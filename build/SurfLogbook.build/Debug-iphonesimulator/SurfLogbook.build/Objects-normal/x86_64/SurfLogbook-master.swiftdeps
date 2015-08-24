@@ -1,0 +1,5 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "b3f54021ffe8e868aa4fe7f479932e8d"
+inputs: 
+- "/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/ViewController.swift"
+- "/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/AppDelegate.swift"

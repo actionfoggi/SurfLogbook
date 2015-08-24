@@ -1,0 +1,4 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "4835794da5e76510f4d02ca44cee9111"
+inputs: 
+- "/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbookTests/SurfLogbookTests.swift"
