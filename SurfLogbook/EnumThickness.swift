@@ -8,9 +8,10 @@
 
 import Foundation
 
-enum Thickness : String{
+@objc
+enum Thickness : Int32 {
     
-    case mm_3_2 = "3/2 mm", mm_4_3 = "4/3 mm", mm_5_4 = "5/4 mm", mm_6_5 = "6/5 mm"
+    case mm_3_2 = 0, mm_4_3 = 1, mm_5_4 = 2, mm_6_5 = 3
     
     func simpleDescription() -> String {
         switch self {
@@ -26,4 +27,21 @@ enum Thickness : String{
     }
     
     static let allValues = [mm_3_2,mm_4_3,mm_5_4,mm_6_5]
+    
+    static func getValue(text: String) -> Int32{
+        
+        if text == "3/2 mm"{
+            return 0
+        } else if text == "4/3 mm"{
+            return 1
+        } else if text == "5/4 mm"{
+            return 2
+        } else if text == "6/5 mm"{
+            return 3
+        }
+        
+        //TODO
+        return -1
+        
+    }
 }

@@ -1,10 +1,11 @@
 version: "Apple Swift version 2.0 (swiftlang-700.0.52.2 clang-700.0.65)"
 options: "e4787f9cd25e070716c8b01a5e022004"
-build_time: [494536124, 765286000]
+build_time: [494764000, 236407000]
 inputs: 
-	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/WetsuitTableViewController.swift": [494531425, 0]
-	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/EnumSkyConditions.swift": [493838803, 0]
-	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/vcSessionEntry.swift": [494532867, 0]
-	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/vcNewWetsuit.swift": [494534415, 0]
-	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/EnumThickness.swift": [494533902, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/EnumSkyConditions.swift": [494710624, 0]
 	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/AppDelegate.swift": [494442510, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/EnumThickness.swift": [494763806, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/vcSessionEntry.swift": [494532867, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/vcNewWetsuit.swift": [494763994, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/WetsuitTableViewController.swift": [494531425, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/Wetsuits.swift": [494763742, 0]

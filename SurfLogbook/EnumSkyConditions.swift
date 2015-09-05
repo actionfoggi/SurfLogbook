@@ -8,9 +8,10 @@
 
 import Foundation
 
-enum SkyConditions : String{
+@objc
+enum SkyConditions : Int32{
     
-    case Sunny = "sunny", Partly_cloudy="partly cloudy", Cloudy="cloudy", Rain="rain", Heavy_rain="heavy rain", Snow="snow", Heavy_snow="heavy snow"
+    case Sunny = 0, Partly_cloudy, Cloudy, Rain, Heavy_rain, Snow, Heavy_snow
     
     func simpleDescription() -> String {
         switch self {

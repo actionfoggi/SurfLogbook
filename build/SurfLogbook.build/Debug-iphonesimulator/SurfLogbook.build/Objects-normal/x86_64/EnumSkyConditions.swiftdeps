@@ -7,30 +7,46 @@ provides-member:
 - ["O11SurfLogbook13SkyConditions", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
+- "IntegerLiteralType"
 - "String"
-- "=="
-- !private "~="
-- "SkyConditions"
 - "Array"
+- !private "~="
+- "=="
+- "Int32"
+- !private "StringLiteralType"
+- "FloatLiteralType"
+- "SkyConditions"
 depends-member:
 - ["Sa", "Element"]
 - ["PSs23ArrayLiteralConvertible", "Element"]
+- !private ["PSs22BidirectionalIndexType", "Distance"]
+- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["PSs22BidirectionalIndexType", "hashValue"]
+- !private ["PSs21BitwiseOperationsType", "Distance"]
+- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["PSs21BitwiseOperationsType", "hashValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSs11CVarArgType", "Distance"]
+- !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "hashValue"]
 - ["PSs14CollectionType", "Element"]
+- !private ["PSs10Comparable", "Distance"]
+- !private ["PSs10Comparable", "IntegerLiteralType"]
 - !private ["PSs10Comparable", "hashValue"]
 - ["PSs28CustomDebugStringConvertible", "Element"]
+- !private ["PSs23CustomStringConvertible", "Distance"]
 - ["PSs23CustomStringConvertible", "Element"]
+- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs23CustomStringConvertible", "hashValue"]
+- !private ["Sd", "deinit"]
 - ["PSs9Equatable", "Cloudy"]
+- !private ["PSs9Equatable", "Distance"]
 - ["PSs9Equatable", "Heavy_rain"]
 - ["PSs9Equatable", "Heavy_snow"]
+- !private ["PSs9Equatable", "IntegerLiteralType"]
 - ["PSs9Equatable", "Partly_cloudy"]
 - ["PSs9Equatable", "Rain"]
 - ["PSs9Equatable", "RawValue"]
@@ -41,10 +57,14 @@ depends-member:
 - ["PSs9Equatable", "init"]
 - ["PSs9Equatable", "rawValue"]
 - ["PSs9Equatable", ""]
+- !private ["PSs16ForwardIndexType", "Distance"]
+- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
 - !private ["PSs16ForwardIndexType", "hashValue"]
 - ["PSs8Hashable", "Cloudy"]
+- !private ["PSs8Hashable", "Distance"]
 - ["PSs8Hashable", "Heavy_rain"]
 - ["PSs8Hashable", "Heavy_snow"]
+- !private ["PSs8Hashable", "IntegerLiteralType"]
 - ["PSs8Hashable", "Partly_cloudy"]
 - ["PSs8Hashable", "Rain"]
 - ["PSs8Hashable", "RawValue"]
@@ -56,15 +76,29 @@ depends-member:
 - ["PSs8Hashable", "rawValue"]
 - ["PSs8Hashable", ""]
 - ["PSs9Indexable", "Element"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
 - !private ["Si", "hashValue"]
+- !private ["VSs5Int32", "Distance"]
+- !private ["VSs5Int32", "deinit"]
+- !private ["PSs21IntegerArithmeticType", "Distance"]
+- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs21IntegerArithmeticType", "hashValue"]
+- !private ["PSs25IntegerLiteralConvertible", "Distance"]
+- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "hashValue"]
+- !private ["PSs11IntegerType", "Distance"]
+- !private ["PSs11IntegerType", "IntegerLiteralType"]
 - !private ["PSs11IntegerType", "hashValue"]
+- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
 - !private ["PSs14MirrorPathType", "hashValue"]
 - ["PSs21MutableCollectionType", "Element"]
 - ["PSs16MutableSliceable", "Element"]
+- !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "deinit"]
-- !private ["CSo8NSString", "deinit"]
+- !private ["CSo7NSValue", "deinit"]
+- !private ["PSs21RandomAccessIndexType", "Distance"]
+- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["PSs21RandomAccessIndexType", "hashValue"]
 - !private ["VSs5Range", "deinit"]
 - ["PSs30RangeReplaceableCollectionType", "Element"]
@@ -81,7 +115,11 @@ depends-member:
 - ["PSs16RawRepresentable", "rawValue"]
 - ["PSs16RawRepresentable", ""]
 - ["PSs12SequenceType", "Element"]
+- !private ["PSs17SignedIntegerType", "Distance"]
+- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs17SignedIntegerType", "hashValue"]
+- !private ["PSs16SignedNumberType", "Distance"]
+- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
 - !private ["PSs16SignedNumberType", "hashValue"]
 - ["O11SurfLogbook13SkyConditions", "Cloudy"]
 - ["O11SurfLogbook13SkyConditions", "Heavy_rain"]
@@ -98,23 +136,39 @@ depends-member:
 - ["O11SurfLogbook13SkyConditions", "init"]
 - ["O11SurfLogbook13SkyConditions", "rawValue"]
 - ["O11SurfLogbook13SkyConditions", "simpleDescription"]
+- !private ["PSs10Strideable", "Distance"]
+- !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["PSs10Strideable", "hashValue"]
-- ["SS", "deinit"]
 - ["PSs10_ArrayType", "Element"]
 - !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "hashValue"]
 - ["PSs24_DestructorSafeContainer", "Element"]
+- !private ["PSs14_Incrementable", "Distance"]
+- !private ["PSs14_Incrementable", "IntegerLiteralType"]
 - !private ["PSs14_Incrementable", "hashValue"]
+- !private ["PSs22_IntegerArithmeticType", "Distance"]
+- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs22_IntegerArithmeticType", "hashValue"]
+- !private ["PSs12_IntegerType", "Distance"]
+- !private ["PSs12_IntegerType", "IntegerLiteralType"]
 - !private ["PSs12_IntegerType", "hashValue"]
 - ["PSs21_ObjectiveCBridgeable", "Element"]
+- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "hashValue"]
 - !private ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs12_Reflectable", "Distance"]
 - ["PSs12_Reflectable", "Element"]
+- !private ["PSs12_Reflectable", "IntegerLiteralType"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["PSs12_Reflectable", "hashValue"]
+- !private ["PSs18_SignedIntegerType", "Distance"]
+- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs18_SignedIntegerType", "hashValue"]
+- !private ["PSs11_Strideable", "Distance"]
+- !private ["PSs11_Strideable", "IntegerLiteralType"]
 - !private ["PSs11_Strideable", "hashValue"]
 depends-nominal:
 - "Sa"
@@ -129,19 +183,22 @@ depends-nominal:
 - !private "PSs10Comparable"
 - "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
+- !private "Sd"
 - "PSs9Equatable"
 - !private "PSs16ForwardIndexType"
 - "PSs8Hashable"
 - "PSs9Indexable"
 - !private "Si"
+- !private "VSs5Int32"
 - !private "PSs21IntegerArithmeticType"
 - !private "PSs25IntegerLiteralConvertible"
 - !private "PSs11IntegerType"
 - !private "PSs14MirrorPathType"
 - "PSs21MutableCollectionType"
 - "PSs16MutableSliceable"
+- !private "CSo8NSNumber"
 - !private "CSo8NSObject"
-- !private "CSo8NSString"
+- !private "CSo7NSValue"
 - !private "PSs21RandomAccessIndexType"
 - !private "VSs5Range"
 - "PSs30RangeReplaceableCollectionType"
@@ -151,7 +208,6 @@ depends-nominal:
 - !private "PSs16SignedNumberType"
 - "O11SurfLogbook13SkyConditions"
 - !private "PSs10Strideable"
-- "SS"
 - "PSs10_ArrayType"
 - !private "PSs33_BuiltinBooleanLiteralConvertible"
 - !private "PSs33_BuiltinIntegerLiteralConvertible"
@@ -187,4 +243,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "4c737399d0ee0a78ec7ab7e5a7d54a04"
+interface-hash: "42c82b1053123d818fd13176337a6409"

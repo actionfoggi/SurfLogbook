@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -16,7 +18,6 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     let thicknessPickerView = UIPickerView()
     let thicknessOptions = Thickness.allValues
     
-    
     @IBOutlet weak var saveButton: UIButton!
     
     
@@ -25,6 +26,34 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         
         thicknessPickerView.delegate = self
         thicknessTextField.inputView = thicknessPickerView
+        
+    }
+    
+    
+    @IBAction func saveNewWetsuit(){
+        
+        /** save content to coredata **/
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        let ent = NSEntityDescription.entityForName("Wetsuits", inManagedObjectContext: context)
+        
+        let newWetsuit = Wetsuits(entity: ent!, insertIntoManagedObjectContext: context)
+        
+        
+        newWetsuit.manufacturer = manufacturerTextField.text!
+        newWetsuit.name = wetsuitNameTextField.text!
+        newWetsuit.thickness = NSNumber(int: Thickness.getValue(thicknessTextField.text!))
+        
+        do{
+           try context.save()
+            print("newWetsuit: \(newWetsuit) ")
+        } catch {
+            print( " An error occured " )
+        }
+        
+        
+        /** go back to wetsuit overview **/
         
     }
     

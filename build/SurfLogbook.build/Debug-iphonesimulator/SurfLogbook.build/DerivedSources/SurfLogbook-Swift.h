@@ -87,6 +87,7 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreData;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -116,6 +117,23 @@ SWIFT_CLASS("_TtC11SurfLogbook11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(int32_t, SkyConditions) {
+  SkyConditionsSunny = 0,
+  SkyConditionsPartly_cloudy = 1,
+  SkyConditionsCloudy = 2,
+  SkyConditionsRain = 3,
+  SkyConditionsHeavy_rain = 4,
+  SkyConditionsSnow = 5,
+  SkyConditionsHeavy_snow = 6,
+};
+
+typedef SWIFT_ENUM(int32_t, Thickness) {
+  Thicknessmm_3_2 = 0,
+  Thicknessmm_4_3 = 1,
+  Thicknessmm_5_4 = 2,
+  Thicknessmm_6_5 = 3,
+};
+
 @class UITableView;
 @class NSBundle;
 @class NSCoder;
@@ -131,6 +149,17 @@ SWIFT_CLASS("_TtC11SurfLogbook26WetsuitTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSNumber;
+@class NSEntityDescription;
+
+SWIFT_CLASS("_TtC11SurfLogbook8Wetsuits")
+@interface Wetsuits : NSManagedObject
+@property (nonatomic, copy) NSString * __nullable name;
+@property (nonatomic, copy) NSString * __nullable manufacturer;
+@property (nonatomic) NSNumber * __nullable thickness;
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIPickerView;
 @class UITextField;
 @class UIButton;
@@ -143,6 +172,7 @@ SWIFT_CLASS("_TtC11SurfLogbook12vcNewWetsuit")
 @property (nonatomic, readonly) UIPickerView * __nonnull thicknessPickerView;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified saveButton;
 - (void)viewDidLoad;
+- (IBAction)saveNewWetsuit;
 
 /// handle picker view selections *
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;

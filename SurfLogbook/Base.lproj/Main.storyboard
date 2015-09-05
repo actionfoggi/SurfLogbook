@@ -300,7 +300,7 @@
             </objects>
             <point key="canvasLocation" x="684" y="-370"/>
         </scene>
-        <!--Wesuit-->
+        <!--Wetsuit-->
         <scene sceneID="Rvt-y6-KHk">
             <objects>
                 <tableViewController id="wzB-NI-a6V" customClass="WetsuitTableViewController" customModule="SurfLogbook" customModuleProvider="target" sceneMemberID="viewController">
@@ -320,7 +320,7 @@
                                             <rect key="frame" x="8" y="11" width="58" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -332,7 +332,7 @@
                             <outlet property="delegate" destination="wzB-NI-a6V" id="iKM-Tz-8Il"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wesuit" id="9xu-6H-g1D">
+                    <navigationItem key="navigationItem" title="Wetsuit" id="9xu-6H-g1D">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="9Ks-J8-85K">
                             <connections>
                                 <segue destination="NQT-zd-Bsd" kind="modal" id="F9u-9L-fE7"/>
@@ -380,6 +380,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveNewWetsuit" destination="Gqp-us-dff" eventType="touchUpInside" id="xN2-DG-dPN"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Manufacturer" minimumFontSize="17" id="FlU-3W-JL9">
                                 <rect key="frame" x="20" y="86" width="280" height="30"/>
@@ -484,7 +487,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="L8x-Zk-VHO"/>
         <segue reference="anq-nA-Bsz"/>
+        <segue reference="F9u-9L-fE7"/>
     </inferredMetricsTieBreakers>
 </document>
