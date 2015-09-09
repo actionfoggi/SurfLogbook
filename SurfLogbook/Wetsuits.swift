@@ -11,9 +11,14 @@ import CoreData
 
 class Wetsuits: NSManagedObject {
     
-    @NSManaged var name:String?
-    @NSManaged var manufacturer:String?
-    @NSManaged var thickness:NSNumber?
+    @NSManaged var name:String
+    @NSManaged var manufacturer:String
+    @NSManaged var thickness:NSNumber
+    
+    func simpleDescription() -> String{
+
+        return  "\(manufacturer), \(name), \(Thickness.getText(thickness))"
+    }
 
 
 }

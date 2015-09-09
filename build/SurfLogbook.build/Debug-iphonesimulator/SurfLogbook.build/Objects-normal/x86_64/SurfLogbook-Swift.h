@@ -154,9 +154,10 @@ SWIFT_CLASS("_TtC11SurfLogbook26WetsuitTableViewController")
 
 SWIFT_CLASS("_TtC11SurfLogbook8Wetsuits")
 @interface Wetsuits : NSManagedObject
-@property (nonatomic, copy) NSString * __nullable name;
-@property (nonatomic, copy) NSString * __nullable manufacturer;
-@property (nonatomic) NSNumber * __nullable thickness;
+@property (nonatomic, copy) NSString * __nonnull name;
+@property (nonatomic, copy) NSString * __nonnull manufacturer;
+@property (nonatomic) NSNumber * __nonnull thickness;
+- (NSString * __nonnull)simpleDescription;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -217,6 +218,7 @@ SWIFT_CLASS("_TtC11SurfLogbook14vcSessionEntry")
 
 /// common session info *
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified usedWetsuitTextField;
+@property (nonatomic, copy) NSArray<Wetsuits *> * __nonnull wetsuitPickOption;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified editWetsuitsButton;
 @property (nonatomic, weak) IBOutlet UITextView * __null_unspecified commentTextView;
 - (void)viewDidLoad;
@@ -224,13 +226,11 @@ SWIFT_CLASS("_TtC11SurfLogbook14vcSessionEntry")
 /// handle scroll view *
 - (void)viewDidLayoutSubviews;
 
-/// handle picker view selections *
+/// handle picker view selections wetsuit *
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;
 - (NSInteger)pickerView:(UIPickerView * __nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
 - (NSString * __nullable)pickerView:(UIPickerView * __nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
 - (void)pickerView:(UIPickerView * __nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
-
-/// handle day picker selection *
 - (IBAction)dayTextField:(UITextField * __nonnull)sender;
 - (void)handleDayPicker:(UIDatePicker * __nonnull)sender;
 

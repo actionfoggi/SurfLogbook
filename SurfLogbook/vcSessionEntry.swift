@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIScrollViewDelegate  {
     
@@ -40,6 +41,8 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     /** common session info **/
     @IBOutlet weak var usedWetsuitTextField: UITextField!
+    var wetsuitPickOption:Array<Wetsuits> = []
+    //let wetsuitPickOption = [Wetsuits]()
     @IBOutlet weak var editWetsuitsButton: UIButton!
     
     
@@ -49,11 +52,39 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /** sky conditions
         let pickerView = UIPickerView()
         pickerView.delegate = self
-        skyConditionTextField.inputView = pickerView
+        skyConditionTextField.inputView = pickerView **/
+        
+        /** used wetsuit **/
+        let wetsuitPickView = UIPickerView()
+        wetsuitPickView.delegate = self
+        usedWetsuitTextField.inputView = wetsuitPickView
+        
+        
+        /** load content from coredata **/
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext!
+        let request = NSFetchRequest(entityName: "Wetsuits")
+        request.returnsObjectsAsFaults = false
 
- 
+        do{
+            let result : NSArray =  try  context.executeFetchRequest(request)
+            if result.count > 0{
+                
+                for wetsuit in result {
+                    let thisWetsuit = wetsuit as! Wetsuits
+                    wetsuitPickOption.append(thisWetsuit)
+                }
+            }
+        }catch{
+            print("error in core data fetch request - wetsuits")
+        }
+        
+        
+        
+        
     }
     
     /** handle scroll view **/
@@ -63,8 +94,22 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.scrollView.contentSize = self.contentView.bounds.size
     }
     
+    /** handle picker view selections wetsuit **/
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return wetsuitPickOption.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return wetsuitPickOption[row].simpleDescription()
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        usedWetsuitTextField.text = wetsuitPickOption[row].simpleDescription()
+    }
     
-    /** handle picker view selections **/
+    
+    /** handle picker view selections sky conditions
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -77,7 +122,7 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         skyConditionTextField.text = pickOption[row].simpleDescription()
     }
-    
+    **/
     
     /** handle day picker selection **/
     @IBAction func dayTextField(sender: UITextField) {
@@ -111,6 +156,7 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         timeFormatter.dateStyle = NSDateFormatterStyle.NoStyle
         timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         startTimeTextField.text = timeFormatter.stringFromDate(sender.date)
+        
     }
     
     
@@ -119,6 +165,8 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         dayTextField.resignFirstResponder()
         startTimeTextField.resignFirstResponder()
         skyConditionTextField.resignFirstResponder()
+        usedWetsuitTextField.resignFirstResponder()
+        
     }
 
     override func didReceiveMemoryWarning() {

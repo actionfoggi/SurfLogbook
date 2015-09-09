@@ -44,4 +44,21 @@ enum Thickness : Int32 {
         return -1
         
     }
+    
+    static func getText(number: NSNumber) -> String{
+        
+        switch number{
+        case 0:
+            return "3/2 mm"
+        case 1:
+            return "4/3 mm"
+        case 2:
+            return "5/4 mm"
+        case 3:
+            return "6/5 mm"
+        default:
+            return "error"
+        }
+        
+    }
 }

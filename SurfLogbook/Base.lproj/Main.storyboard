@@ -96,15 +96,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sky Condition" minimumFontSize="17" id="59G-gH-ESE">
-                                                <rect key="frame" x="20" y="286" width="468" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="editingDone:" destination="848-9Y-71o" eventType="editingDidEnd" id="wvc-Yv-W3F"/>
-                                                </connections>
-                                            </textField>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-20" maxValue="30" id="DVF-he-zfS">
                                                 <rect key="frame" x="182" y="210" width="308" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -268,6 +259,15 @@
                                                     <segue destination="vrV-Pn-SS1" kind="modal" id="neR-z5-dXh"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sky Condition" minimumFontSize="17" id="59G-gH-ESE">
+                                                <rect key="frame" x="20" y="284" width="468" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="editingDone:" destination="848-9Y-71o" eventType="editingDidEnd" id="wvc-Yv-W3F"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -291,7 +291,6 @@
                         <outlet property="scrollView" destination="Dwz-ne-mIE" id="VeP-zc-4cJ"/>
                         <outlet property="skyConditionTextField" destination="59G-gH-ESE" id="f6N-Rb-4KC"/>
                         <outlet property="startTimeTextField" destination="y3N-dZ-VWt" id="Wbk-FB-PDk"/>
-                        <outlet property="usedWetsuitTextField" destination="BZc-bg-zO9" id="kAv-3b-ICK"/>
                         <outlet property="waterTempLabel" destination="NKm-cG-0BM" id="sQC-ku-x59"/>
                         <outlet property="waterTempSlider" destination="IDy-Ac-IBR" id="ore-0t-N69"/>
                     </connections>
@@ -487,7 +486,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="anq-nA-Bsz"/>
         <segue reference="F9u-9L-fE7"/>
+        <segue reference="neR-z5-dXh"/>
     </inferredMetricsTieBreakers>
 </document>

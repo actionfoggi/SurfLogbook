@@ -7,15 +7,15 @@ provides-member:
 - ["O11SurfLogbook13SkyConditions", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "IntegerLiteralType"
+- "FloatLiteralType"
+- "Int32"
 - "String"
 - "Array"
-- !private "~="
-- "=="
-- "Int32"
 - !private "StringLiteralType"
-- "FloatLiteralType"
 - "SkyConditions"
+- "=="
+- !private "~="
+- "IntegerLiteralType"
 depends-member:
 - ["Sa", "Element"]
 - ["PSs23ArrayLiteralConvertible", "Element"]

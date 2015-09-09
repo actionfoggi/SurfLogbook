@@ -7,15 +7,16 @@ provides-member:
 - ["O11SurfLogbook9Thickness", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "FloatLiteralType"
-- "String"
 - "Int32"
-- "Array"
-- "Thickness"
-- !private "StringLiteralType"
+- "String"
+- "NSNumber"
+- "FloatLiteralType"
 - "IntegerLiteralType"
 - "=="
 - !private "~="
+- !private "StringLiteralType"
+- "Array"
+- "Thickness"
 depends-member:
 - ["Sa", "Element"]
 - ["PSs23ArrayLiteralConvertible", "Element"]
@@ -116,10 +117,12 @@ depends-member:
 - !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["PSs10Strideable", "hashValue"]
 - ["O11SurfLogbook9Thickness", "Int32"]
+- ["O11SurfLogbook9Thickness", "NSNumber"]
 - ["O11SurfLogbook9Thickness", "RawValue"]
 - ["O11SurfLogbook9Thickness", "String"]
 - ["O11SurfLogbook9Thickness", "allValues"]
 - ["O11SurfLogbook9Thickness", "deinit"]
+- ["O11SurfLogbook9Thickness", "getText"]
 - ["O11SurfLogbook9Thickness", "getValue"]
 - ["O11SurfLogbook9Thickness", "hashValue"]
 - ["O11SurfLogbook9Thickness", "init"]
@@ -233,4 +236,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "34450e62faf0177d40e9d258fe9b0489"
+interface-hash: "69d2a9bd8347f671ed7badaf859af8f5"
