@@ -37,12 +37,11 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var avgPeopleSlider: UISlider!
     
     @IBOutlet weak var skyConditionTextField: UITextField!
-    let pickOption = SkyConditions.allValues
+    let skyconditionsPickOption = SkyConditions.allValues
     
     /** common session info **/
     @IBOutlet weak var usedWetsuitTextField: UITextField!
     var wetsuitPickOption:Array<Wetsuits> = []
-    //let wetsuitPickOption = [Wetsuits]()
     @IBOutlet weak var editWetsuitsButton: UIButton!
     
     
@@ -52,15 +51,17 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /** sky conditions
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        skyConditionTextField.inputView = pickerView **/
+        /** sky conditions **/
+        let skyconditionsPickerView = UIPickerView()
+        skyconditionsPickerView.delegate = self
+        skyConditionTextField.inputView = skyconditionsPickerView
+        skyconditionsPickerView.tag=0
         
         /** used wetsuit **/
-        let wetsuitPickView = UIPickerView()
-        wetsuitPickView.delegate = self
-        usedWetsuitTextField.inputView = wetsuitPickView
+        let wetsuitPickerView = UIPickerView()
+        wetsuitPickerView.delegate = self
+        usedWetsuitTextField.inputView = wetsuitPickerView
+        wetsuitPickerView.tag = 1
         
         
         /** load content from coredata **/
@@ -82,9 +83,6 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             print("error in core data fetch request - wetsuits")
         }
         
-        
-        
-        
     }
     
     /** handle scroll view **/
@@ -99,30 +97,31 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return wetsuitPickOption.count
+        
+        switch pickerView.tag {
+        case 0: return skyconditionsPickOption.count
+        case 1: return wetsuitPickOption.count
+        default: return -1
+        }
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return wetsuitPickOption[row].simpleDescription()
+        
+        switch pickerView.tag{
+        case 0: return skyconditionsPickOption[row].simpleDescription()
+        case 1: return wetsuitPickOption[row].simpleDescription()
+        default: return "error"
+        }
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        usedWetsuitTextField.text = wetsuitPickOption[row].simpleDescription()
+        
+        switch pickerView.tag {
+        case 0: skyConditionTextField.text = skyconditionsPickOption[row].simpleDescription()
+        case 1: usedWetsuitTextField.text = wetsuitPickOption[row].simpleDescription()
+        default: "do nothing here"
+        }
+        
+        
     }
-    
-    
-    /** handle picker view selections sky conditions
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickOption.count
-    }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickOption[row].simpleDescription()
-    }
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        skyConditionTextField.text = pickOption[row].simpleDescription()
-    }
-    **/
     
     /** handle day picker selection **/
     @IBAction func dayTextField(sender: UITextField) {
