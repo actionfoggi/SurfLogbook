@@ -12,7 +12,6 @@
 		26A84C751B8BAA05004B6C20 /* vcSessionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A84C741B8BAA05004B6C20 /* vcSessionEntry.swift */; };
 		26AB7DBE1B976E6200B51683 /* WetsuitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AB7DBD1B976E6200B51683 /* WetsuitTableViewController.swift */; };
 		26AB7DC01B9772B700B51683 /* vcNewWetsuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AB7DBF1B9772B700B51683 /* vcNewWetsuit.swift */; };
-		26AB7DC21B97769500B51683 /* EnumThickness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AB7DC11B97769500B51683 /* EnumThickness.swift */; };
 		26F367871B8B63F600D5880A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F367861B8B63F600D5880A /* AppDelegate.swift */; };
 		26F3678A1B8B63F600D5880A /* SurfLogbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26F367881B8B63F600D5880A /* SurfLogbook.xcdatamodeld */; };
 		26F3678F1B8B63F600D5880A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26F3678D1B8B63F600D5880A /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 		26A84C741B8BAA05004B6C20 /* vcSessionEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcSessionEntry.swift; sourceTree = "<group>"; };
 		26AB7DBD1B976E6200B51683 /* WetsuitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WetsuitTableViewController.swift; sourceTree = "<group>"; };
 		26AB7DBF1B9772B700B51683 /* vcNewWetsuit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcNewWetsuit.swift; sourceTree = "<group>"; };
-		26AB7DC11B97769500B51683 /* EnumThickness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumThickness.swift; sourceTree = "<group>"; };
 		26F367811B8B63F600D5880A /* SurfLogbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfLogbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F367851B8B63F600D5880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26F367861B8B63F600D5880A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				2670E47C1B8CD2220030CB4D /* EnumSkyConditions.swift */,
 				26AB7DBD1B976E6200B51683 /* WetsuitTableViewController.swift */,
 				26AB7DBF1B9772B700B51683 /* vcNewWetsuit.swift */,
-				26AB7DC11B97769500B51683 /* EnumThickness.swift */,
 				268E3FE31B9AF9C4005E8B7B /* Wetsuits.swift */,
 			);
 			path = SurfLogbook;
@@ -232,7 +229,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26AB7DC21B97769500B51683 /* EnumThickness.swift in Sources */,
 				268E3FE41B9AF9C4005E8B7B /* Wetsuits.swift in Sources */,
 				2670E47D1B8CD2220030CB4D /* EnumSkyConditions.swift in Sources */,
 				26AB7DC01B9772B700B51683 /* vcNewWetsuit.swift in Sources */,

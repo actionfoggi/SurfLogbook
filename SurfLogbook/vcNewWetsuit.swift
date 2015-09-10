@@ -16,7 +16,7 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var wetsuitNameTextField: UITextField!
     @IBOutlet weak var thicknessTextField: UITextField!
     let thicknessPickerView = UIPickerView()
-    let thicknessOptions = Thickness.allValues
+    let thicknessOptions = WetsuitThickness.allValues
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -43,7 +43,7 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         
         newWetsuit.manufacturer = manufacturerTextField.text!
         newWetsuit.name = wetsuitNameTextField.text!
-        newWetsuit.thickness = NSNumber(int: Thickness.getValue(thicknessTextField.text!))
+        newWetsuit.wetsuitThickness = thicknessTextField.text! 
         
         do{
            try context.save()

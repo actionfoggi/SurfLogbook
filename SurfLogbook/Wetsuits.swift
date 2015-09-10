@@ -9,16 +9,41 @@
 import UIKit
 import CoreData
 
-class Wetsuits: NSManagedObject {
+public class Wetsuits: NSManagedObject {
     
     @NSManaged var name:String
     @NSManaged var manufacturer:String
-    @NSManaged var thickness:NSNumber
+    @NSManaged var wetsuitThickness:String
     
     func simpleDescription() -> String{
 
-        return  "\(manufacturer), \(name), \(Thickness.getText(thickness))"
+        return  "\(manufacturer), \(name), \(wetsuitThickness) "
     }
 
 
+}
+
+
+
+public enum WetsuitThickness : String {
+    
+    case mm_3_2 = "3/2 mm"
+    case mm_4_3 = "4/3 mm"
+    case mm_5_4 = "5/4 mm"
+    case mm_6_5 = "6/5 mm"
+    
+    static let allValues = [mm_3_2,mm_4_3,mm_5_4,mm_6_5]
+    
+    func simpleDescription() -> String {
+        switch self {
+        case .mm_3_2:
+            return mm_3_2.rawValue
+        case .mm_4_3:
+            return mm_4_3.rawValue
+        case .mm_5_4:
+            return mm_5_4.rawValue
+        case .mm_6_5:
+            return mm_6_5.rawValue
+        }
+    }
 }
