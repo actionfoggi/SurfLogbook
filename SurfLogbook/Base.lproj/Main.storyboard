@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="tGF-AV-4bu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="tGF-AV-4bu">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -258,7 +258,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="vrV-Pn-SS1" kind="modal" id="neR-z5-dXh"/>
+                                                    <segue destination="Ydy-Zl-bAB" kind="modal" id="A7p-Pw-8uS"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sky Condition" minimumFontSize="17" id="59G-gH-ESE">
@@ -286,6 +286,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hLs-ll-Cam"/>
+                    <navigationItem key="navigationItem" id="r3a-bi-j2b"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="500" height="950"/>
                     <connections>
@@ -309,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="684" y="-370"/>
         </scene>
-        <!--Wetsuit-->
+        <!--Your Wetsuits-->
         <scene sceneID="Rvt-y6-KHk">
             <objects>
                 <tableViewController id="wzB-NI-a6V" customClass="WetsuitTableViewController" customModule="SurfLogbook" customModuleProvider="target" sceneMemberID="viewController">
@@ -322,11 +323,11 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4hv-Zc-ZKf" id="bP3-7B-gf3">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mhJ-0P-c33">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,22 +342,23 @@
                             <outlet property="delegate" destination="wzB-NI-a6V" id="iKM-Tz-8Il"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wetsuit" id="9xu-6H-g1D">
+                    <navigationItem key="navigationItem" title="Your Wetsuits" id="9xu-6H-g1D">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="9Ks-J8-85K">
                             <connections>
-                                <segue destination="NQT-zd-Bsd" kind="modal" id="F9u-9L-fE7"/>
+                                <action selector="goBack:" destination="wzB-NI-a6V" id="Umj-vC-zix"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New" id="lo0-tv-WDX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lo0-tv-WDX">
                             <connections>
-                                <segue destination="Rdg-Ul-dx1" kind="modal" id="YXD-vR-GJX"/>
+                                <action selector="addButtonPressed:" destination="wzB-NI-a6V" id="c8G-W0-847"/>
+                                <segue destination="7L9-t2-pfZ" kind="modal" identifier="AddItem" id="9y7-GW-xkm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZ5-yT-gp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="-788"/>
+            <point key="canvasLocation" x="1814" y="-788"/>
         </scene>
         <!--New Wetsuit-->
         <scene sceneID="XMT-u9-RAI">
@@ -384,15 +386,6 @@
                                     <outlet property="delegate" destination="tBe-lG-zgP" id="QVb-Jz-tSQ"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xgy-JD-J8b">
-                                <rect key="frame" x="107" y="200" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveNewWetsuit" destination="Gqp-us-dff" eventType="touchUpInside" id="xN2-DG-dPN"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Manufacturer" minimumFontSize="17" id="FlU-3W-JL9">
                                 <rect key="frame" x="20" y="86" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -406,20 +399,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Wetsuit" id="btm-dI-RCs">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Nwm-Fk-cDj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Nwm-Fk-cDj">
                             <connections>
-                                <segue destination="vrV-Pn-SS1" kind="modal" id="anq-nA-Bsz"/>
+                                <action selector="calcel:" destination="tBe-lG-zgP" id="fRg-wo-TCW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="5ak-qg-jMC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5ak-qg-jMC">
                             <connections>
-                                <segue destination="McO-VZ-RKq" kind="unwind" unwindAction="unwindToMealList:" id="6gE-Hc-Akz"/>
+                                <segue destination="McO-VZ-RKq" kind="unwind" unwindAction="unwindToWetsuitList:" id="5Zo-Dn-MEU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="manufacturerTextField" destination="FlU-3W-JL9" id="jLf-FQ-xki"/>
-                        <outlet property="saveButton" destination="Xgy-JD-J8b" id="aKL-3N-NwV"/>
+                        <outlet property="saveButton" destination="5ak-qg-jMC" id="k6G-ql-9Ci"/>
                         <outlet property="thicknessTextField" destination="KQz-aJ-ZPW" id="L3F-Pg-BwO"/>
                         <outlet property="wetsuitNameTextField" destination="7AT-Oe-2Py" id="9N5-WG-iEF"/>
                     </connections>
@@ -427,7 +420,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gqp-us-dff" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="McO-VZ-RKq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2674" y="-788"/>
+            <point key="canvasLocation" x="2598" y="-788"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="7DS-cU-drk">
@@ -464,45 +457,40 @@
             <point key="canvasLocation" x="52.799999999999997" y="191.22666666666666"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tdE-qp-WeR">
+        <scene sceneID="wqE-As-QkX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vrV-Pn-SS1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ydy-Zl-bAB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="DV5-fJ-Jtd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xef-QU-aKK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kHA-e6-YnD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="wzB-NI-a6V" kind="relationship" relationship="rootViewController" id="zF9-CX-8fo"/>
+                        <segue destination="wzB-NI-a6V" kind="relationship" relationship="rootViewController" id="gsT-KL-ANb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zFC-GS-yAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5MC-Vs-mq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="-788"/>
+            <point key="canvasLocation" x="1422" y="-788"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RRF-Zf-q2g">
+        <scene sceneID="q8Q-hE-tq5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rdg-Ul-dx1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7L9-t2-pfZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uWh-g3-0gm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6R5-rE-Ysa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="tBe-lG-zgP" kind="relationship" relationship="rootViewController" id="rrt-Zd-hdM"/>
+                        <segue destination="tBe-lG-zgP" kind="relationship" relationship="rootViewController" id="uZt-DL-ABT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dwQ-YK-vZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNp-bp-hT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="-788"/>
+            <point key="canvasLocation" x="2203" y="-788"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="anq-nA-Bsz"/>
-        <segue reference="F9u-9L-fE7"/>
-    </inferredMetricsTieBreakers>
 </document>

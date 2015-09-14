@@ -15,10 +15,13 @@ public class Wetsuits: NSManagedObject {
     @NSManaged var manufacturer:String
     @NSManaged var wetsuitThickness:String
     
+    
     func simpleDescription() -> String{
 
         return  "\(manufacturer), \(name), \(wetsuitThickness) "
     }
+    
+
 
 
 }
@@ -37,13 +40,13 @@ public enum WetsuitThickness : String {
     func simpleDescription() -> String {
         switch self {
         case .mm_3_2:
-            return mm_3_2.rawValue
+            return self.rawValue
         case .mm_4_3:
-            return mm_4_3.rawValue
+            return self.rawValue
         case .mm_5_4:
-            return mm_5_4.rawValue
+            return self.rawValue
         case .mm_6_5:
-            return mm_6_5.rawValue
+            return self.rawValue
         }
     }
 }

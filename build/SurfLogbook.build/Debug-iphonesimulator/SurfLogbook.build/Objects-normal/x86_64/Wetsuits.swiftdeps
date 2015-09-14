@@ -9,20 +9,20 @@ provides-member:
 - ["C11SurfLogbook8Wetsuits", ""]
 - ["O11SurfLogbook16WetsuitThickness", ""]
 provides-dynamic-lookup:
-- "name"
-- "simpleDescription"
-- "wetsuitThickness"
 - "manufacturer"
+- "wetsuitThickness"
+- "simpleDescription"
+- "name"
 depends-top-level:
 - "StringLiteralType"
-- "NSManagedObject"
 - "WetsuitThickness"
-- !private "UnicodeScalarType"
-- "Wetsuits"
+- "String"
+- "Array"
 - "=="
 - !private "~="
-- "Array"
-- "String"
+- "Wetsuits"
+- !private "UnicodeScalarType"
+- "NSManagedObject"
 depends-member:
 - ["PSs9AnyObject", "init"]
 - ["PSs9AnyObject", "manufacturer"]

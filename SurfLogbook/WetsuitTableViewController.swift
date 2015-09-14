@@ -12,7 +12,6 @@ import CoreData
 class WetsuitTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
-    
     var fetchedResultsController: NSFetchedResultsController?
 
 
@@ -28,12 +27,13 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
         catch{
             print("Error during fetsh request")
         }
+        
+        tableView.reloadData()
 
         
     }
     
     func allWetsuitsFetchRequest() -> NSFetchRequest {
-        
         let fetchRequest = NSFetchRequest(entityName: "Wetsuits")
         let sortDescriptor = NSSortDescriptor(key: "manufacturer", ascending: true)
         
@@ -44,17 +44,17 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
         return fetchRequest
     }
 
+    
+
 
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
         return fetchedResultsController?.sections?.count ?? 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return fetchedResultsController?.sections?[section].numberOfObjects ?? 0
     }
     
@@ -64,29 +64,43 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
         
         if let cellContact = fetchedResultsController?.objectAtIndexPath(indexPath) as? Wetsuits {
             cell.textLabel?.text = "\(cellContact.manufacturer), \(cellContact.name), \(cellContact.wetsuitThickness)"
-            
         }
-        
-        
         return cell
     }
-    
-/*
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
-
-        cell.textLabel?.text = " Section \(indexPath.section) Row \(indexPath.row)"
-
-        return cell
-    }
-   
-*/
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    // MARK: - navigation
+    // go back from the wetsuit overview
+    @IBAction func goBack(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func unwindToWetsuitList(sender: UIStoryboardSegue) {
+        
+        if let sourceViewController = sender.sourceViewController as? vcNewWetsuit{
+            let wetsuitName = sourceViewController.wetsuitName
+            let manufacturer = sourceViewController.manufacturer
+            let wetsuitThickness = sourceViewController.wetsuitThickness
+            
+            let newWetsuit =  NSEntityDescription.insertNewObjectForEntityForName("Wetsuits", inManagedObjectContext: managedObjectContext!) as! Wetsuits
+            newWetsuit.name = wetsuitName
+            newWetsuit.manufacturer = manufacturer
+            newWetsuit.wetsuitThickness = wetsuitThickness
+            
+            do{
+                
+                try managedObjectContext?.save()
+            }catch{
+                print("error while saving")
+            }
+            self.viewDidLoad()
+        }
+        
+        
     }
 }

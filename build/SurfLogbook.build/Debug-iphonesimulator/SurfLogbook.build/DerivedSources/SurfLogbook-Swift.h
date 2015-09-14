@@ -127,16 +127,28 @@ typedef SWIFT_ENUM(int32_t, SkyConditions) {
   SkyConditionsHeavy_snow = 6,
 };
 
+@class NSFetchedResultsController;
+@class NSFetchRequest;
 @class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@class UIBarButtonItem;
+@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC11SurfLogbook26WetsuitTableViewController")
-@interface WetsuitTableViewController : UITableViewController
+@interface WetsuitTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@property (nonatomic, readonly) NSManagedObjectContext * __nullable managedObjectContext;
+@property (nonatomic) NSFetchedResultsController * __nullable fetchedResultsController;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (NSFetchRequest * __nonnull)allWetsuitsFetchRequest;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)didReceiveMemoryWarning;
+- (IBAction)goBack:(UIBarButtonItem * __nonnull)sender;
+- (IBAction)unwindToWetsuitList:(UIStoryboardSegue * __nonnull)sender;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -155,17 +167,18 @@ SWIFT_CLASS("_TtC11SurfLogbook8Wetsuits")
 
 @class UIPickerView;
 @class UITextField;
-@class UIButton;
 
 SWIFT_CLASS("_TtC11SurfLogbook12vcNewWetsuit")
-@interface vcNewWetsuit : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface vcNewWetsuit : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate>
+@property (nonatomic, copy) NSString * __null_unspecified wetsuitName;
+@property (nonatomic, copy) NSString * __null_unspecified manufacturer;
+@property (nonatomic, copy) NSString * __null_unspecified wetsuitThickness;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified manufacturerTextField;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified wetsuitNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified thicknessTextField;
 @property (nonatomic, readonly) UIPickerView * __nonnull thicknessPickerView;
-@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified saveButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem * __null_unspecified saveButton;
 - (void)viewDidLoad;
-- (IBAction)saveNewWetsuit;
 
 /// handle picker view selections *
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;
@@ -173,15 +186,18 @@ SWIFT_CLASS("_TtC11SurfLogbook12vcNewWetsuit")
 - (NSString * __nullable)pickerView:(UIPickerView * __nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
 - (void)pickerView:(UIPickerView * __nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 - (void)didReceiveMemoryWarning;
+- (IBAction)calcel:(UIBarButtonItem * __nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * __nonnull)segue sender:(id __nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIDatePicker;
+@class UISlider;
+@class UIButton;
 @class UIScrollView;
 @class UIView;
 @class UILabel;
-@class UISlider;
 @class UITextView;
 
 SWIFT_CLASS("_TtC11SurfLogbook14vcSessionEntry")
@@ -217,6 +233,15 @@ SWIFT_CLASS("_TtC11SurfLogbook14vcSessionEntry")
 
 /// handle scroll view *
 - (void)viewDidLayoutSubviews;
+
+/// Air Temp Slinder *
+- (IBAction)slinderValueChanged:(UISlider * __nonnull)sender;
+
+/// water temp slider *
+- (IBAction)waterTempSliderValueChanged:(UISlider * __nonnull)sender;
+
+/// avg people slider *
+- (IBAction)avgPeopleSliderValueChanged:(UISlider * __nonnull)sender;
 
 /// handle picker view selections wetsuit *
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;

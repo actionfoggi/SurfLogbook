@@ -7,10 +7,14 @@
 //
 
 import UIKit
-import CoreData
 
 
-class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
+    
+    
+    var wetsuitName : String!
+    var manufacturer : String!
+    var wetsuitThickness : String!
 
     @IBOutlet weak var manufacturerTextField: UITextField!
     @IBOutlet weak var wetsuitNameTextField: UITextField!
@@ -18,51 +22,17 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     let thicknessPickerView = UIPickerView()
     let thicknessOptions = WetsuitThickness.allValues
     
-    @IBOutlet weak var saveButton: UIButton!
-    
-    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         thicknessPickerView.delegate = self
         thicknessTextField.inputView = thicknessPickerView
-        
     }
     
     
-    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
-        
-        /** save content to coredata **/
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDel.managedObjectContext!
-        
-        let ent = NSEntityDescription.entityForName("Wetsuits", inManagedObjectContext: context)
-        
-        let newWetsuit = Wetsuits(entity: ent!, insertIntoManagedObjectContext: context)
-        
-        
-        newWetsuit.manufacturer = manufacturerTextField.text!
-        newWetsuit.name = wetsuitNameTextField.text!
-        newWetsuit.wetsuitThickness = thicknessTextField.text!
-        
-        do{
-            //try context.save()
-            print("newWetsuit: \(newWetsuit) ")
-        } catch {
-            print( " An error occured " )
-        }
-        
-    }
-    
-    
-    @IBAction func saveNewWetsuit(){
-        
 
-        
-    }
 
-    
-    
     /** handle picker view selections **/
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -76,12 +46,27 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         thicknessTextField.text = thicknessOptions[row].simpleDescription()
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    // MARK: - Navigation
+    
+    @IBAction func calcel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if saveButton === sender {
+            manufacturer = manufacturerTextField.text ?? ""
+            wetsuitName = wetsuitNameTextField.text ?? ""
+            wetsuitThickness = thicknessTextField.text ?? ""
+        }
     }
     
     
