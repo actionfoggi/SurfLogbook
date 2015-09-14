@@ -30,7 +30,7 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     }
     
     
-    @IBAction func saveNewWetsuit(){
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         
         /** save content to coredata **/
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -43,19 +43,24 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         
         newWetsuit.manufacturer = manufacturerTextField.text!
         newWetsuit.name = wetsuitNameTextField.text!
-        newWetsuit.wetsuitThickness = thicknessTextField.text! 
+        newWetsuit.wetsuitThickness = thicknessTextField.text!
         
         do{
-           try context.save()
+            //try context.save()
             print("newWetsuit: \(newWetsuit) ")
         } catch {
             print( " An error occured " )
         }
         
+    }
+    
+    
+    @IBAction func saveNewWetsuit(){
         
-        /** go back to wetsuit overview **/
+
         
     }
+
     
     
     /** handle picker view selections **/
