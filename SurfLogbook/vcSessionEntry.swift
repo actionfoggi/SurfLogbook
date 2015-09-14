@@ -92,6 +92,25 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.scrollView.contentSize = self.contentView.bounds.size
     }
     
+    /** Air Temp Slinder **/
+    @IBAction func slinderValueChanged(sender: UISlider) {
+        let selectedValue = Float(sender.value)
+        airTempLabel.text  = String.localizedStringWithFormat("%.1f", selectedValue)
+    }
+    
+    /** water temp slider **/
+    @IBAction func waterTempSliderValueChanged(sender: UISlider) {
+        let selectedValue = Float(sender.value)
+        waterTempLabel.text  = String.localizedStringWithFormat("%.1f", selectedValue)
+    }
+    
+    /** avg people slider **/
+    @IBAction func avgPeopleSliderValueChanged(sender: UISlider) {
+        let selectedValue = Int(sender.value)
+        avgPeopleLabel.text  = String.localizedStringWithFormat("%i", selectedValue)
+    }
+    
+    
     /** handle picker view selections wetsuit **/
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
