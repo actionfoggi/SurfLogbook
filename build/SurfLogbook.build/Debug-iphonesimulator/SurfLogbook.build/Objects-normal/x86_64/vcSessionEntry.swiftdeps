@@ -7,71 +7,72 @@ provides-member:
 - ["C11SurfLogbook14vcSessionEntry", ""]
 provides-dynamic-lookup:
 - "airTempSlider"
-- "wetsuitPickOption"
-- "commentTextView"
-- "numberOfComponentsInPickerView"
 - "avgPeopleLabel"
+- "durationPickerView"
+- "wetsuitPickOption"
+- "viewDidLayoutSubviews"
 - "viewDidLoad"
-- "contentView"
-- "waterTempSlider"
-- "pickerView"
-- "pickerView"
-- "pickerView"
-- "datePickerView"
-- "durationTextField"
-- "handleDayPicker"
-- "editingDone"
-- "didReceiveMemoryWarning"
-- "handleTimePicker"
-- "airTempLabel"
 - "timePickerView"
+- "waterTempSlider"
+- "dayTextField"
+- "dayTextField"
+- "airTempLabel"
+- "pickerView"
+- "pickerView"
+- "pickerView"
 - "avgPeopleSlider"
 - "scrollView"
-- "waterTempLabel"
-- "dayTextField"
-- "dayTextField"
-- "viewDidLayoutSubviews"
+- "datePickerView"
+- "durationTextField"
 - "editWetsuitsButton"
+- "didReceiveMemoryWarning"
+- "waterTempLabel"
 - "usedWetsuitTextField"
-- "durationPickerView"
-- "startTimeTextField"
-- "startTimeTextField"
+- "numberOfComponentsInPickerView"
+- "contentView"
+- "handleDayPicker"
+- "commentTextView"
 - "skyConditionTextField"
+- "handleTimePicker"
+- "startTimeTextField"
+- "startTimeTextField"
+- "editingDone"
 depends-top-level:
+- !private "AppDelegate"
+- !private "NSManagedObjectContext"
+- "UIPickerView"
+- !private "print"
+- !private "NSFetchRequest"
+- "UIScrollViewDelegate"
+- "UISlider"
+- !private "BooleanLiteralType"
+- !private "UIControlEvents"
+- "Array"
+- "UIPickerViewDelegate"
+- "Wetsuits"
+- !private "NSLocale"
+- !private ">"
+- "UIPickerViewDataSource"
+- "UILabel"
 - !private "NSDateFormatter"
 - "UIViewController"
-- !private "AppDelegate"
-- !private "StringLiteralType"
-- "vcSessionEntry"
-- !private "UIControlEvents"
-- "UIPickerView"
-- "UIScrollView"
-- "Array"
-- !private "print"
-- "UILabel"
-- "UIView"
-- !private "NSArray"
-- !private "NSFetchRequest"
-- "UITextField"
-- "String"
-- !private "NSLocale"
 - "UITextView"
-- !private "UIDatePickerMode"
-- "Int"
-- !private ">"
-- !private "Selector"
-- !private "UIApplication"
-- !private "BooleanLiteralType"
-- "Wetsuits"
-- "UIPickerViewDelegate"
-- "UIDatePicker"
-- "UIPickerViewDataSource"
-- "UISlider"
-- !private "NSManagedObjectContext"
-- "UIScrollViewDelegate"
-- !private "NSDateFormatterStyle"
-- "SkyConditions"
 - "UIButton"
+- !private "NSDateFormatterStyle"
+- !private "Selector"
+- !private "StringLiteralType"
+- "SkyConditions"
+- "UIScrollView"
+- !private "UIDatePickerMode"
+- "UIDatePicker"
+- !private "NSArray"
+- "Int"
+- "vcSessionEntry"
+- !private "UIApplication"
+- !private "~="
+- "UITextField"
+- "UIView"
+- "String"
 depends-member:
 - !private ["PSs9AnyObject", "Element"]
 - !private ["PSs9AnyObject", "Generator"]
@@ -116,7 +117,6 @@ depends-member:
 - !private ["PSs9AnyObject", "locale"]
 - !private ["PSs9AnyObject", "managedObjectContext"]
 - ["PSs9AnyObject", "numberOfComponentsInPickerView"]
-- ["PSs9AnyObject", "pickOption"]
 - ["PSs9AnyObject", "pickerView"]
 - !private ["PSs9AnyObject", "print"]
 - !private ["PSs9AnyObject", "resignFirstResponder"]
@@ -137,8 +137,10 @@ depends-member:
 - !private ["PSs9AnyObject", "sharedApplication"]
 - !private ["PSs9AnyObject", "simpleDescription"]
 - ["PSs9AnyObject", "skyConditionTextField"]
+- ["PSs9AnyObject", "skyconditionsPickOption"]
 - ["PSs9AnyObject", "startTimeTextField"]
 - !private ["PSs9AnyObject", "stringFromDate"]
+- !private ["PSs9AnyObject", "tag"]
 - !private ["PSs9AnyObject", "text"]
 - ["PSs9AnyObject", "timePickerView"]
 - !private ["PSs9AnyObject", "timeStyle"]
@@ -221,7 +223,6 @@ depends-member:
 - !private ["PSs11CVarArgType", "locale"]
 - !private ["PSs11CVarArgType", "managedObjectContext"]
 - ["PSs11CVarArgType", "numberOfComponentsInPickerView"]
-- ["PSs11CVarArgType", "pickOption"]
 - ["PSs11CVarArgType", "pickerView"]
 - !private ["PSs11CVarArgType", "print"]
 - !private ["PSs11CVarArgType", "resignFirstResponder"]
@@ -242,8 +243,10 @@ depends-member:
 - !private ["PSs11CVarArgType", "sharedApplication"]
 - !private ["PSs11CVarArgType", "simpleDescription"]
 - ["PSs11CVarArgType", "skyConditionTextField"]
+- ["PSs11CVarArgType", "skyconditionsPickOption"]
 - ["PSs11CVarArgType", "startTimeTextField"]
 - !private ["PSs11CVarArgType", "stringFromDate"]
+- !private ["PSs11CVarArgType", "tag"]
 - !private ["PSs11CVarArgType", "text"]
 - ["PSs11CVarArgType", "timePickerView"]
 - !private ["PSs11CVarArgType", "timeStyle"]
@@ -320,7 +323,6 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "locale"]
 - !private ["PSs23CustomStringConvertible", "managedObjectContext"]
 - ["PSs23CustomStringConvertible", "numberOfComponentsInPickerView"]
-- ["PSs23CustomStringConvertible", "pickOption"]
 - ["PSs23CustomStringConvertible", "pickerView"]
 - !private ["PSs23CustomStringConvertible", "print"]
 - !private ["PSs23CustomStringConvertible", "resignFirstResponder"]
@@ -341,9 +343,11 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "sharedApplication"]
 - !private ["PSs23CustomStringConvertible", "simpleDescription"]
 - ["PSs23CustomStringConvertible", "skyConditionTextField"]
+- ["PSs23CustomStringConvertible", "skyconditionsPickOption"]
 - ["PSs23CustomStringConvertible", "startTimeTextField"]
 - !private ["PSs23CustomStringConvertible", "stringFromDate"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
+- !private ["PSs23CustomStringConvertible", "tag"]
 - !private ["PSs23CustomStringConvertible", "text"]
 - ["PSs23CustomStringConvertible", "timePickerView"]
 - !private ["PSs23CustomStringConvertible", "timeStyle"]
@@ -355,6 +359,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "waterTempSlider"]
 - ["PSs23CustomStringConvertible", "wetsuitPickOption"]
 - ["PSs23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
 - !private ["PSs9Equatable", "Date"]
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "FullStyle"]
@@ -407,7 +412,6 @@ depends-member:
 - !private ["PSs9Equatable", "locale"]
 - !private ["PSs9Equatable", "managedObjectContext"]
 - ["PSs9Equatable", "numberOfComponentsInPickerView"]
-- ["PSs9Equatable", "pickOption"]
 - ["PSs9Equatable", "pickerView"]
 - !private ["PSs9Equatable", "print"]
 - !private ["PSs9Equatable", "resignFirstResponder"]
@@ -429,8 +433,10 @@ depends-member:
 - !private ["PSs9Equatable", "simpleDescription"]
 - !private ["PSs9Equatable", "size"]
 - ["PSs9Equatable", "skyConditionTextField"]
+- ["PSs9Equatable", "skyconditionsPickOption"]
 - ["PSs9Equatable", "startTimeTextField"]
 - !private ["PSs9Equatable", "stringFromDate"]
+- !private ["PSs9Equatable", "tag"]
 - !private ["PSs9Equatable", "text"]
 - ["PSs9Equatable", "timePickerView"]
 - !private ["PSs9Equatable", "timeStyle"]
@@ -497,7 +503,6 @@ depends-member:
 - !private ["PSs8Hashable", "locale"]
 - !private ["PSs8Hashable", "managedObjectContext"]
 - ["PSs8Hashable", "numberOfComponentsInPickerView"]
-- ["PSs8Hashable", "pickOption"]
 - ["PSs8Hashable", "pickerView"]
 - !private ["PSs8Hashable", "print"]
 - !private ["PSs8Hashable", "resignFirstResponder"]
@@ -518,8 +523,10 @@ depends-member:
 - !private ["PSs8Hashable", "sharedApplication"]
 - !private ["PSs8Hashable", "simpleDescription"]
 - ["PSs8Hashable", "skyConditionTextField"]
+- ["PSs8Hashable", "skyconditionsPickOption"]
 - ["PSs8Hashable", "startTimeTextField"]
 - !private ["PSs8Hashable", "stringFromDate"]
+- !private ["PSs8Hashable", "tag"]
 - !private ["PSs8Hashable", "text"]
 - ["PSs8Hashable", "timePickerView"]
 - !private ["PSs8Hashable", "timeStyle"]
@@ -541,6 +548,7 @@ depends-member:
 - !private ["VSs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
 - !private ["PSs21IntegerArithmeticType", "Distance"]
 - !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "Distance"]
@@ -606,7 +614,6 @@ depends-member:
 - !private ["PSo8NSCoding", "layoutIfNeeded"]
 - !private ["PSo8NSCoding", "locale"]
 - ["PSo8NSCoding", "numberOfComponentsInPickerView"]
-- ["PSo8NSCoding", "pickOption"]
 - ["PSo8NSCoding", "pickerView"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
@@ -625,8 +632,10 @@ depends-member:
 - ["PSo8NSCoding", "scrollViewWillBeginZooming"]
 - ["PSo8NSCoding", "scrollViewWillEndDragging"]
 - ["PSo8NSCoding", "skyConditionTextField"]
+- ["PSo8NSCoding", "skyconditionsPickOption"]
 - ["PSo8NSCoding", "startTimeTextField"]
 - !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo8NSCoding", "tag"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "timePickerView"]
 - !private ["PSo8NSCoding", "timeStyle"]
@@ -682,7 +691,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "handleTimePicker"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "numberOfComponentsInPickerView"]
-- ["PSo26NSExtensionRequestHandling", "pickOption"]
 - ["PSo26NSExtensionRequestHandling", "pickerView"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "scrollView"]
@@ -699,6 +707,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillBeginZooming"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewWillEndDragging"]
 - ["PSo26NSExtensionRequestHandling", "skyConditionTextField"]
+- ["PSo26NSExtensionRequestHandling", "skyconditionsPickOption"]
 - ["PSo26NSExtensionRequestHandling", "startTimeTextField"]
 - ["PSo26NSExtensionRequestHandling", "timePickerView"]
 - ["PSo26NSExtensionRequestHandling", "usedWetsuitTextField"]
@@ -725,6 +734,7 @@ depends-member:
 - !private ["CSo22NSManagedObjectContext", "executeFetchRequest"]
 - !private ["PSo16NSMutableCopying", "Generator"]
 - !private ["PSo16NSMutableCopying", "count"]
+- !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "AppDelegate"]
 - ["CSo8NSObject", "Array"]
 - !private ["CSo8NSObject", "Generator"]
@@ -766,6 +776,7 @@ depends-member:
 - ["CSo8NSObject", "datePickerView"]
 - !private ["CSo8NSObject", "dateStyle"]
 - ["CSo8NSObject", "dayTextField"]
+- !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "durationPickerView"]
@@ -781,7 +792,6 @@ depends-member:
 - !private ["CSo8NSObject", "locale"]
 - !private ["CSo8NSObject", "managedObjectContext"]
 - ["CSo8NSObject", "numberOfComponentsInPickerView"]
-- ["CSo8NSObject", "pickOption"]
 - ["CSo8NSObject", "pickerView"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
@@ -802,8 +812,10 @@ depends-member:
 - !private ["CSo8NSObject", "sharedApplication"]
 - !private ["CSo8NSObject", "simpleDescription"]
 - ["CSo8NSObject", "skyConditionTextField"]
+- ["CSo8NSObject", "skyconditionsPickOption"]
 - ["CSo8NSObject", "startTimeTextField"]
 - !private ["CSo8NSObject", "stringFromDate"]
+- !private ["CSo8NSObject", "tag"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "timePickerView"]
 - !private ["CSo8NSObject", "timeStyle"]
@@ -856,7 +868,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "locale"]
 - !private ["PSo16NSObjectProtocol", "managedObjectContext"]
 - ["PSo16NSObjectProtocol", "numberOfComponentsInPickerView"]
-- ["PSo16NSObjectProtocol", "pickOption"]
 - ["PSo16NSObjectProtocol", "pickerView"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
@@ -877,8 +888,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "sharedApplication"]
 - !private ["PSo16NSObjectProtocol", "simpleDescription"]
 - ["PSo16NSObjectProtocol", "skyConditionTextField"]
+- ["PSo16NSObjectProtocol", "skyconditionsPickOption"]
 - ["PSo16NSObjectProtocol", "startTimeTextField"]
 - !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- !private ["PSo16NSObjectProtocol", "tag"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "timePickerView"]
 - !private ["PSo16NSObjectProtocol", "timeStyle"]
@@ -895,11 +908,13 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "Generator"]
 - !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo7NSValue", "deinit"]
 - !private ["PSs21NilLiteralConvertible", "init"]
 - !private ["PSs13OptionSetType", "ValueChanged"]
 - !private ["Sq", "deinit"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["VSs5Range", "deinit"]
 - !private ["PSs30RangeReplaceableCollectionType", "Generator"]
 - !private ["PSs30RangeReplaceableCollectionType", "Index"]
 - !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
@@ -914,6 +929,7 @@ depends-member:
 - !private ["PSs16RawRepresentable", "Time"]
 - !private ["PSs16RawRepresentable", "ValueChanged"]
 - ["PSs16RawRepresentable", "allValues"]
+- !private ["PSs16RawRepresentable", "simpleDescription"]
 - !private ["V10ObjectiveC8Selector", "init"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
@@ -929,6 +945,7 @@ depends-member:
 - !private ["PSs16SignedNumberType", "Distance"]
 - !private ["PSs16SignedNumberType", "IntegerLiteralType"]
 - ["O11SurfLogbook13SkyConditions", "allValues"]
+- !private ["O11SurfLogbook13SkyConditions", "simpleDescription"]
 - !private ["VSs5Slice", "Generator"]
 - !private ["VSs5Slice", "Index"]
 - !private ["VSs5Slice", "SubSequence"]
@@ -947,6 +964,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "layoutIfNeeded"]
 - !private ["PSo29UIAccessibilityIdentification", "locale"]
 - !private ["PSo29UIAccessibilityIdentification", "resignFirstResponder"]
+- !private ["PSo29UIAccessibilityIdentification", "tag"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo12UIAppearance", "addTarget"]
 - !private ["PSo12UIAppearance", "bounds"]
@@ -959,6 +977,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "layoutIfNeeded"]
 - !private ["PSo12UIAppearance", "locale"]
 - !private ["PSo12UIAppearance", "resignFirstResponder"]
+- !private ["PSo12UIAppearance", "tag"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "NSDateFormatter"]
 - !private ["PSo21UIAppearanceContainer", "NSDateFormatterStyle"]
@@ -997,7 +1016,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "layoutIfNeeded"]
 - !private ["PSo21UIAppearanceContainer", "locale"]
 - ["PSo21UIAppearanceContainer", "numberOfComponentsInPickerView"]
-- ["PSo21UIAppearanceContainer", "pickOption"]
 - ["PSo21UIAppearanceContainer", "pickerView"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
@@ -1015,7 +1033,9 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "scrollViewWillBeginZooming"]
 - ["PSo21UIAppearanceContainer", "scrollViewWillEndDragging"]
 - ["PSo21UIAppearanceContainer", "skyConditionTextField"]
+- ["PSo21UIAppearanceContainer", "skyconditionsPickOption"]
 - ["PSo21UIAppearanceContainer", "startTimeTextField"]
+- !private ["PSo21UIAppearanceContainer", "tag"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "timePickerView"]
 - ["PSo21UIAppearanceContainer", "usedWetsuitTextField"]
@@ -1057,7 +1077,6 @@ depends-member:
 - ["PSo18UIContentContainer", "handleTimePicker"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "numberOfComponentsInPickerView"]
-- ["PSo18UIContentContainer", "pickOption"]
 - ["PSo18UIContentContainer", "pickerView"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "scrollView"]
@@ -1074,6 +1093,7 @@ depends-member:
 - ["PSo18UIContentContainer", "scrollViewWillBeginZooming"]
 - ["PSo18UIContentContainer", "scrollViewWillEndDragging"]
 - ["PSo18UIContentContainer", "skyConditionTextField"]
+- ["PSo18UIContentContainer", "skyconditionsPickOption"]
 - ["PSo18UIContentContainer", "startTimeTextField"]
 - ["PSo18UIContentContainer", "timePickerView"]
 - ["PSo18UIContentContainer", "usedWetsuitTextField"]
@@ -1104,6 +1124,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "layoutIfNeeded"]
 - !private ["PSo17UICoordinateSpace", "locale"]
 - !private ["PSo17UICoordinateSpace", "resignFirstResponder"]
+- !private ["PSo17UICoordinateSpace", "tag"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["CSo12UIDatePicker", "addTarget"]
 - !private ["CSo12UIDatePicker", "date"]
@@ -1123,12 +1144,14 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "layoutIfNeeded"]
 - !private ["PSo13UIDynamicItem", "locale"]
 - !private ["PSo13UIDynamicItem", "resignFirstResponder"]
+- !private ["PSo13UIDynamicItem", "tag"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo10UIKeyInput", "inputView"]
 - !private ["PSo10UIKeyInput", "resignFirstResponder"]
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["CSo12UIPickerView", "delegate"]
 - !private ["CSo12UIPickerView", "init"]
+- !private ["CSo12UIPickerView", "tag"]
 - !private ["PSo22UIPickerViewDataSource", "NSDateFormatter"]
 - !private ["PSo22UIPickerViewDataSource", "NSDateFormatterStyle"]
 - !private ["PSo22UIPickerViewDataSource", "NSFetchRequest"]
@@ -1160,6 +1183,7 @@ depends-member:
 - ["PSo22UIPickerViewDataSource", "scrollViewWillBeginZooming"]
 - ["PSo22UIPickerViewDataSource", "scrollViewWillEndDragging"]
 - !private ["PSo22UIPickerViewDataSource", "skyConditionTextField"]
+- !private ["PSo22UIPickerViewDataSource", "skyconditionsPickOption"]
 - !private ["PSo22UIPickerViewDataSource", "startTimeTextField"]
 - !private ["PSo22UIPickerViewDataSource", "timePickerView"]
 - !private ["PSo22UIPickerViewDataSource", "usedWetsuitTextField"]
@@ -1197,6 +1221,7 @@ depends-member:
 - ["PSo20UIPickerViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo20UIPickerViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo20UIPickerViewDelegate", "skyConditionTextField"]
+- !private ["PSo20UIPickerViewDelegate", "skyconditionsPickOption"]
 - !private ["PSo20UIPickerViewDelegate", "startTimeTextField"]
 - !private ["PSo20UIPickerViewDelegate", "timePickerView"]
 - !private ["PSo20UIPickerViewDelegate", "usedWetsuitTextField"]
@@ -1255,7 +1280,6 @@ depends-member:
 - !private ["CSo11UIResponder", "locale"]
 - !private ["CSo11UIResponder", "managedObjectContext"]
 - ["CSo11UIResponder", "numberOfComponentsInPickerView"]
-- ["CSo11UIResponder", "pickOption"]
 - ["CSo11UIResponder", "pickerView"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
@@ -1274,7 +1298,9 @@ depends-member:
 - ["CSo11UIResponder", "scrollViewWillEndDragging"]
 - !private ["CSo11UIResponder", "sharedApplication"]
 - ["CSo11UIResponder", "skyConditionTextField"]
+- ["CSo11UIResponder", "skyconditionsPickOption"]
 - ["CSo11UIResponder", "startTimeTextField"]
+- !private ["CSo11UIResponder", "tag"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "timePickerView"]
 - ["CSo11UIResponder", "usedWetsuitTextField"]
@@ -1317,6 +1343,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "scrollViewWillBeginZooming"]
 - ["PSo20UIScrollViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo20UIScrollViewDelegate", "skyConditionTextField"]
+- !private ["PSo20UIScrollViewDelegate", "skyconditionsPickOption"]
 - !private ["PSo20UIScrollViewDelegate", "startTimeTextField"]
 - !private ["PSo20UIScrollViewDelegate", "timePickerView"]
 - !private ["PSo20UIScrollViewDelegate", "usedWetsuitTextField"]
@@ -1351,7 +1378,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "handleTimePicker"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "numberOfComponentsInPickerView"]
-- ["PSo16UIStateRestoring", "pickOption"]
 - ["PSo16UIStateRestoring", "pickerView"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "scrollView"]
@@ -1368,6 +1394,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "scrollViewWillBeginZooming"]
 - ["PSo16UIStateRestoring", "scrollViewWillEndDragging"]
 - ["PSo16UIStateRestoring", "skyConditionTextField"]
+- ["PSo16UIStateRestoring", "skyconditionsPickOption"]
 - ["PSo16UIStateRestoring", "startTimeTextField"]
 - ["PSo16UIStateRestoring", "timePickerView"]
 - ["PSo16UIStateRestoring", "usedWetsuitTextField"]
@@ -1380,6 +1407,7 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo21UITableViewDataSource", "delegate"]
 - !private ["PSo21UITableViewDataSource", "init"]
+- !private ["PSo21UITableViewDataSource", "tag"]
 - !private ["CSo11UITextField", "inputView"]
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
@@ -1426,7 +1454,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "layoutIfNeeded"]
 - !private ["PSo18UITraitEnvironment", "locale"]
 - ["PSo18UITraitEnvironment", "numberOfComponentsInPickerView"]
-- ["PSo18UITraitEnvironment", "pickOption"]
 - ["PSo18UITraitEnvironment", "pickerView"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
@@ -1444,7 +1471,9 @@ depends-member:
 - ["PSo18UITraitEnvironment", "scrollViewWillBeginZooming"]
 - ["PSo18UITraitEnvironment", "scrollViewWillEndDragging"]
 - ["PSo18UITraitEnvironment", "skyConditionTextField"]
+- ["PSo18UITraitEnvironment", "skyconditionsPickOption"]
 - ["PSo18UITraitEnvironment", "startTimeTextField"]
+- !private ["PSo18UITraitEnvironment", "tag"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "timePickerView"]
 - ["PSo18UITraitEnvironment", "usedWetsuitTextField"]
@@ -1466,6 +1495,7 @@ depends-member:
 - !private ["CSo6UIView", "layoutIfNeeded"]
 - !private ["CSo6UIView", "locale"]
 - !private ["CSo6UIView", "resignFirstResponder"]
+- !private ["CSo6UIView", "tag"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo16UIViewController", "AppDelegate"]
 - ["CSo16UIViewController", "Array"]
@@ -1509,7 +1539,6 @@ depends-member:
 - ["CSo16UIViewController", "handleTimePicker"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "numberOfComponentsInPickerView"]
-- ["CSo16UIViewController", "pickOption"]
 - ["CSo16UIViewController", "pickerView"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "scrollView"]
@@ -1526,6 +1555,7 @@ depends-member:
 - ["CSo16UIViewController", "scrollViewWillBeginZooming"]
 - ["CSo16UIViewController", "scrollViewWillEndDragging"]
 - ["CSo16UIViewController", "skyConditionTextField"]
+- ["CSo16UIViewController", "skyconditionsPickOption"]
 - ["CSo16UIViewController", "startTimeTextField"]
 - ["CSo16UIViewController", "timePickerView"]
 - ["CSo16UIViewController", "usedWetsuitTextField"]
@@ -1571,6 +1601,7 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "append"]
 - !private ["PSs21_ObjectiveCBridgeable", "count"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
+- !private ["VSs26_OptionalNilComparisonType", "deinit"]
 - !private ["PSs12_Reflectable", "Distance"]
 - !private ["PSs12_Reflectable", "Generator"]
 - !private ["PSs12_Reflectable", "Index"]
@@ -1593,6 +1624,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "resignFirstResponder"]
 - !private ["PSs12_Reflectable", "size"]
 - !private ["PSs12_Reflectable", "subscript"]
+- !private ["PSs12_Reflectable", "tag"]
 - !private ["PSs12_Reflectable", "text"]
 - !private ["PSs18_SignedIntegerType", "Distance"]
 - !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
@@ -1641,7 +1673,6 @@ depends-member:
 - ["C11SurfLogbook14vcSessionEntry", "handleTimePicker"]
 - ["C11SurfLogbook14vcSessionEntry", "init"]
 - ["C11SurfLogbook14vcSessionEntry", "numberOfComponentsInPickerView"]
-- ["C11SurfLogbook14vcSessionEntry", "pickOption"]
 - ["C11SurfLogbook14vcSessionEntry", "pickerView"]
 - !private ["C11SurfLogbook14vcSessionEntry", "print"]
 - ["C11SurfLogbook14vcSessionEntry", "scrollView"]
@@ -1658,6 +1689,7 @@ depends-member:
 - ["C11SurfLogbook14vcSessionEntry", "scrollViewWillBeginZooming"]
 - ["C11SurfLogbook14vcSessionEntry", "scrollViewWillEndDragging"]
 - ["C11SurfLogbook14vcSessionEntry", "skyConditionTextField"]
+- ["C11SurfLogbook14vcSessionEntry", "skyconditionsPickOption"]
 - ["C11SurfLogbook14vcSessionEntry", "startTimeTextField"]
 - ["C11SurfLogbook14vcSessionEntry", "timePickerView"]
 - ["C11SurfLogbook14vcSessionEntry", "usedWetsuitTextField"]
@@ -1684,6 +1716,7 @@ depends-nominal:
 - !private "PSs10Comparable"
 - !private "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
+- !private "Sd"
 - "PSs9Equatable"
 - !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
 - !private "PSs16ForwardIndexType"
@@ -1713,14 +1746,17 @@ depends-nominal:
 - !private "CSo15NSManagedObject"
 - !private "CSo22NSManagedObjectContext"
 - !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "CSo24NSPersistentStoreRequest"
 - !private "PSo14NSSecureCoding"
+- !private "CSo7NSValue"
 - !private "PSs21NilLiteralConvertible"
 - !private "PSs13OptionSetType"
 - !private "Sq"
 - !private "PSs21RandomAccessIndexType"
+- !private "VSs5Range"
 - !private "PSs30RangeReplaceableCollectionType"
 - "PSs16RawRepresentable"
 - !private "V10ObjectiveC8Selector"
@@ -1769,6 +1805,7 @@ depends-nominal:
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
 - !private "PSs21_ObjectiveCBridgeable"
+- !private "VSs26_OptionalNilComparisonType"
 - !private "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
@@ -1788,12 +1825,12 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/module.map"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "c4e5bcb41177385df912a3970daa2248"
+interface-hash: "e3b4b2dc2c801b35d0e1e7f41d5a8930"

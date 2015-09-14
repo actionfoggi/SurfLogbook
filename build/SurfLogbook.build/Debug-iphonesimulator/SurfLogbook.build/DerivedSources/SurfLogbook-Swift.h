@@ -127,13 +127,6 @@ typedef SWIFT_ENUM(int32_t, SkyConditions) {
   SkyConditionsHeavy_snow = 6,
 };
 
-typedef SWIFT_ENUM(int32_t, Thickness) {
-  Thicknessmm_3_2 = 0,
-  Thicknessmm_4_3 = 1,
-  Thicknessmm_5_4 = 2,
-  Thicknessmm_6_5 = 3,
-};
-
 @class UITableView;
 @class NSBundle;
 @class NSCoder;
@@ -149,14 +142,13 @@ SWIFT_CLASS("_TtC11SurfLogbook26WetsuitTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSNumber;
 @class NSEntityDescription;
 
 SWIFT_CLASS("_TtC11SurfLogbook8Wetsuits")
 @interface Wetsuits : NSManagedObject
 @property (nonatomic, copy) NSString * __nonnull name;
 @property (nonatomic, copy) NSString * __nonnull manufacturer;
-@property (nonatomic) NSNumber * __nonnull thickness;
+@property (nonatomic, copy) NSString * __nonnull wetsuitThickness;
 - (NSString * __nonnull)simpleDescription;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -231,6 +223,8 @@ SWIFT_CLASS("_TtC11SurfLogbook14vcSessionEntry")
 - (NSInteger)pickerView:(UIPickerView * __nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
 - (NSString * __nullable)pickerView:(UIPickerView * __nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
 - (void)pickerView:(UIPickerView * __nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+
+/// handle day picker selection *
 - (IBAction)dayTextField:(UITextField * __nonnull)sender;
 - (void)handleDayPicker:(UIDatePicker * __nonnull)sender;
 

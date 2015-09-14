@@ -6,44 +6,42 @@ provides-nominal:
 provides-member:
 - ["C11SurfLogbook12vcNewWetsuit", ""]
 provides-dynamic-lookup:
-- "manufacturerTextField"
-- "saveButton"
-- "didReceiveMemoryWarning"
-- "viewDidLoad"
-- "thicknessPickerView"
-- "saveNewWetsuit"
-- "pickerView"
-- "pickerView"
-- "pickerView"
-- "wetsuitNameTextField"
-- "thicknessTextField"
 - "numberOfComponentsInPickerView"
+- "wetsuitNameTextField"
+- "didReceiveMemoryWarning"
+- "pickerView"
+- "pickerView"
+- "pickerView"
+- "thicknessPickerView"
+- "saveButton"
+- "manufacturerTextField"
+- "saveNewWetsuit"
+- "viewDidLoad"
+- "thicknessTextField"
 depends-top-level:
-- !private "StringLiteralType"
+- "WetsuitThickness"
+- !private "NSEntityDescription"
+- "vcNewWetsuit"
+- "UITextField"
+- !private "UIApplication"
 - !private "print"
-- "Thickness"
-- !private "NSNumber"
-- !private "UnicodeScalarType"
+- "String"
+- "UIPickerView"
+- !private "NSManagedObjectContext"
+- !private "Wetsuits"
+- "UIViewController"
+- "Int"
 - !private "AppDelegate"
 - "UIButton"
-- "Int"
-- "String"
-- "vcNewWetsuit"
-- "UIViewController"
-- !private "NSManagedObjectContext"
-- "UIPickerView"
-- !private "Wetsuits"
+- !private "StringLiteralType"
 - "UIPickerViewDataSource"
-- "UITextField"
-- !private "NSEntityDescription"
-- !private "UIApplication"
+- !private "UnicodeScalarType"
 - "UIPickerViewDelegate"
 depends-member:
 - !private ["PSs9AnyObject", "NSEntityDescription"]
-- !private ["PSs9AnyObject", "NSNumber"]
-- ["PSs9AnyObject", "Thickness"]
 - !private ["PSs9AnyObject", "UIApplication"]
 - ["PSs9AnyObject", "UIPickerView"]
+- ["PSs9AnyObject", "WetsuitThickness"]
 - !private ["PSs9AnyObject", "Wetsuits"]
 - !private ["PSs9AnyObject", "delegate"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
@@ -62,12 +60,12 @@ depends-member:
 - ["PSs9AnyObject", "saveNewWetsuit"]
 - !private ["PSs9AnyObject", "sharedApplication"]
 - !private ["PSs9AnyObject", "text"]
-- !private ["PSs9AnyObject", "thickness"]
 - ["PSs9AnyObject", "thicknessOptions"]
 - ["PSs9AnyObject", "thicknessPickerView"]
 - ["PSs9AnyObject", "thicknessTextField"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", "wetsuitNameTextField"]
+- !private ["PSs9AnyObject", "wetsuitThickness"]
 - ["PSs9AnyObject", ""]
 - !private ["C11SurfLogbook11AppDelegate", "managedObjectContext"]
 - !private ["Sa", "Generator"]
@@ -88,14 +86,12 @@ depends-member:
 - !private ["PSs21BitwiseOperationsType", "Distance"]
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "deinit"]
-- !private ["PSs25BooleanLiteralConvertible", "init"]
 - !private ["PSs11CVarArgType", "Distance"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSEntityDescription"]
-- !private ["PSs11CVarArgType", "NSNumber"]
-- ["PSs11CVarArgType", "Thickness"]
 - !private ["PSs11CVarArgType", "UIApplication"]
 - ["PSs11CVarArgType", "UIPickerView"]
+- ["PSs11CVarArgType", "WetsuitThickness"]
 - !private ["PSs11CVarArgType", "Wetsuits"]
 - !private ["PSs11CVarArgType", "delegate"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
@@ -114,12 +110,12 @@ depends-member:
 - ["PSs11CVarArgType", "saveNewWetsuit"]
 - !private ["PSs11CVarArgType", "sharedApplication"]
 - !private ["PSs11CVarArgType", "text"]
-- !private ["PSs11CVarArgType", "thickness"]
 - ["PSs11CVarArgType", "thicknessOptions"]
 - ["PSs11CVarArgType", "thicknessPickerView"]
 - ["PSs11CVarArgType", "thicknessTextField"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", "wetsuitNameTextField"]
+- !private ["PSs11CVarArgType", "wetsuitThickness"]
 - ["PSs11CVarArgType", ""]
 - !private ["VSs9Character", "deinit"]
 - !private ["PSs14CollectionType", "Generator"]
@@ -142,11 +138,10 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "Index"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "NSEntityDescription"]
-- !private ["PSs23CustomStringConvertible", "NSNumber"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
-- ["PSs23CustomStringConvertible", "Thickness"]
 - !private ["PSs23CustomStringConvertible", "UIApplication"]
 - ["PSs23CustomStringConvertible", "UIPickerView"]
+- ["PSs23CustomStringConvertible", "WetsuitThickness"]
 - !private ["PSs23CustomStringConvertible", "Wetsuits"]
 - !private ["PSs23CustomStringConvertible", "count"]
 - !private ["PSs23CustomStringConvertible", "delegate"]
@@ -167,27 +162,25 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "sharedApplication"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "text"]
-- !private ["PSs23CustomStringConvertible", "thickness"]
 - ["PSs23CustomStringConvertible", "thicknessOptions"]
 - ["PSs23CustomStringConvertible", "thicknessPickerView"]
 - ["PSs23CustomStringConvertible", "thicknessTextField"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", "wetsuitNameTextField"]
+- !private ["PSs23CustomStringConvertible", "wetsuitThickness"]
 - ["PSs23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSEntityDescription"]
-- !private ["PSs9Equatable", "NSNumber"]
-- ["PSs9Equatable", "Thickness"]
 - !private ["PSs9Equatable", "UIApplication"]
 - ["PSs9Equatable", "UIPickerView"]
+- ["PSs9Equatable", "WetsuitThickness"]
 - !private ["PSs9Equatable", "Wetsuits"]
 - ["PSs9Equatable", "allValues"]
 - !private ["PSs9Equatable", "delegate"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "entityForName"]
-- !private ["PSs9Equatable", "getValue"]
 - ["PSs9Equatable", "init"]
 - !private ["PSs9Equatable", "inputView"]
 - !private ["PSs9Equatable", "managedObjectContext"]
@@ -203,32 +196,29 @@ depends-member:
 - !private ["PSs9Equatable", "sharedApplication"]
 - !private ["PSs9Equatable", "simpleDescription"]
 - !private ["PSs9Equatable", "text"]
-- !private ["PSs9Equatable", "thickness"]
 - ["PSs9Equatable", "thicknessOptions"]
 - ["PSs9Equatable", "thicknessPickerView"]
 - ["PSs9Equatable", "thicknessTextField"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", "wetsuitNameTextField"]
+- !private ["PSs9Equatable", "wetsuitThickness"]
 - ["PSs9Equatable", ""]
 - !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
-- !private ["PSs23FloatLiteralConvertible", "init"]
 - !private ["PSs16ForwardIndexType", "Distance"]
 - !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
 - !private ["PSs13GeneratorType", "Element"]
 - !private ["PSs8Hashable", "Distance"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSEntityDescription"]
-- !private ["PSs8Hashable", "NSNumber"]
-- ["PSs8Hashable", "Thickness"]
 - !private ["PSs8Hashable", "UIApplication"]
 - ["PSs8Hashable", "UIPickerView"]
+- ["PSs8Hashable", "WetsuitThickness"]
 - !private ["PSs8Hashable", "Wetsuits"]
 - ["PSs8Hashable", "allValues"]
 - !private ["PSs8Hashable", "delegate"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "entityForName"]
-- !private ["PSs8Hashable", "getValue"]
 - ["PSs8Hashable", "init"]
 - !private ["PSs8Hashable", "inputView"]
 - !private ["PSs8Hashable", "managedObjectContext"]
@@ -244,12 +234,12 @@ depends-member:
 - !private ["PSs8Hashable", "sharedApplication"]
 - !private ["PSs8Hashable", "simpleDescription"]
 - !private ["PSs8Hashable", "text"]
-- !private ["PSs8Hashable", "thickness"]
 - ["PSs8Hashable", "thicknessOptions"]
 - ["PSs8Hashable", "thicknessPickerView"]
 - ["PSs8Hashable", "thicknessTextField"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", "wetsuitNameTextField"]
+- !private ["PSs8Hashable", "wetsuitThickness"]
 - ["PSs8Hashable", ""]
 - !private ["PSs9Indexable", "Generator"]
 - !private ["PSs9Indexable", "Index"]
@@ -269,7 +259,6 @@ depends-member:
 - !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "Distance"]
 - !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs25IntegerLiteralConvertible", "init"]
 - !private ["PSs11IntegerType", "Distance"]
 - !private ["PSs11IntegerType", "IntegerLiteralType"]
 - !private ["PSs14MirrorPathType", "Distance"]
@@ -286,10 +275,9 @@ depends-member:
 - !private ["PSs16MutableSliceable", "count"]
 - !private ["PSs16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "NSEntityDescription"]
-- !private ["PSo8NSCoding", "NSNumber"]
-- ["PSo8NSCoding", "Thickness"]
 - !private ["PSo8NSCoding", "UIApplication"]
 - ["PSo8NSCoding", "UIPickerView"]
+- ["PSo8NSCoding", "WetsuitThickness"]
 - !private ["PSo8NSCoding", "Wetsuits"]
 - !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
@@ -314,10 +302,9 @@ depends-member:
 - !private ["PSo9NSCopying", "init"]
 - !private ["CSo19NSEntityDescription", "entityForName"]
 - !private ["PSo26NSExtensionRequestHandling", "NSEntityDescription"]
-- !private ["PSo26NSExtensionRequestHandling", "NSNumber"]
-- ["PSo26NSExtensionRequestHandling", "Thickness"]
 - !private ["PSo26NSExtensionRequestHandling", "UIApplication"]
 - ["PSo26NSExtensionRequestHandling", "UIPickerView"]
+- ["PSo26NSExtensionRequestHandling", "WetsuitThickness"]
 - !private ["PSo26NSExtensionRequestHandling", "Wetsuits"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -338,21 +325,19 @@ depends-member:
 - !private ["CSo15NSManagedObject", "init"]
 - !private ["CSo15NSManagedObject", "manufacturer"]
 - !private ["CSo15NSManagedObject", "name"]
-- !private ["CSo15NSManagedObject", "thickness"]
+- !private ["CSo15NSManagedObject", "wetsuitThickness"]
 - !private ["CSo22NSManagedObjectContext", "save"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSNumber", "init"]
 - !private ["CSo8NSObject", "AppDelegate"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "NSEntityDescription"]
 - !private ["CSo8NSObject", "NSManagedObjectContext"]
-- !private ["CSo8NSObject", "NSNumber"]
 - ["CSo8NSObject", "String"]
-- ["CSo8NSObject", "Thickness"]
 - !private ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UIPickerView"]
 - ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "WetsuitThickness"]
 - !private ["CSo8NSObject", "Wetsuits"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
@@ -371,17 +356,16 @@ depends-member:
 - ["CSo8NSObject", "saveNewWetsuit"]
 - !private ["CSo8NSObject", "sharedApplication"]
 - !private ["CSo8NSObject", "text"]
-- !private ["CSo8NSObject", "thickness"]
 - ["CSo8NSObject", "thicknessOptions"]
 - ["CSo8NSObject", "thicknessPickerView"]
 - ["CSo8NSObject", "thicknessTextField"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "wetsuitNameTextField"]
+- !private ["CSo8NSObject", "wetsuitThickness"]
 - !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
-- !private ["PSo16NSObjectProtocol", "NSNumber"]
-- ["PSo16NSObjectProtocol", "Thickness"]
 - !private ["PSo16NSObjectProtocol", "UIApplication"]
 - ["PSo16NSObjectProtocol", "UIPickerView"]
+- ["PSo16NSObjectProtocol", "WetsuitThickness"]
 - !private ["PSo16NSObjectProtocol", "Wetsuits"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
@@ -400,16 +384,15 @@ depends-member:
 - ["PSo16NSObjectProtocol", "saveNewWetsuit"]
 - !private ["PSo16NSObjectProtocol", "sharedApplication"]
 - !private ["PSo16NSObjectProtocol", "text"]
-- !private ["PSo16NSObjectProtocol", "thickness"]
 - ["PSo16NSObjectProtocol", "thicknessOptions"]
 - ["PSo16NSObjectProtocol", "thicknessPickerView"]
 - ["PSo16NSObjectProtocol", "thicknessTextField"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "wetsuitNameTextField"]
+- !private ["PSo16NSObjectProtocol", "wetsuitThickness"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
-- !private ["CSo7NSValue", "init"]
 - !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "init"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
@@ -420,7 +403,6 @@ depends-member:
 - !private ["PSs30RangeReplaceableCollectionType", "count"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
 - ["PSs16RawRepresentable", "allValues"]
-- !private ["PSs16RawRepresentable", "getValue"]
 - !private ["PSs16RawRepresentable", "simpleDescription"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
@@ -443,9 +425,6 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["PSs30StringInterpolationConvertible", "init"]
 - !private ["PSs24StringLiteralConvertible", "init"]
-- ["O11SurfLogbook9Thickness", "allValues"]
-- !private ["O11SurfLogbook9Thickness", "getValue"]
-- !private ["O11SurfLogbook9Thickness", "simpleDescription"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "inputView"]
@@ -455,10 +434,9 @@ depends-member:
 - !private ["PSo12UIAppearance", "inputView"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo21UIAppearanceContainer", "NSEntityDescription"]
-- !private ["PSo21UIAppearanceContainer", "NSNumber"]
-- ["PSo21UIAppearanceContainer", "Thickness"]
 - !private ["PSo21UIAppearanceContainer", "UIApplication"]
 - ["PSo21UIAppearanceContainer", "UIPickerView"]
+- ["PSo21UIAppearanceContainer", "WetsuitThickness"]
 - !private ["PSo21UIAppearanceContainer", "Wetsuits"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
@@ -481,10 +459,9 @@ depends-member:
 - !private ["CSo13UIApplication", "sharedApplication"]
 - !private ["PSo21UIApplicationDelegate", "managedObjectContext"]
 - !private ["PSo18UIContentContainer", "NSEntityDescription"]
-- !private ["PSo18UIContentContainer", "NSNumber"]
-- ["PSo18UIContentContainer", "Thickness"]
 - !private ["PSo18UIContentContainer", "UIApplication"]
 - ["PSo18UIContentContainer", "UIPickerView"]
+- ["PSo18UIContentContainer", "WetsuitThickness"]
 - !private ["PSo18UIContentContainer", "Wetsuits"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
@@ -515,10 +492,9 @@ depends-member:
 - !private ["CSo12UIPickerView", "delegate"]
 - ["CSo12UIPickerView", "init"]
 - !private ["PSo22UIPickerViewDataSource", "NSEntityDescription"]
-- !private ["PSo22UIPickerViewDataSource", "NSNumber"]
-- ["PSo22UIPickerViewDataSource", "Thickness"]
 - !private ["PSo22UIPickerViewDataSource", "UIApplication"]
 - ["PSo22UIPickerViewDataSource", "UIPickerView"]
+- ["PSo22UIPickerViewDataSource", "WetsuitThickness"]
 - !private ["PSo22UIPickerViewDataSource", "Wetsuits"]
 - !private ["PSo22UIPickerViewDataSource", "manufacturerTextField"]
 - ["PSo22UIPickerViewDataSource", "numberOfComponentsInPickerView"]
@@ -530,10 +506,9 @@ depends-member:
 - !private ["PSo22UIPickerViewDataSource", "wetsuitNameTextField"]
 - ["PSo22UIPickerViewDataSource", ""]
 - !private ["PSo20UIPickerViewDelegate", "NSEntityDescription"]
-- !private ["PSo20UIPickerViewDelegate", "NSNumber"]
-- ["PSo20UIPickerViewDelegate", "Thickness"]
 - !private ["PSo20UIPickerViewDelegate", "UIApplication"]
 - ["PSo20UIPickerViewDelegate", "UIPickerView"]
+- ["PSo20UIPickerViewDelegate", "WetsuitThickness"]
 - !private ["PSo20UIPickerViewDelegate", "Wetsuits"]
 - !private ["PSo20UIPickerViewDelegate", "manufacturerTextField"]
 - ["PSo20UIPickerViewDelegate", "numberOfComponentsInPickerView"]
@@ -548,13 +523,12 @@ depends-member:
 - ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "NSEntityDescription"]
 - !private ["CSo11UIResponder", "NSManagedObjectContext"]
-- !private ["CSo11UIResponder", "NSNumber"]
 - ["CSo11UIResponder", "String"]
-- ["CSo11UIResponder", "Thickness"]
 - !private ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UIPickerView"]
 - ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "WetsuitThickness"]
 - !private ["CSo11UIResponder", "Wetsuits"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
@@ -575,10 +549,9 @@ depends-member:
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "wetsuitNameTextField"]
 - !private ["PSo16UIStateRestoring", "NSEntityDescription"]
-- !private ["PSo16UIStateRestoring", "NSNumber"]
-- ["PSo16UIStateRestoring", "Thickness"]
 - !private ["PSo16UIStateRestoring", "UIApplication"]
 - ["PSo16UIStateRestoring", "UIPickerView"]
+- ["PSo16UIStateRestoring", "WetsuitThickness"]
 - !private ["PSo16UIStateRestoring", "Wetsuits"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
@@ -603,10 +576,9 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "inputView"]
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo18UITraitEnvironment", "NSEntityDescription"]
-- !private ["PSo18UITraitEnvironment", "NSNumber"]
-- ["PSo18UITraitEnvironment", "Thickness"]
 - !private ["PSo18UITraitEnvironment", "UIApplication"]
 - ["PSo18UITraitEnvironment", "UIPickerView"]
+- ["PSo18UITraitEnvironment", "WetsuitThickness"]
 - !private ["PSo18UITraitEnvironment", "Wetsuits"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
@@ -633,13 +605,12 @@ depends-member:
 - ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "NSEntityDescription"]
 - !private ["CSo16UIViewController", "NSManagedObjectContext"]
-- !private ["CSo16UIViewController", "NSNumber"]
 - ["CSo16UIViewController", "String"]
-- ["CSo16UIViewController", "Thickness"]
 - !private ["CSo16UIViewController", "UIApplication"]
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UIPickerView"]
 - ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "WetsuitThickness"]
 - !private ["CSo16UIViewController", "Wetsuits"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
@@ -662,10 +633,12 @@ depends-member:
 - !private ["VSs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- ["O11SurfLogbook16WetsuitThickness", "allValues"]
+- !private ["O11SurfLogbook16WetsuitThickness", "simpleDescription"]
 - !private ["C11SurfLogbook8Wetsuits", "init"]
 - !private ["C11SurfLogbook8Wetsuits", "manufacturer"]
 - !private ["C11SurfLogbook8Wetsuits", "name"]
-- !private ["C11SurfLogbook8Wetsuits", "thickness"]
+- !private ["C11SurfLogbook8Wetsuits", "wetsuitThickness"]
 - !private ["PSs10_ArrayType", "Generator"]
 - !private ["PSs10_ArrayType", "Index"]
 - !private ["PSs10_ArrayType", "SubSequence"]
@@ -716,13 +689,12 @@ depends-member:
 - ["C11SurfLogbook12vcNewWetsuit", "Int"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "NSEntityDescription"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "NSManagedObjectContext"]
-- !private ["C11SurfLogbook12vcNewWetsuit", "NSNumber"]
 - ["C11SurfLogbook12vcNewWetsuit", "String"]
-- ["C11SurfLogbook12vcNewWetsuit", "Thickness"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "UIApplication"]
 - ["C11SurfLogbook12vcNewWetsuit", "UIButton"]
 - ["C11SurfLogbook12vcNewWetsuit", "UIPickerView"]
 - ["C11SurfLogbook12vcNewWetsuit", "UITextField"]
+- ["C11SurfLogbook12vcNewWetsuit", "WetsuitThickness"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "Wetsuits"]
 - ["C11SurfLogbook12vcNewWetsuit", "deinit"]
 - ["C11SurfLogbook12vcNewWetsuit", "didReceiveMemoryWarning"]
@@ -747,7 +719,6 @@ depends-nominal:
 - !private "PSs22BidirectionalIndexType"
 - !private "PSs21BitwiseOperationsType"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
 - "PSs11CVarArgType"
 - !private "VSs9Character"
 - !private "PSs14CollectionType"
@@ -758,7 +729,6 @@ depends-nominal:
 - "PSs9Equatable"
 - !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
-- !private "PSs23FloatLiteralConvertible"
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
 - "PSs8Hashable"
@@ -784,12 +754,10 @@ depends-nominal:
 - !private "CSo15NSManagedObject"
 - !private "CSo22NSManagedObjectContext"
 - !private "PSo16NSMutableCopying"
-- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- !private "CSo7NSValue"
 - !private "Sq"
 - !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
@@ -804,7 +772,6 @@ depends-nominal:
 - !private "SS"
 - !private "PSs30StringInterpolationConvertible"
 - !private "PSs24StringLiteralConvertible"
-- "O11SurfLogbook9Thickness"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -834,6 +801,7 @@ depends-nominal:
 - !private "VSs5UInt8"
 - !private "Sc"
 - !private "PSs31UnicodeScalarLiteralConvertible"
+- "O11SurfLogbook16WetsuitThickness"
 - !private "C11SurfLogbook8Wetsuits"
 - !private "PSs10_ArrayType"
 - !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
@@ -866,12 +834,12 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/module.map"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "3f51f3d7eb0a92519ff3951862aec816"
+interface-hash: "71358cf3468c0716cc15e351077c9315"
