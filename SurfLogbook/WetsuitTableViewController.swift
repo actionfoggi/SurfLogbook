@@ -73,34 +73,104 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
         super.didReceiveMemoryWarning()
     }
     
-    
-    // MARK: - navigation
-    // go back from the wetsuit overview
-    @IBAction func goBack(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     @IBAction func unwindToWetsuitList(sender: UIStoryboardSegue) {
         
         if let sourceViewController = sender.sourceViewController as? vcNewWetsuit{
-            let wetsuitName = sourceViewController.wetsuitName
-            let manufacturer = sourceViewController.manufacturer
-            let wetsuitThickness = sourceViewController.wetsuitThickness
             
-            let newWetsuit =  NSEntityDescription.insertNewObjectForEntityForName("Wetsuits", inManagedObjectContext: managedObjectContext!) as! Wetsuits
-            newWetsuit.name = wetsuitName
-            newWetsuit.manufacturer = manufacturer
-            newWetsuit.wetsuitThickness = wetsuitThickness
-            
-            do{
+            //Check whether ther is a new wetsuit or update one
+            if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                /** update an existing wetsuit **/
                 
-                try managedObjectContext?.save()
-            }catch{
-                print("error while saving")
+                let fetchRequest = NSFetchRequest(entityName: "Wetsuits")
+                let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+                fetchRequest.sortDescriptors = [sortDescriptor]
+                
+                // Create a new predicate that filters out any object that
+                // doesn't have a title of "Best Language" exactly.
+                let namePredicate = NSPredicate(format: "name == %@", sourceViewController.wetsuitName)
+                let manufacturerPredicate = NSPredicate(format: "manufacturer == %@", sourceViewController.manufacturer)
+                let thicknessPredicate = NSPredicate(format: "wetsuitThickness == %@", sourceViewController.wetsuitThickness)
+                
+                
+                let predicate = NSCompoundPredicate(type: NSCompoundPredicateType.OrPredicateType, subpredicates: [namePredicate, manufacturerPredicate, thicknessPredicate])
+                
+                
+                // Set the predicate on the fetch request
+                fetchRequest.predicate = predicate
+                
+                do{
+                
+                    if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [Wetsuits] {
+                        
+                        /** set new properties **/
+                        
+                        fetchResults.first?.name = sourceViewController.wetsuitNameTextField.text ?? ""
+                        
+                        fetchResults.first?.manufacturer = sourceViewController.manufacturerTextField.text ?? ""
+                        
+                        fetchResults.first?.wetsuitThickness = sourceViewController.thicknessTextField.text ?? ""
+                        
+                        /** save updated data to coredate database **/
+                        try managedObjectContext?.save()
+                        
+                    }
+                    
+                }catch{
+                    
+                }
+                
+                //update tableviews
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                
+            }else{
+                /** add a new wetsuit **/
+            
+                let wetsuitName = sourceViewController.wetsuitName
+                let manufacturer = sourceViewController.manufacturer
+                let wetsuitThickness = sourceViewController.wetsuitThickness
+            
+                let newWetsuit =  NSEntityDescription.insertNewObjectForEntityForName("Wetsuits", inManagedObjectContext: managedObjectContext!) as! Wetsuits
+                newWetsuit.name = wetsuitName
+                newWetsuit.manufacturer = manufacturer
+                newWetsuit.wetsuitThickness = wetsuitThickness
+            
+                do{
+                    try managedObjectContext?.save()
+                }catch{
+                    print("error while saving")
+                }
+                self.viewDidLoad()
             }
-            self.viewDidLoad()
+        }
+    }
+    
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ShowDetail" {
+            let wetsuitDetailViewController = segue.destinationViewController as! vcNewWetsuit
+            
+            if let selectedWetsuitCell = sender as? UITableViewCell {
+                
+                let indexPath = tableView.indexPathForCell(selectedWetsuitCell)!
+                
+                /** get data from coredata **/
+                let selectedWetsuit = fetchedResultsController?.objectAtIndexPath(indexPath) as? Wetsuits
+                
+                wetsuitDetailViewController.wetsuitName = selectedWetsuit?.name
+                wetsuitDetailViewController.manufacturer = selectedWetsuit?.manufacturer
+                wetsuitDetailViewController.wetsuitThickness = selectedWetsuit?.wetsuitThickness
+                
+            }
+            
+        }
+        else if segue.identifier == "AddItem" {
+            
+            print("add new item")
         }
         
-        
     }
+    
+    
 }

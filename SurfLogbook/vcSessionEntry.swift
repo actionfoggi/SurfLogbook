@@ -18,13 +18,13 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     /** day info **/
     @IBOutlet var dayTextField: UITextField!
-    @IBOutlet var datePickerView  : UIDatePicker!
+    var datePickerView  : UIDatePicker!
     
     @IBOutlet var startTimeTextField: UITextField!
-    @IBOutlet var timePickerView  : UIDatePicker!
+    var startTimePickerView  : UIDatePicker!
     
-    @IBOutlet var durationTextField: UITextField!
-    @IBOutlet var durationPickerView: UIDatePicker!
+    @IBOutlet var endTimeTextField: UITextField!
+    var endTimePickerView: UIDatePicker!
     
     /** weather info info **/
     @IBOutlet weak var airTempLabel: UILabel!
@@ -65,15 +65,19 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         
         /** load content from coredata **/
+        loadCoreDataContentToView()
+        
+    }
+    
+    func loadCoreDataContentToView(){
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context:NSManagedObjectContext = appDel.managedObjectContext!
         let request = NSFetchRequest(entityName: "Wetsuits")
         request.returnsObjectsAsFaults = false
-
+        
         do{
             let result : NSArray =  try  context.executeFetchRequest(request)
             if result.count > 0{
-                
                 for wetsuit in result {
                     let thisWetsuit = wetsuit as! Wetsuits
                     wetsuitPickOption.append(thisWetsuit)
@@ -161,24 +165,39 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     /** handly start time picker selection **/
     @IBAction func startTimeTextField(sender: UITextField) {
-        timePickerView = UIDatePicker()
-        timePickerView.datePickerMode = UIDatePickerMode.Time
-        timePickerView.locale = NSLocale(localeIdentifier: "de_DE")
-        sender.inputView = timePickerView
-        timePickerView.addTarget(self, action: Selector("handleTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+        startTimePickerView = UIDatePicker()
+        startTimePickerView.datePickerMode = UIDatePickerMode.Time
+        startTimePickerView.locale = NSLocale(localeIdentifier: "de_DE")
+        sender.inputView = startTimePickerView
+        startTimePickerView.addTarget(self, action: Selector("handleStartTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
     }
-    
-    func handleTimePicker(sender: UIDatePicker) {
+    func handleStartTimePicker(sender: UIDatePicker) {
         let timeFormatter = NSDateFormatter()
         timeFormatter.locale = NSLocale(localeIdentifier: "de_DE")
         timeFormatter.dateStyle = NSDateFormatterStyle.NoStyle
         timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         startTimeTextField.text = timeFormatter.stringFromDate(sender.date)
-        
     }
     
+    @IBAction func endTimeTextField(sender: UITextField) {
+        endTimePickerView = UIDatePicker()
+        endTimePickerView.datePickerMode = UIDatePickerMode.Time
+        endTimePickerView.locale = NSLocale(localeIdentifier: "de_DE")
+        sender.inputView = endTimePickerView
+        endTimePickerView.addTarget(self, action: Selector("handleEndTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    func handleEndTimePicker(sender: UIDatePicker) {
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.locale = NSLocale(localeIdentifier: "de_DE")
+        timeFormatter.dateStyle = NSDateFormatterStyle.NoStyle
+        timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        endTimeTextField.text = timeFormatter.stringFromDate(sender.date)
+    }
     
-    /** handly end of selection **/
+
+    
+    
+    /** handly end of selection **/ 
     @IBAction func editingDone(sender: UIButton) {
         dayTextField.resignFirstResponder()
         startTimeTextField.resignFirstResponder()
@@ -190,6 +209,16 @@ class vcSessionEntry: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Navigatoin
+    @IBAction func unwindToSessionEntry(sender: UIStoryboardSegue) {
+        
+        /** clear data in usedWetsuitTextField **/
+        wetsuitPickOption.removeAll()
+        
+        /** load data from coredata to textfields **/
+        loadCoreDataContentToView()
     }
 
 }

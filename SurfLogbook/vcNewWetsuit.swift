@@ -28,10 +28,19 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         super.viewDidLoad()
         thicknessPickerView.delegate = self
         thicknessTextField.inputView = thicknessPickerView
-    }
-    
-    
 
+        
+        if let wetsuitName = wetsuitName {
+            wetsuitNameTextField.text = wetsuitName
+        }
+        if let manufacturer = manufacturer {
+            manufacturerTextField.text = manufacturer
+        }
+        if let wetsuitThickness = wetsuitThickness {
+            thicknessTextField.text = wetsuitThickness
+        }
+        
+    }
 
     /** handle picker view selections **/
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -56,9 +65,15 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     // MARK: - Navigation
     
     @IBAction func calcel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        let isPresentingInAddWetsuitMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddWetsuitMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        }else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
-    
+
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
