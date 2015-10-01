@@ -1,0 +1,301 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Wetsuits"
+- "WetsuitThickness"
+provides-nominal:
+- "C11SurfLogbook8Wetsuits"
+- "O11SurfLogbook16WetsuitThickness"
+provides-member:
+- ["C11SurfLogbook8Wetsuits", ""]
+- ["O11SurfLogbook16WetsuitThickness", ""]
+provides-dynamic-lookup:
+- "name"
+- "simpleDescription"
+- "wetsuitThickness"
+- "manufacturer"
+depends-top-level:
+- "WetsuitThickness"
+- "String"
+- "StringLiteralType"
+- !private "~="
+- "=="
+- "NSManagedObject"
+- "Wetsuits"
+- !private "UnicodeScalarType"
+- "Array"
+depends-member:
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "manufacturer"]
+- ["PSs9AnyObject", "name"]
+- ["PSs9AnyObject", "simpleDescription"]
+- ["PSs9AnyObject", "wetsuitThickness"]
+- ["PSs9AnyObject", ""]
+- ["Sa", "Element"]
+- ["PSs23ArrayLiteralConvertible", "Element"]
+- !private ["PSs22BidirectionalIndexType", "hashValue"]
+- !private ["PSs21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSs11CVarArgType", "hashValue"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "manufacturer"]
+- ["PSs11CVarArgType", "name"]
+- ["PSs11CVarArgType", "simpleDescription"]
+- ["PSs11CVarArgType", "wetsuitThickness"]
+- ["PSs11CVarArgType", ""]
+- !private ["VSs9Character", "deinit"]
+- ["PSs14CollectionType", "Element"]
+- !private ["PSs10Comparable", "hashValue"]
+- !private ["PSs10Comparable", "init"]
+- ["PSs28CustomDebugStringConvertible", "Element"]
+- !private ["PSs28CustomDebugStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "Element"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs23CustomStringConvertible", "hashValue"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "manufacturer"]
+- ["PSs23CustomStringConvertible", "name"]
+- ["PSs23CustomStringConvertible", "simpleDescription"]
+- ["PSs23CustomStringConvertible", "wetsuitThickness"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- ["PSs9Equatable", "RawValue"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- ["PSs9Equatable", "hashValue"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "manufacturer"]
+- ["PSs9Equatable", "mm_3_2"]
+- ["PSs9Equatable", "mm_4_3"]
+- ["PSs9Equatable", "mm_5_4"]
+- ["PSs9Equatable", "mm_6_5"]
+- ["PSs9Equatable", "name"]
+- ["PSs9Equatable", "rawValue"]
+- ["PSs9Equatable", "simpleDescription"]
+- ["PSs9Equatable", "wetsuitThickness"]
+- ["PSs9Equatable", ""]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["PSs16ForwardIndexType", "hashValue"]
+- ["PSs8Hashable", "RawValue"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- ["PSs8Hashable", "hashValue"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "manufacturer"]
+- ["PSs8Hashable", "mm_3_2"]
+- ["PSs8Hashable", "mm_4_3"]
+- ["PSs8Hashable", "mm_5_4"]
+- ["PSs8Hashable", "mm_6_5"]
+- ["PSs8Hashable", "name"]
+- ["PSs8Hashable", "rawValue"]
+- ["PSs8Hashable", "simpleDescription"]
+- ["PSs8Hashable", "wetsuitThickness"]
+- ["PSs8Hashable", ""]
+- ["PSs9Indexable", "Element"]
+- !private ["Si", "deinit"]
+- !private ["Si", "hashValue"]
+- !private ["VSs5Int16", "deinit"]
+- !private ["VSs5Int32", "deinit"]
+- !private ["VSs5Int64", "deinit"]
+- !private ["VSs4Int8", "deinit"]
+- !private ["PSs21IntegerArithmeticType", "hashValue"]
+- !private ["PSs25IntegerLiteralConvertible", "hashValue"]
+- !private ["PSs11IntegerType", "hashValue"]
+- !private ["PSs14MirrorPathType", "hashValue"]
+- !private ["PSs14MirrorPathType", "init"]
+- ["PSs21MutableCollectionType", "Element"]
+- ["PSs16MutableIndexable", "Element"]
+- ["PSs16MutableSliceable", "Element"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- ["CSo15NSManagedObject", "String"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", "manufacturer"]
+- ["CSo15NSManagedObject", "name"]
+- ["CSo15NSManagedObject", "simpleDescription"]
+- ["CSo15NSManagedObject", "wetsuitThickness"]
+- ["CSo15NSManagedObject", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "manufacturer"]
+- ["CSo8NSObject", "name"]
+- ["CSo8NSObject", "simpleDescription"]
+- ["CSo8NSObject", "wetsuitThickness"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "manufacturer"]
+- ["PSo16NSObjectProtocol", "name"]
+- ["PSo16NSObjectProtocol", "simpleDescription"]
+- ["PSo16NSObjectProtocol", "wetsuitThickness"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- !private ["PSs16OutputStreamType", "init"]
+- !private ["PSs21RandomAccessIndexType", "hashValue"]
+- !private ["VSs5Range", "deinit"]
+- ["PSs30RangeReplaceableCollectionType", "Element"]
+- ["PSs16RawRepresentable", "RawValue"]
+- ["PSs16RawRepresentable", "hashValue"]
+- ["PSs16RawRepresentable", "init"]
+- ["PSs16RawRepresentable", "mm_3_2"]
+- ["PSs16RawRepresentable", "mm_4_3"]
+- ["PSs16RawRepresentable", "mm_5_4"]
+- ["PSs16RawRepresentable", "mm_6_5"]
+- ["PSs16RawRepresentable", "rawValue"]
+- ["PSs16RawRepresentable", ""]
+- ["PSs12SequenceType", "Element"]
+- !private ["PSs17SignedIntegerType", "hashValue"]
+- !private ["PSs16SignedNumberType", "hashValue"]
+- !private ["PSs10Streamable", "init"]
+- !private ["PSs10Strideable", "hashValue"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["PSs30StringInterpolationConvertible", "init"]
+- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["Su", "deinit"]
+- !private ["VSs6UInt16", "deinit"]
+- !private ["VSs6UInt32", "deinit"]
+- !private ["VSs6UInt64", "deinit"]
+- !private ["VSs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- ["O11SurfLogbook16WetsuitThickness", "RawValue"]
+- ["O11SurfLogbook16WetsuitThickness", "String"]
+- ["O11SurfLogbook16WetsuitThickness", "allValues"]
+- ["O11SurfLogbook16WetsuitThickness", "deinit"]
+- ["O11SurfLogbook16WetsuitThickness", "hashValue"]
+- ["O11SurfLogbook16WetsuitThickness", "init"]
+- ["O11SurfLogbook16WetsuitThickness", "mm_3_2"]
+- ["O11SurfLogbook16WetsuitThickness", "mm_4_3"]
+- ["O11SurfLogbook16WetsuitThickness", "mm_5_4"]
+- ["O11SurfLogbook16WetsuitThickness", "mm_6_5"]
+- ["O11SurfLogbook16WetsuitThickness", "rawValue"]
+- ["O11SurfLogbook16WetsuitThickness", "simpleDescription"]
+- ["C11SurfLogbook8Wetsuits", "String"]
+- ["C11SurfLogbook8Wetsuits", "deinit"]
+- ["C11SurfLogbook8Wetsuits", "init"]
+- ["C11SurfLogbook8Wetsuits", "manufacturer"]
+- ["C11SurfLogbook8Wetsuits", "name"]
+- ["C11SurfLogbook8Wetsuits", "simpleDescription"]
+- ["C11SurfLogbook8Wetsuits", "wetsuitThickness"]
+- ["PSs10_ArrayType", "Element"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
+- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs16_CocoaStringType", "init"]
+- ["PSs24_DestructorSafeContainer", "Element"]
+- !private ["PSs14_Incrementable", "hashValue"]
+- !private ["PSs22_IntegerArithmeticType", "hashValue"]
+- !private ["PSs12_IntegerType", "hashValue"]
+- ["PSs21_ObjectiveCBridgeable", "Element"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "hashValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs22_RandomAccessAmbiguity", "hashValue"]
+- ["PSs12_Reflectable", "Element"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "hashValue"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs18_SignedIntegerType", "hashValue"]
+- !private ["PSs11_Strideable", "hashValue"]
+depends-nominal:
+- "PSs9AnyObject"
+- "Sa"
+- "PSs23ArrayLiteralConvertible"
+- !private "PSs22BidirectionalIndexType"
+- !private "PSs21BitwiseOperationsType"
+- !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
+- "PSs11CVarArgType"
+- !private "VSs9Character"
+- "PSs14CollectionType"
+- !private "PSs10Comparable"
+- "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- !private "Sd"
+- "PSs9Equatable"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "PSs16ForwardIndexType"
+- "PSs8Hashable"
+- "PSs9Indexable"
+- !private "Si"
+- !private "VSs5Int16"
+- !private "VSs5Int32"
+- !private "VSs5Int64"
+- !private "VSs4Int8"
+- !private "PSs21IntegerArithmeticType"
+- !private "PSs25IntegerLiteralConvertible"
+- !private "PSs11IntegerType"
+- !private "PSs14MirrorPathType"
+- "PSs21MutableCollectionType"
+- "PSs16MutableIndexable"
+- "PSs16MutableSliceable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo15NSManagedObject"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "PSs16OutputStreamType"
+- !private "PSs21RandomAccessIndexType"
+- !private "VSs5Range"
+- "PSs30RangeReplaceableCollectionType"
+- "PSs16RawRepresentable"
+- "PSs12SequenceType"
+- !private "PSs17SignedIntegerType"
+- !private "PSs16SignedNumberType"
+- !private "PSs10Streamable"
+- !private "PSs10Strideable"
+- "SS"
+- !private "PSs30StringInterpolationConvertible"
+- !private "PSs24StringLiteralConvertible"
+- !private "Su"
+- !private "VSs6UInt16"
+- !private "VSs6UInt32"
+- !private "VSs6UInt64"
+- !private "VSs5UInt8"
+- !private "Sc"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- "O11SurfLogbook16WetsuitThickness"
+- "C11SurfLogbook8Wetsuits"
+- "PSs10_ArrayType"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "PSs33_BuiltinIntegerLiteralConvertible"
+- !private "PSs32_BuiltinStringLiteralConvertible"
+- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
+- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "PSs16_CocoaStringType"
+- "PSs24_DestructorSafeContainer"
+- !private "PSs14_Incrementable"
+- !private "PSs22_IntegerArithmeticType"
+- !private "PSs12_IntegerType"
+- "PSs21_ObjectiveCBridgeable"
+- !private "VSs26_OptionalNilComparisonType"
+- !private "PSs22_RandomAccessAmbiguity"
+- "PSs12_Reflectable"
+- !private "PSs18_SignedIntegerType"
+- !private "PSs11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "a5b0cafd3400016829e98fe3dc90f250"

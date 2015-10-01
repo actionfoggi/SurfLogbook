@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "847983bbdd04a16aadd8e09474d704eb"
+build_time: [496770063, 353039000]
+inputs: 
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbookTests/SurfLogbookTests.swift": [493759916, 0]

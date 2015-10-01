@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "afe52fe3d7892eaba32d7396cdb5a9e3"
+build_time: [496770060, 297553000]
+inputs: 
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/WetsuitTableViewController.swift": [496769546, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/Wetsuits.swift": [495564246, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/vcSessionEntry.swift": [496768719, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/EnumSkyConditions.swift": [494710624, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/vcNewWetsuit.swift": [496769505, 0]
+	"/Users/sven/Documents/XCodeProjects/SurfLogbook/SurfLogbook/AppDelegate.swift": [494442510, 0]

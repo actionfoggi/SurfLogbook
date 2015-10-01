@@ -6,40 +6,43 @@ provides-nominal:
 provides-member:
 - ["C11SurfLogbook12vcNewWetsuit", ""]
 provides-dynamic-lookup:
-- "wetsuitThickness"
-- "pickerView"
-- "pickerView"
-- "pickerView"
-- "didReceiveMemoryWarning"
-- "thicknessTextField"
-- "prepareForSegue"
-- "manufacturerTextField"
-- "saveButton"
-- "thicknessPickerView"
-- "calcel"
-- "viewDidLoad"
-- "wetsuitNameTextField"
 - "wetsuitName"
+- "viewDidLoad"
+- "calcel"
+- "thicknessPickerView"
+- "wetsuitThickness"
+- "saveButton"
+- "manufacturerTextField"
+- "thicknessTextField"
+- "didReceiveMemoryWarning"
+- "prepareForSegue"
 - "numberOfComponentsInPickerView"
 - "manufacturer"
+- "objectId"
+- "pickerView"
+- "pickerView"
+- "pickerView"
+- "wetsuitNameTextField"
 depends-top-level:
-- !private "StringLiteralType"
-- !private "==="
-- "Int"
-- "WetsuitThickness"
-- "vcNewWetsuit"
-- "UIViewController"
-- "String"
-- "UIBarButtonItem"
 - "AnyObject"
+- !private "StringLiteralType"
 - "UIPickerView"
-- !private "BooleanLiteralType"
-- !private "??"
+- "String"
+- "Int"
 - "UITextField"
-- "UINavigationControllerDelegate"
-- "UIStoryboardSegue"
 - "UIPickerViewDelegate"
 - "UIPickerViewDataSource"
+- "UIStoryboardSegue"
+- "UINavigationControllerDelegate"
+- !private "??"
+- !private "==="
+- !private "UINavigationController"
+- "UIViewController"
+- !private "BooleanLiteralType"
+- "UIBarButtonItem"
+- "NSManagedObjectID"
+- "WetsuitThickness"
+- "vcNewWetsuit"
 depends-member:
 - ["PSs9AnyObject", "UIPickerView"]
 - ["PSs9AnyObject", "WetsuitThickness"]
@@ -55,8 +58,11 @@ depends-member:
 - ["PSs9AnyObject", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSs9AnyObject", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSs9AnyObject", "numberOfComponentsInPickerView"]
+- ["PSs9AnyObject", "objectId"]
 - ["PSs9AnyObject", "pickerView"]
+- !private ["PSs9AnyObject", "popViewControllerAnimated"]
 - ["PSs9AnyObject", "prepareForSegue"]
+- !private ["PSs9AnyObject", "presentingViewController"]
 - ["PSs9AnyObject", "saveButton"]
 - !private ["PSs9AnyObject", "text"]
 - ["PSs9AnyObject", "thicknessOptions"]
@@ -103,8 +109,11 @@ depends-member:
 - ["PSs11CVarArgType", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSs11CVarArgType", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSs11CVarArgType", "numberOfComponentsInPickerView"]
+- ["PSs11CVarArgType", "objectId"]
 - ["PSs11CVarArgType", "pickerView"]
+- !private ["PSs11CVarArgType", "popViewControllerAnimated"]
 - ["PSs11CVarArgType", "prepareForSegue"]
+- !private ["PSs11CVarArgType", "presentingViewController"]
 - ["PSs11CVarArgType", "saveButton"]
 - !private ["PSs11CVarArgType", "text"]
 - ["PSs11CVarArgType", "thicknessOptions"]
@@ -132,6 +141,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "Generator"]
 - !private ["PSs23CustomStringConvertible", "Index"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
+- ["PSs23CustomStringConvertible", "Some"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - ["PSs23CustomStringConvertible", "UIPickerView"]
 - ["PSs23CustomStringConvertible", "WetsuitThickness"]
@@ -149,8 +159,11 @@ depends-member:
 - ["PSs23CustomStringConvertible", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSs23CustomStringConvertible", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSs23CustomStringConvertible", "numberOfComponentsInPickerView"]
+- ["PSs23CustomStringConvertible", "objectId"]
 - ["PSs23CustomStringConvertible", "pickerView"]
+- !private ["PSs23CustomStringConvertible", "popViewControllerAnimated"]
 - ["PSs23CustomStringConvertible", "prepareForSegue"]
+- !private ["PSs23CustomStringConvertible", "presentingViewController"]
 - ["PSs23CustomStringConvertible", "saveButton"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "text"]
@@ -180,8 +193,11 @@ depends-member:
 - ["PSs9Equatable", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSs9Equatable", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSs9Equatable", "numberOfComponentsInPickerView"]
+- ["PSs9Equatable", "objectId"]
 - ["PSs9Equatable", "pickerView"]
+- !private ["PSs9Equatable", "popViewControllerAnimated"]
 - ["PSs9Equatable", "prepareForSegue"]
+- !private ["PSs9Equatable", "presentingViewController"]
 - ["PSs9Equatable", "saveButton"]
 - !private ["PSs9Equatable", "simpleDescription"]
 - !private ["PSs9Equatable", "text"]
@@ -214,8 +230,11 @@ depends-member:
 - ["PSs8Hashable", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSs8Hashable", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSs8Hashable", "numberOfComponentsInPickerView"]
+- ["PSs8Hashable", "objectId"]
 - ["PSs8Hashable", "pickerView"]
+- !private ["PSs8Hashable", "popViewControllerAnimated"]
 - ["PSs8Hashable", "prepareForSegue"]
+- !private ["PSs8Hashable", "presentingViewController"]
 - ["PSs8Hashable", "saveButton"]
 - !private ["PSs8Hashable", "simpleDescription"]
 - !private ["PSs8Hashable", "text"]
@@ -227,6 +246,7 @@ depends-member:
 - ["PSs8Hashable", "wetsuitNameTextField"]
 - ["PSs8Hashable", "wetsuitThickness"]
 - ["PSs8Hashable", ""]
+- ["SQ", "Some"]
 - !private ["SQ", "deinit"]
 - !private ["PSs9Indexable", "Generator"]
 - !private ["PSs9Indexable", "Index"]
@@ -250,6 +270,11 @@ depends-member:
 - !private ["PSs21MutableCollectionType", "SubSequence"]
 - !private ["PSs21MutableCollectionType", "count"]
 - !private ["PSs21MutableCollectionType", "subscript"]
+- !private ["PSs16MutableIndexable", "Generator"]
+- !private ["PSs16MutableIndexable", "Index"]
+- !private ["PSs16MutableIndexable", "SubSequence"]
+- !private ["PSs16MutableIndexable", "count"]
+- !private ["PSs16MutableIndexable", "subscript"]
 - !private ["PSs16MutableSliceable", "Generator"]
 - !private ["PSs16MutableSliceable", "Index"]
 - !private ["PSs16MutableSliceable", "SubSequence"]
@@ -269,8 +294,11 @@ depends-member:
 - ["PSo8NSCoding", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo8NSCoding", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo8NSCoding", "numberOfComponentsInPickerView"]
+- ["PSo8NSCoding", "objectId"]
 - ["PSo8NSCoding", "pickerView"]
+- !private ["PSo8NSCoding", "popViewControllerAnimated"]
 - ["PSo8NSCoding", "prepareForSegue"]
+- !private ["PSo8NSCoding", "presentingViewController"]
 - ["PSo8NSCoding", "saveButton"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "thicknessOptions"]
@@ -293,8 +321,11 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo26NSExtensionRequestHandling", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo26NSExtensionRequestHandling", "numberOfComponentsInPickerView"]
+- ["PSo26NSExtensionRequestHandling", "objectId"]
 - ["PSo26NSExtensionRequestHandling", "pickerView"]
+- !private ["PSo26NSExtensionRequestHandling", "popViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "prepareForSegue"]
+- !private ["PSo26NSExtensionRequestHandling", "presentingViewController"]
 - ["PSo26NSExtensionRequestHandling", "saveButton"]
 - ["PSo26NSExtensionRequestHandling", "thicknessOptions"]
 - ["PSo26NSExtensionRequestHandling", "thicknessPickerView"]
@@ -306,8 +337,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "NSManagedObjectID"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIBarButtonItem"]
+- !private ["CSo8NSObject", "UINavigationController"]
 - ["CSo8NSObject", "UIPickerView"]
 - ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITextField"]
@@ -324,8 +357,11 @@ depends-member:
 - ["CSo8NSObject", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["CSo8NSObject", "navigationControllerSupportedInterfaceOrientations"]
 - ["CSo8NSObject", "numberOfComponentsInPickerView"]
+- ["CSo8NSObject", "objectId"]
 - ["CSo8NSObject", "pickerView"]
+- !private ["CSo8NSObject", "popViewControllerAnimated"]
 - ["CSo8NSObject", "prepareForSegue"]
+- !private ["CSo8NSObject", "presentingViewController"]
 - ["CSo8NSObject", "saveButton"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "thicknessOptions"]
@@ -349,8 +385,11 @@ depends-member:
 - ["PSo16NSObjectProtocol", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo16NSObjectProtocol", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo16NSObjectProtocol", "numberOfComponentsInPickerView"]
+- ["PSo16NSObjectProtocol", "objectId"]
 - ["PSo16NSObjectProtocol", "pickerView"]
+- !private ["PSo16NSObjectProtocol", "popViewControllerAnimated"]
 - ["PSo16NSObjectProtocol", "prepareForSegue"]
+- !private ["PSo16NSObjectProtocol", "presentingViewController"]
 - ["PSo16NSObjectProtocol", "saveButton"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "thicknessOptions"]
@@ -361,6 +400,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "wetsuitNameTextField"]
 - ["PSo16NSObjectProtocol", "wetsuitThickness"]
 - ["PSo16NSObjectProtocol", ""]
+- ["PSs21NilLiteralConvertible", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
@@ -410,8 +450,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo21UIAppearanceContainer", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo21UIAppearanceContainer", "numberOfComponentsInPickerView"]
+- ["PSo21UIAppearanceContainer", "objectId"]
 - ["PSo21UIAppearanceContainer", "pickerView"]
+- !private ["PSo21UIAppearanceContainer", "popViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "prepareForSegue"]
+- !private ["PSo21UIAppearanceContainer", "presentingViewController"]
 - ["PSo21UIAppearanceContainer", "saveButton"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "thicknessOptions"]
@@ -434,8 +477,11 @@ depends-member:
 - ["PSo18UIContentContainer", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo18UIContentContainer", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo18UIContentContainer", "numberOfComponentsInPickerView"]
+- ["PSo18UIContentContainer", "objectId"]
 - ["PSo18UIContentContainer", "pickerView"]
+- !private ["PSo18UIContentContainer", "popViewControllerAnimated"]
 - ["PSo18UIContentContainer", "prepareForSegue"]
+- !private ["PSo18UIContentContainer", "presentingViewController"]
 - ["PSo18UIContentContainer", "saveButton"]
 - ["PSo18UIContentContainer", "thicknessOptions"]
 - ["PSo18UIContentContainer", "thicknessPickerView"]
@@ -457,6 +503,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo10UIKeyInput", "inputView"]
 - !private ["PSo10UIKeyInput", "text"]
+- !private ["CSo22UINavigationController", "popViewControllerAnimated"]
 - ["PSo30UINavigationControllerDelegate", "UIPickerView"]
 - ["PSo30UINavigationControllerDelegate", "WetsuitThickness"]
 - !private ["PSo30UINavigationControllerDelegate", "dismissViewControllerAnimated"]
@@ -467,6 +514,7 @@ depends-member:
 - ["PSo30UINavigationControllerDelegate", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo30UINavigationControllerDelegate", "numberOfComponentsInPickerView"]
 - ["PSo30UINavigationControllerDelegate", "pickerView"]
+- !private ["PSo30UINavigationControllerDelegate", "presentingViewController"]
 - !private ["PSo30UINavigationControllerDelegate", "saveButton"]
 - !private ["PSo30UINavigationControllerDelegate", "thicknessOptions"]
 - !private ["PSo30UINavigationControllerDelegate", "thicknessPickerView"]
@@ -487,6 +535,7 @@ depends-member:
 - ["PSo22UIPickerViewDataSource", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo22UIPickerViewDataSource", "numberOfComponentsInPickerView"]
 - ["PSo22UIPickerViewDataSource", "pickerView"]
+- !private ["PSo22UIPickerViewDataSource", "presentingViewController"]
 - !private ["PSo22UIPickerViewDataSource", "saveButton"]
 - !private ["PSo22UIPickerViewDataSource", "thicknessOptions"]
 - !private ["PSo22UIPickerViewDataSource", "thicknessPickerView"]
@@ -505,6 +554,7 @@ depends-member:
 - ["PSo20UIPickerViewDelegate", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo20UIPickerViewDelegate", "numberOfComponentsInPickerView"]
 - ["PSo20UIPickerViewDelegate", "pickerView"]
+- !private ["PSo20UIPickerViewDelegate", "presentingViewController"]
 - !private ["PSo20UIPickerViewDelegate", "saveButton"]
 - !private ["PSo20UIPickerViewDelegate", "thicknessOptions"]
 - !private ["PSo20UIPickerViewDelegate", "thicknessPickerView"]
@@ -515,8 +565,10 @@ depends-member:
 - ["PSo20UIPickerViewDelegate", ""]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Int"]
+- ["CSo11UIResponder", "NSManagedObjectID"]
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIBarButtonItem"]
+- !private ["CSo11UIResponder", "UINavigationController"]
 - ["CSo11UIResponder", "UIPickerView"]
 - ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITextField"]
@@ -533,8 +585,11 @@ depends-member:
 - ["CSo11UIResponder", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["CSo11UIResponder", "navigationControllerSupportedInterfaceOrientations"]
 - ["CSo11UIResponder", "numberOfComponentsInPickerView"]
+- ["CSo11UIResponder", "objectId"]
 - ["CSo11UIResponder", "pickerView"]
+- !private ["CSo11UIResponder", "popViewControllerAnimated"]
 - ["CSo11UIResponder", "prepareForSegue"]
+- !private ["CSo11UIResponder", "presentingViewController"]
 - ["CSo11UIResponder", "saveButton"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "thicknessOptions"]
@@ -556,8 +611,11 @@ depends-member:
 - ["PSo16UIStateRestoring", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo16UIStateRestoring", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo16UIStateRestoring", "numberOfComponentsInPickerView"]
+- ["PSo16UIStateRestoring", "objectId"]
 - ["PSo16UIStateRestoring", "pickerView"]
+- !private ["PSo16UIStateRestoring", "popViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "prepareForSegue"]
+- !private ["PSo16UIStateRestoring", "presentingViewController"]
 - ["PSo16UIStateRestoring", "saveButton"]
 - ["PSo16UIStateRestoring", "thicknessOptions"]
 - ["PSo16UIStateRestoring", "thicknessPickerView"]
@@ -589,8 +647,11 @@ depends-member:
 - ["PSo18UITraitEnvironment", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["PSo18UITraitEnvironment", "navigationControllerSupportedInterfaceOrientations"]
 - ["PSo18UITraitEnvironment", "numberOfComponentsInPickerView"]
+- ["PSo18UITraitEnvironment", "objectId"]
 - ["PSo18UITraitEnvironment", "pickerView"]
+- !private ["PSo18UITraitEnvironment", "popViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "prepareForSegue"]
+- !private ["PSo18UITraitEnvironment", "presentingViewController"]
 - ["PSo18UITraitEnvironment", "saveButton"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "thicknessOptions"]
@@ -607,8 +668,10 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Int"]
+- ["CSo16UIViewController", "NSManagedObjectID"]
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIBarButtonItem"]
+- !private ["CSo16UIViewController", "UINavigationController"]
 - ["CSo16UIViewController", "UIPickerView"]
 - ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITextField"]
@@ -623,8 +686,11 @@ depends-member:
 - ["CSo16UIViewController", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["CSo16UIViewController", "navigationControllerSupportedInterfaceOrientations"]
 - ["CSo16UIViewController", "numberOfComponentsInPickerView"]
+- ["CSo16UIViewController", "objectId"]
 - ["CSo16UIViewController", "pickerView"]
+- !private ["CSo16UIViewController", "popViewControllerAnimated"]
 - ["CSo16UIViewController", "prepareForSegue"]
+- !private ["CSo16UIViewController", "presentingViewController"]
 - ["CSo16UIViewController", "saveButton"]
 - ["CSo16UIViewController", "thicknessOptions"]
 - ["CSo16UIViewController", "thicknessPickerView"]
@@ -635,6 +701,7 @@ depends-member:
 - ["CSo16UIViewController", "wetsuitThickness"]
 - ["CSo16UIViewController", ""]
 - ["O11SurfLogbook16WetsuitThickness", "allValues"]
+- ["O11SurfLogbook16WetsuitThickness", "deinit"]
 - !private ["O11SurfLogbook16WetsuitThickness", "simpleDescription"]
 - !private ["PSs10_ArrayType", "Generator"]
 - !private ["PSs10_ArrayType", "Index"]
@@ -659,14 +726,18 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "Generator"]
 - !private ["PSs21_ObjectiveCBridgeable", "Index"]
 - !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- ["PSs21_ObjectiveCBridgeable", "Some"]
 - !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "count"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
+- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
+- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["PSs12_Reflectable", "Distance"]
 - !private ["PSs12_Reflectable", "Generator"]
 - !private ["PSs12_Reflectable", "Index"]
 - !private ["PSs12_Reflectable", "IntegerLiteralType"]
+- ["PSs12_Reflectable", "Some"]
 - !private ["PSs12_Reflectable", "SubSequence"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["PSs12_Reflectable", "count"]
@@ -681,8 +752,10 @@ depends-member:
 - !private ["PSs11_Strideable", "IntegerLiteralType"]
 - ["C11SurfLogbook12vcNewWetsuit", "AnyObject"]
 - ["C11SurfLogbook12vcNewWetsuit", "Int"]
+- ["C11SurfLogbook12vcNewWetsuit", "NSManagedObjectID"]
 - ["C11SurfLogbook12vcNewWetsuit", "String"]
 - ["C11SurfLogbook12vcNewWetsuit", "UIBarButtonItem"]
+- !private ["C11SurfLogbook12vcNewWetsuit", "UINavigationController"]
 - ["C11SurfLogbook12vcNewWetsuit", "UIPickerView"]
 - ["C11SurfLogbook12vcNewWetsuit", "UIStoryboardSegue"]
 - ["C11SurfLogbook12vcNewWetsuit", "UITextField"]
@@ -698,8 +771,10 @@ depends-member:
 - ["C11SurfLogbook12vcNewWetsuit", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["C11SurfLogbook12vcNewWetsuit", "navigationControllerSupportedInterfaceOrientations"]
 - ["C11SurfLogbook12vcNewWetsuit", "numberOfComponentsInPickerView"]
+- ["C11SurfLogbook12vcNewWetsuit", "objectId"]
 - ["C11SurfLogbook12vcNewWetsuit", "pickerView"]
 - ["C11SurfLogbook12vcNewWetsuit", "prepareForSegue"]
+- !private ["C11SurfLogbook12vcNewWetsuit", "presentingViewController"]
 - ["C11SurfLogbook12vcNewWetsuit", "saveButton"]
 - ["C11SurfLogbook12vcNewWetsuit", "thicknessOptions"]
 - ["C11SurfLogbook12vcNewWetsuit", "thicknessPickerView"]
@@ -727,7 +802,7 @@ depends-nominal:
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
 - "PSs8Hashable"
-- !private "SQ"
+- "SQ"
 - !private "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
 - !private "Si"
@@ -736,11 +811,13 @@ depends-nominal:
 - !private "PSs11IntegerType"
 - !private "PSs14MirrorPathType"
 - !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
 - !private "PSs16MutableSliceable"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- "PSs21NilLiteralConvertible"
 - !private "Sq"
 - !private "PSs21RandomAccessIndexType"
 - !private "PSs30RangeReplaceableCollectionType"
@@ -758,6 +835,7 @@ depends-nominal:
 - "PSo17UICoordinateSpace"
 - "PSo13UIDynamicItem"
 - !private "PSo10UIKeyInput"
+- !private "CSo22UINavigationController"
 - "PSo30UINavigationControllerDelegate"
 - "CSo12UIPickerView"
 - "PSo22UIPickerViewDataSource"
@@ -779,32 +857,21 @@ depends-nominal:
 - !private "PSs14_Incrementable"
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
-- !private "PSs21_ObjectiveCBridgeable"
+- "PSs21_ObjectiveCBridgeable"
+- !private "PSs22_RandomAccessAmbiguity"
 - "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
 - "C11SurfLogbook12vcNewWetsuit"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/DarwinShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/module.map"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "63fa6be5c846251c6ea37f4cf2a03f05"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "734c098bb9888074050751d1a2da4634"

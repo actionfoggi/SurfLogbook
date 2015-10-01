@@ -80,45 +80,26 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
             //Check whether ther is a new wetsuit or update one
             if let selectedIndexPath = tableView.indexPathForSelectedRow{
                 /** update an existing wetsuit **/
-                
-                let fetchRequest = NSFetchRequest(entityName: "Wetsuits")
-                let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-                fetchRequest.sortDescriptors = [sortDescriptor]
-                
-                // Create a new predicate that filters out any object that
-                // doesn't have a title of "Best Language" exactly.
-                let namePredicate = NSPredicate(format: "name == %@", sourceViewController.wetsuitName)
-                let manufacturerPredicate = NSPredicate(format: "manufacturer == %@", sourceViewController.manufacturer)
-                let thicknessPredicate = NSPredicate(format: "wetsuitThickness == %@", sourceViewController.wetsuitThickness)
-                
-                
-                let predicate = NSCompoundPredicate(type: NSCompoundPredicateType.OrPredicateType, subpredicates: [namePredicate, manufacturerPredicate, thicknessPredicate])
-                
-                
-                // Set the predicate on the fetch request
-                fetchRequest.predicate = predicate
-                
+                let fetchRequest = allWetsuitsFetchRequest()  // NSFetchRequest(entityName: "Wetsuits")
                 do{
-                
-                    if let fetchResults = try managedObjectContext!.executeFetchRequest(fetchRequest) as? [Wetsuits] {
-                        
-                        /** set new properties **/
-                        
-                        fetchResults.first?.name = sourceViewController.wetsuitNameTextField.text ?? ""
-                        
-                        fetchResults.first?.manufacturer = sourceViewController.manufacturerTextField.text ?? ""
-                        
-                        fetchResults.first?.wetsuitThickness = sourceViewController.thicknessTextField.text ?? ""
-                        
-                        /** save updated data to coredate database **/
-                        try managedObjectContext?.save()
-                        
+                    let result : NSArray =  try  managedObjectContext!.executeFetchRequest(fetchRequest)
+                    if result.count > 0{
+                        for wetsuit in result {
+                            let thisWetsuit = wetsuit as! Wetsuits
+                            if thisWetsuit.objectID == sourceViewController.objectId{
+                                
+                                thisWetsuit.name = sourceViewController.wetsuitName
+                                thisWetsuit.manufacturer = sourceViewController.manufacturer
+                                thisWetsuit.wetsuitThickness = sourceViewController.wetsuitThickness
+                                try managedObjectContext?.save()
+                                break
+                            }
+                        }
                     }
-                    
                 }catch{
-                    
+                    print("error in core data fetch request - wetsuits")
                 }
-                
+
                 //update tableviews
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
                 
@@ -161,6 +142,7 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
                 wetsuitDetailViewController.wetsuitName = selectedWetsuit?.name
                 wetsuitDetailViewController.manufacturer = selectedWetsuit?.manufacturer
                 wetsuitDetailViewController.wetsuitThickness = selectedWetsuit?.wetsuitThickness
+                wetsuitDetailViewController.objectId = selectedWetsuit?.objectID
                 
             }
             

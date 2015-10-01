@@ -6,41 +6,46 @@ provides-nominal:
 provides-member:
 - ["C11SurfLogbook26WetsuitTableViewController", ""]
 provides-dynamic-lookup:
-- "tableView"
-- "tableView"
-- "numberOfSectionsInTableView"
 - "unwindToWetsuitList"
-- "goBack"
-- "viewDidLoad"
-- "allWetsuitsFetchRequest"
-- "fetchedResultsController"
+- "numberOfSectionsInTableView"
+- "prepareForSegue"
 - "didReceiveMemoryWarning"
+- "fetchedResultsController"
 - "managedObjectContext"
+- "tableView"
+- "tableView"
+- "allWetsuitsFetchRequest"
+- "viewDidLoad"
 depends-top-level:
-- !private "??"
-- "NSFetchedResultsControllerDelegate"
-- "UIApplication"
-- !private "NSSortDescriptor"
-- "UIBarButtonItem"
-- !private "print"
+- "NSFetchedResultsController"
 - "NSIndexPath"
-- "NSManagedObjectContext"
-- "UITableView"
-- !private "Array"
-- "Int"
-- !private "vcNewWetsuit"
+- !private "StringLiteralType"
+- !private "print"
 - "AppDelegate"
+- "UITableView"
 - "WetsuitTableViewController"
 - "NSFetchRequest"
-- !private "NSEntityDescription"
-- !private "StringLiteralType"
+- !private "NSArray"
 - "UIStoryboardSegue"
-- !private "Wetsuits"
-- !private "BooleanLiteralType"
-- "UITableViewController"
+- !private "=="
+- "NSFetchedResultsControllerDelegate"
+- !private "vcNewWetsuit"
 - "UITableViewCell"
-- "NSFetchedResultsController"
+- !private "NSEntityDescription"
+- "Int"
+- !private "BooleanLiteralType"
+- !private "Array"
+- "AnyObject"
+- !private "NSSortDescriptor"
+- !private "??"
+- !private "Wetsuits"
+- "UITableViewController"
+- !private ">"
+- "UIApplication"
+- "NSManagedObjectContext"
 depends-member:
+- !private ["PSs9AnyObject", "Element"]
+- !private ["PSs9AnyObject", "Generator"]
 - !private ["PSs9AnyObject", "NSEntityDescription"]
 - !private ["PSs9AnyObject", "NSFetchRequest"]
 - !private ["PSs9AnyObject", "NSFetchedResultsController"]
@@ -50,13 +55,17 @@ depends-member:
 - ["PSs9AnyObject", "controller"]
 - ["PSs9AnyObject", "controllerDidChangeContent"]
 - ["PSs9AnyObject", "controllerWillChangeContent"]
+- !private ["PSs9AnyObject", "count"]
 - ["PSs9AnyObject", "delegate"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs9AnyObject", "destinationViewController"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
-- !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
+- !private ["PSs9AnyObject", "executeFetchRequest"]
 - !private ["PSs9AnyObject", "fetchBatchSize"]
 - ["PSs9AnyObject", "fetchedResultsController"]
-- ["PSs9AnyObject", "goBack"]
+- !private ["PSs9AnyObject", "identifier"]
+- !private ["PSs9AnyObject", "indexPathForCell"]
+- !private ["PSs9AnyObject", "indexPathForSelectedRow"]
 - ["PSs9AnyObject", "init"]
 - !private ["PSs9AnyObject", "insertNewObjectForEntityForName"]
 - ["PSs9AnyObject", "managedObjectContext"]
@@ -64,10 +73,14 @@ depends-member:
 - !private ["PSs9AnyObject", "name"]
 - ["PSs9AnyObject", "numberOfSectionsInTableView"]
 - !private ["PSs9AnyObject", "objectAtIndexPath"]
+- !private ["PSs9AnyObject", "objectID"]
+- !private ["PSs9AnyObject", "objectId"]
 - !private ["PSs9AnyObject", "performFetch"]
 - !private ["PSs9AnyObject", "predicate"]
+- ["PSs9AnyObject", "prepareForSegue"]
 - !private ["PSs9AnyObject", "print"]
 - !private ["PSs9AnyObject", "reloadData"]
+- !private ["PSs9AnyObject", "reloadRowsAtIndexPaths"]
 - !private ["PSs9AnyObject", "save"]
 - !private ["PSs9AnyObject", "sections"]
 - ["PSs9AnyObject", "sharedApplication"]
@@ -101,8 +114,12 @@ depends-member:
 - !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["PSs21BitwiseOperationsType", "Distance"]
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
 - !private ["PSs11CVarArgType", "Distance"]
+- !private ["PSs11CVarArgType", "Generator"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSEntityDescription"]
 - !private ["PSs11CVarArgType", "NSFetchRequest"]
@@ -113,13 +130,17 @@ depends-member:
 - ["PSs11CVarArgType", "controller"]
 - ["PSs11CVarArgType", "controllerDidChangeContent"]
 - ["PSs11CVarArgType", "controllerWillChangeContent"]
+- !private ["PSs11CVarArgType", "count"]
 - ["PSs11CVarArgType", "delegate"]
 - !private ["PSs11CVarArgType", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs11CVarArgType", "destinationViewController"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
-- !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
+- !private ["PSs11CVarArgType", "executeFetchRequest"]
 - !private ["PSs11CVarArgType", "fetchBatchSize"]
 - ["PSs11CVarArgType", "fetchedResultsController"]
-- ["PSs11CVarArgType", "goBack"]
+- !private ["PSs11CVarArgType", "identifier"]
+- !private ["PSs11CVarArgType", "indexPathForCell"]
+- !private ["PSs11CVarArgType", "indexPathForSelectedRow"]
 - ["PSs11CVarArgType", "init"]
 - !private ["PSs11CVarArgType", "insertNewObjectForEntityForName"]
 - ["PSs11CVarArgType", "managedObjectContext"]
@@ -127,10 +148,14 @@ depends-member:
 - !private ["PSs11CVarArgType", "name"]
 - ["PSs11CVarArgType", "numberOfSectionsInTableView"]
 - !private ["PSs11CVarArgType", "objectAtIndexPath"]
+- !private ["PSs11CVarArgType", "objectID"]
+- !private ["PSs11CVarArgType", "objectId"]
 - !private ["PSs11CVarArgType", "performFetch"]
 - !private ["PSs11CVarArgType", "predicate"]
+- ["PSs11CVarArgType", "prepareForSegue"]
 - !private ["PSs11CVarArgType", "print"]
 - !private ["PSs11CVarArgType", "reloadData"]
+- !private ["PSs11CVarArgType", "reloadRowsAtIndexPaths"]
 - !private ["PSs11CVarArgType", "save"]
 - !private ["PSs11CVarArgType", "sections"]
 - ["PSs11CVarArgType", "sharedApplication"]
@@ -174,6 +199,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "NSSortDescriptor"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - ["PSs23CustomStringConvertible", "UIApplication"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["PSs23CustomStringConvertible", "allWetsuitsFetchRequest"]
 - ["PSs23CustomStringConvertible", "controller"]
 - ["PSs23CustomStringConvertible", "controllerDidChangeContent"]
@@ -181,11 +207,14 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "count"]
 - ["PSs23CustomStringConvertible", "delegate"]
 - !private ["PSs23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs23CustomStringConvertible", "destinationViewController"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
-- !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
+- !private ["PSs23CustomStringConvertible", "executeFetchRequest"]
 - !private ["PSs23CustomStringConvertible", "fetchBatchSize"]
 - ["PSs23CustomStringConvertible", "fetchedResultsController"]
-- ["PSs23CustomStringConvertible", "goBack"]
+- !private ["PSs23CustomStringConvertible", "identifier"]
+- !private ["PSs23CustomStringConvertible", "indexPathForCell"]
+- !private ["PSs23CustomStringConvertible", "indexPathForSelectedRow"]
 - ["PSs23CustomStringConvertible", "init"]
 - !private ["PSs23CustomStringConvertible", "insertNewObjectForEntityForName"]
 - ["PSs23CustomStringConvertible", "managedObjectContext"]
@@ -193,10 +222,14 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "name"]
 - ["PSs23CustomStringConvertible", "numberOfSectionsInTableView"]
 - !private ["PSs23CustomStringConvertible", "objectAtIndexPath"]
+- !private ["PSs23CustomStringConvertible", "objectID"]
+- !private ["PSs23CustomStringConvertible", "objectId"]
 - !private ["PSs23CustomStringConvertible", "performFetch"]
 - !private ["PSs23CustomStringConvertible", "predicate"]
+- ["PSs23CustomStringConvertible", "prepareForSegue"]
 - !private ["PSs23CustomStringConvertible", "print"]
 - !private ["PSs23CustomStringConvertible", "reloadData"]
+- !private ["PSs23CustomStringConvertible", "reloadRowsAtIndexPaths"]
 - !private ["PSs23CustomStringConvertible", "save"]
 - !private ["PSs23CustomStringConvertible", "sections"]
 - ["PSs23CustomStringConvertible", "sharedApplication"]
@@ -213,23 +246,30 @@ depends-member:
 - ["PSs23CustomStringConvertible", ""]
 - !private ["Sd", "deinit"]
 - !private ["PSs9Equatable", "Distance"]
+- !private ["PSs9Equatable", "Generator"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSEntityDescription"]
 - !private ["PSs9Equatable", "NSFetchRequest"]
 - !private ["PSs9Equatable", "NSFetchedResultsController"]
 - !private ["PSs9Equatable", "NSSortDescriptor"]
+- !private ["PSs9Equatable", "None"]
 - ["PSs9Equatable", "UIApplication"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - ["PSs9Equatable", "allWetsuitsFetchRequest"]
 - ["PSs9Equatable", "controller"]
 - ["PSs9Equatable", "controllerDidChangeContent"]
 - ["PSs9Equatable", "controllerWillChangeContent"]
+- !private ["PSs9Equatable", "count"]
 - ["PSs9Equatable", "delegate"]
 - !private ["PSs9Equatable", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs9Equatable", "destinationViewController"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
-- !private ["PSs9Equatable", "dismissViewControllerAnimated"]
+- !private ["PSs9Equatable", "executeFetchRequest"]
 - !private ["PSs9Equatable", "fetchBatchSize"]
 - ["PSs9Equatable", "fetchedResultsController"]
-- ["PSs9Equatable", "goBack"]
+- !private ["PSs9Equatable", "identifier"]
+- !private ["PSs9Equatable", "indexPathForCell"]
+- !private ["PSs9Equatable", "indexPathForSelectedRow"]
 - ["PSs9Equatable", "init"]
 - !private ["PSs9Equatable", "insertNewObjectForEntityForName"]
 - ["PSs9Equatable", "managedObjectContext"]
@@ -237,10 +277,14 @@ depends-member:
 - !private ["PSs9Equatable", "name"]
 - ["PSs9Equatable", "numberOfSectionsInTableView"]
 - !private ["PSs9Equatable", "objectAtIndexPath"]
+- !private ["PSs9Equatable", "objectID"]
+- !private ["PSs9Equatable", "objectId"]
 - !private ["PSs9Equatable", "performFetch"]
 - !private ["PSs9Equatable", "predicate"]
+- ["PSs9Equatable", "prepareForSegue"]
 - !private ["PSs9Equatable", "print"]
 - !private ["PSs9Equatable", "reloadData"]
+- !private ["PSs9Equatable", "reloadRowsAtIndexPaths"]
 - !private ["PSs9Equatable", "save"]
 - !private ["PSs9Equatable", "sections"]
 - ["PSs9Equatable", "sharedApplication"]
@@ -260,23 +304,30 @@ depends-member:
 - !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
 - !private ["PSs13GeneratorType", "Element"]
 - !private ["PSs8Hashable", "Distance"]
+- !private ["PSs8Hashable", "Generator"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSEntityDescription"]
 - !private ["PSs8Hashable", "NSFetchRequest"]
 - !private ["PSs8Hashable", "NSFetchedResultsController"]
 - !private ["PSs8Hashable", "NSSortDescriptor"]
+- !private ["PSs8Hashable", "None"]
 - ["PSs8Hashable", "UIApplication"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - ["PSs8Hashable", "allWetsuitsFetchRequest"]
 - ["PSs8Hashable", "controller"]
 - ["PSs8Hashable", "controllerDidChangeContent"]
 - ["PSs8Hashable", "controllerWillChangeContent"]
+- !private ["PSs8Hashable", "count"]
 - ["PSs8Hashable", "delegate"]
 - !private ["PSs8Hashable", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs8Hashable", "destinationViewController"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
-- !private ["PSs8Hashable", "dismissViewControllerAnimated"]
+- !private ["PSs8Hashable", "executeFetchRequest"]
 - !private ["PSs8Hashable", "fetchBatchSize"]
 - ["PSs8Hashable", "fetchedResultsController"]
-- ["PSs8Hashable", "goBack"]
+- !private ["PSs8Hashable", "identifier"]
+- !private ["PSs8Hashable", "indexPathForCell"]
+- !private ["PSs8Hashable", "indexPathForSelectedRow"]
 - ["PSs8Hashable", "init"]
 - !private ["PSs8Hashable", "insertNewObjectForEntityForName"]
 - ["PSs8Hashable", "managedObjectContext"]
@@ -284,10 +335,14 @@ depends-member:
 - !private ["PSs8Hashable", "name"]
 - ["PSs8Hashable", "numberOfSectionsInTableView"]
 - !private ["PSs8Hashable", "objectAtIndexPath"]
+- !private ["PSs8Hashable", "objectID"]
+- !private ["PSs8Hashable", "objectId"]
 - !private ["PSs8Hashable", "performFetch"]
 - !private ["PSs8Hashable", "predicate"]
+- ["PSs8Hashable", "prepareForSegue"]
 - !private ["PSs8Hashable", "print"]
 - !private ["PSs8Hashable", "reloadData"]
+- !private ["PSs8Hashable", "reloadRowsAtIndexPaths"]
 - !private ["PSs8Hashable", "save"]
 - !private ["PSs8Hashable", "sections"]
 - ["PSs8Hashable", "sharedApplication"]
@@ -331,12 +386,21 @@ depends-member:
 - !private ["PSs21MutableCollectionType", "SubSequence"]
 - !private ["PSs21MutableCollectionType", "count"]
 - !private ["PSs21MutableCollectionType", "subscript"]
+- !private ["PSs16MutableIndexable", "Element"]
+- !private ["PSs16MutableIndexable", "Generator"]
+- !private ["PSs16MutableIndexable", "Index"]
+- !private ["PSs16MutableIndexable", "SubSequence"]
+- !private ["PSs16MutableIndexable", "count"]
+- !private ["PSs16MutableIndexable", "subscript"]
 - !private ["PSs16MutableSliceable", "Element"]
 - !private ["PSs16MutableSliceable", "Generator"]
 - !private ["PSs16MutableSliceable", "Index"]
 - !private ["PSs16MutableSliceable", "SubSequence"]
 - !private ["PSs16MutableSliceable", "count"]
 - !private ["PSs16MutableSliceable", "subscript"]
+- !private ["CSo7NSArray", "Generator"]
+- !private ["CSo7NSArray", "count"]
+- !private ["PSo8NSCoding", "Generator"]
 - !private ["PSo8NSCoding", "NSEntityDescription"]
 - !private ["PSo8NSCoding", "NSFetchRequest"]
 - !private ["PSo8NSCoding", "NSFetchedResultsController"]
@@ -346,20 +410,25 @@ depends-member:
 - ["PSo8NSCoding", "controller"]
 - ["PSo8NSCoding", "controllerDidChangeContent"]
 - ["PSo8NSCoding", "controllerWillChangeContent"]
+- !private ["PSo8NSCoding", "count"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
-- !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
+- !private ["PSo8NSCoding", "executeFetchRequest"]
 - !private ["PSo8NSCoding", "fetchBatchSize"]
 - ["PSo8NSCoding", "fetchedResultsController"]
-- ["PSo8NSCoding", "goBack"]
+- !private ["PSo8NSCoding", "indexPathForCell"]
+- !private ["PSo8NSCoding", "indexPathForSelectedRow"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "insertNewObjectForEntityForName"]
 - ["PSo8NSCoding", "managedObjectContext"]
 - !private ["PSo8NSCoding", "manufacturer"]
 - ["PSo8NSCoding", "numberOfSectionsInTableView"]
+- !private ["PSo8NSCoding", "objectId"]
 - !private ["PSo8NSCoding", "predicate"]
+- ["PSo8NSCoding", "prepareForSegue"]
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "reloadData"]
+- !private ["PSo8NSCoding", "reloadRowsAtIndexPaths"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo8NSCoding", "sortDescriptors"]
 - ["PSo8NSCoding", "tableView"]
@@ -370,6 +439,8 @@ depends-member:
 - !private ["PSo8NSCoding", "wetsuitName"]
 - !private ["PSo8NSCoding", "wetsuitThickness"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "Generator"]
+- !private ["PSo9NSCopying", "count"]
 - !private ["PSo9NSCopying", "fetchBatchSize"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "insertNewObjectForEntityForName"]
@@ -386,13 +457,13 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "controllerDidChangeContent"]
 - ["PSo26NSExtensionRequestHandling", "controllerWillChangeContent"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
-- !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - ["PSo26NSExtensionRequestHandling", "fetchedResultsController"]
-- ["PSo26NSExtensionRequestHandling", "goBack"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "managedObjectContext"]
 - !private ["PSo26NSExtensionRequestHandling", "manufacturer"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSectionsInTableView"]
+- !private ["PSo26NSExtensionRequestHandling", "objectId"]
+- ["PSo26NSExtensionRequestHandling", "prepareForSegue"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
 - ["PSo26NSExtensionRequestHandling", "unwindToWetsuitList"]
@@ -400,7 +471,10 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "wetsuitName"]
 - !private ["PSo26NSExtensionRequestHandling", "wetsuitThickness"]
 - ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo17NSFastEnumeration", "Generator"]
+- !private ["PSo17NSFastEnumeration", "count"]
 - !private ["PSo17NSFastEnumeration", "insertNewObjectForEntityForName"]
+- !private ["C10Foundation15NSFastGenerator", "Element"]
 - !private ["CSo14NSFetchRequest", "fetchBatchSize"]
 - !private ["CSo14NSFetchRequest", "init"]
 - !private ["CSo14NSFetchRequest", "predicate"]
@@ -419,7 +493,6 @@ depends-member:
 - ["PSo34NSFetchedResultsControllerDelegate", "controller"]
 - ["PSo34NSFetchedResultsControllerDelegate", "controllerDidChangeContent"]
 - ["PSo34NSFetchedResultsControllerDelegate", "controllerWillChangeContent"]
-- !private ["PSo34NSFetchedResultsControllerDelegate", "dismissViewControllerAnimated"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "fetchedResultsController"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "managedObjectContext"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "print"]
@@ -427,15 +500,23 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "viewDidLoad"]
 - ["PSo34NSFetchedResultsControllerDelegate", ""]
 - !private ["PSo27NSFetchedResultsSectionInfo", "numberOfObjects"]
+- !private ["PSo9NSLocking", "executeFetchRequest"]
 - !private ["PSo9NSLocking", "save"]
 - !private ["CSo15NSManagedObject", "deinit"]
 - !private ["CSo15NSManagedObject", "manufacturer"]
 - !private ["CSo15NSManagedObject", "name"]
+- !private ["CSo15NSManagedObject", "objectID"]
 - !private ["CSo15NSManagedObject", "wetsuitThickness"]
+- !private ["CSo22NSManagedObjectContext", "executeFetchRequest"]
 - !private ["CSo22NSManagedObjectContext", "save"]
+- !private ["PSo16NSMutableCopying", "Generator"]
+- !private ["PSo16NSMutableCopying", "count"]
 - !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "AppDelegate"]
+- !private ["CSo8NSObject", "Generator"]
 - ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "NSArray"]
 - !private ["CSo8NSObject", "NSEntityDescription"]
 - ["CSo8NSObject", "NSFetchRequest"]
 - ["CSo8NSObject", "NSFetchedResultsController"]
@@ -443,7 +524,6 @@ depends-member:
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "NSSortDescriptor"]
 - ["CSo8NSObject", "UIApplication"]
-- ["CSo8NSObject", "UIBarButtonItem"]
 - ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
@@ -452,13 +532,17 @@ depends-member:
 - ["CSo8NSObject", "controller"]
 - ["CSo8NSObject", "controllerDidChangeContent"]
 - ["CSo8NSObject", "controllerWillChangeContent"]
+- !private ["CSo8NSObject", "count"]
 - ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo8NSObject", "destinationViewController"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
-- !private ["CSo8NSObject", "dismissViewControllerAnimated"]
+- !private ["CSo8NSObject", "executeFetchRequest"]
 - !private ["CSo8NSObject", "fetchBatchSize"]
 - ["CSo8NSObject", "fetchedResultsController"]
-- ["CSo8NSObject", "goBack"]
+- !private ["CSo8NSObject", "identifier"]
+- !private ["CSo8NSObject", "indexPathForCell"]
+- !private ["CSo8NSObject", "indexPathForSelectedRow"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "insertNewObjectForEntityForName"]
 - ["CSo8NSObject", "managedObjectContext"]
@@ -466,10 +550,14 @@ depends-member:
 - !private ["CSo8NSObject", "name"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
 - !private ["CSo8NSObject", "objectAtIndexPath"]
+- !private ["CSo8NSObject", "objectID"]
+- !private ["CSo8NSObject", "objectId"]
 - !private ["CSo8NSObject", "performFetch"]
 - !private ["CSo8NSObject", "predicate"]
+- ["CSo8NSObject", "prepareForSegue"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "reloadData"]
+- !private ["CSo8NSObject", "reloadRowsAtIndexPaths"]
 - !private ["CSo8NSObject", "save"]
 - !private ["CSo8NSObject", "sections"]
 - ["CSo8NSObject", "sharedApplication"]
@@ -483,6 +571,7 @@ depends-member:
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["CSo8NSObject", "wetsuitName"]
 - !private ["CSo8NSObject", "wetsuitThickness"]
+- !private ["PSo16NSObjectProtocol", "Generator"]
 - !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
 - !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
 - !private ["PSo16NSObjectProtocol", "NSFetchedResultsController"]
@@ -492,13 +581,17 @@ depends-member:
 - ["PSo16NSObjectProtocol", "controller"]
 - ["PSo16NSObjectProtocol", "controllerDidChangeContent"]
 - ["PSo16NSObjectProtocol", "controllerWillChangeContent"]
+- !private ["PSo16NSObjectProtocol", "count"]
 - ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo16NSObjectProtocol", "destinationViewController"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
-- !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
+- !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
 - !private ["PSo16NSObjectProtocol", "fetchBatchSize"]
 - ["PSo16NSObjectProtocol", "fetchedResultsController"]
-- ["PSo16NSObjectProtocol", "goBack"]
+- !private ["PSo16NSObjectProtocol", "identifier"]
+- !private ["PSo16NSObjectProtocol", "indexPathForCell"]
+- !private ["PSo16NSObjectProtocol", "indexPathForSelectedRow"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "insertNewObjectForEntityForName"]
 - ["PSo16NSObjectProtocol", "managedObjectContext"]
@@ -506,10 +599,14 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "name"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
 - !private ["PSo16NSObjectProtocol", "objectAtIndexPath"]
+- !private ["PSo16NSObjectProtocol", "objectID"]
+- !private ["PSo16NSObjectProtocol", "objectId"]
 - !private ["PSo16NSObjectProtocol", "performFetch"]
 - !private ["PSo16NSObjectProtocol", "predicate"]
+- ["PSo16NSObjectProtocol", "prepareForSegue"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
+- !private ["PSo16NSObjectProtocol", "reloadRowsAtIndexPaths"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - !private ["PSo16NSObjectProtocol", "sections"]
 - ["PSo16NSObjectProtocol", "sharedApplication"]
@@ -527,6 +624,8 @@ depends-member:
 - !private ["CSo24NSPersistentStoreRequest", "init"]
 - !private ["CSo24NSPersistentStoreRequest", "predicate"]
 - !private ["CSo24NSPersistentStoreRequest", "sortDescriptors"]
+- !private ["PSo14NSSecureCoding", "Generator"]
+- !private ["PSo14NSSecureCoding", "count"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo16NSSortDescriptor", "init"]
 - !private ["CSo8NSString", "init"]
@@ -542,6 +641,7 @@ depends-member:
 - !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["PSs30RangeReplaceableCollectionType", "count"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
+- !private ["PSs16RawRepresentable", "None"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
 - !private ["PSs12SequenceType", "Index"]
@@ -564,11 +664,17 @@ depends-member:
 - !private ["PSs30StringInterpolationConvertible", "init"]
 - !private ["PSs24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo29UIAccessibilityIdentification", "indexPathForCell"]
+- !private ["PSo29UIAccessibilityIdentification", "indexPathForSelectedRow"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
+- !private ["PSo29UIAccessibilityIdentification", "reloadRowsAtIndexPaths"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo12UIAppearance", "indexPathForCell"]
+- !private ["PSo12UIAppearance", "indexPathForSelectedRow"]
 - !private ["PSo12UIAppearance", "reloadData"]
+- !private ["PSo12UIAppearance", "reloadRowsAtIndexPaths"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textLabel"]
 - !private ["PSo21UIAppearanceContainer", "NSEntityDescription"]
@@ -582,15 +688,18 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "controllerWillChangeContent"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
-- !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - ["PSo21UIAppearanceContainer", "fetchedResultsController"]
-- ["PSo21UIAppearanceContainer", "goBack"]
+- !private ["PSo21UIAppearanceContainer", "indexPathForCell"]
+- !private ["PSo21UIAppearanceContainer", "indexPathForSelectedRow"]
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "managedObjectContext"]
 - !private ["PSo21UIAppearanceContainer", "manufacturer"]
 - ["PSo21UIAppearanceContainer", "numberOfSectionsInTableView"]
+- !private ["PSo21UIAppearanceContainer", "objectId"]
+- ["PSo21UIAppearanceContainer", "prepareForSegue"]
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
+- !private ["PSo21UIAppearanceContainer", "reloadRowsAtIndexPaths"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textLabel"]
@@ -612,13 +721,13 @@ depends-member:
 - ["PSo18UIContentContainer", "controllerDidChangeContent"]
 - ["PSo18UIContentContainer", "controllerWillChangeContent"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
-- !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - ["PSo18UIContentContainer", "fetchedResultsController"]
-- ["PSo18UIContentContainer", "goBack"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "managedObjectContext"]
 - !private ["PSo18UIContentContainer", "manufacturer"]
 - ["PSo18UIContentContainer", "numberOfSectionsInTableView"]
+- !private ["PSo18UIContentContainer", "objectId"]
+- ["PSo18UIContentContainer", "prepareForSegue"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "tableView"]
 - ["PSo18UIContentContainer", "unwindToWetsuitList"]
@@ -627,26 +736,37 @@ depends-member:
 - !private ["PSo18UIContentContainer", "wetsuitThickness"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo17UICoordinateSpace", "indexPathForCell"]
+- !private ["PSo17UICoordinateSpace", "indexPathForSelectedRow"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
+- !private ["PSo17UICoordinateSpace", "reloadRowsAtIndexPaths"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo13UIDynamicItem", "indexPathForCell"]
+- !private ["PSo13UIDynamicItem", "indexPathForSelectedRow"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
+- !private ["PSo13UIDynamicItem", "reloadRowsAtIndexPaths"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
 - !private ["CSo7UILabel", "text"]
 - !private ["PSo30UINavigationControllerDelegate", "manufacturer"]
+- !private ["PSo30UINavigationControllerDelegate", "objectId"]
 - !private ["PSo30UINavigationControllerDelegate", "wetsuitName"]
 - !private ["PSo30UINavigationControllerDelegate", "wetsuitThickness"]
 - !private ["PSo22UIPickerViewDataSource", "manufacturer"]
+- !private ["PSo22UIPickerViewDataSource", "objectId"]
 - !private ["PSo22UIPickerViewDataSource", "wetsuitName"]
 - !private ["PSo22UIPickerViewDataSource", "wetsuitThickness"]
 - !private ["PSo20UIPickerViewDelegate", "manufacturer"]
+- !private ["PSo20UIPickerViewDelegate", "objectId"]
 - !private ["PSo20UIPickerViewDelegate", "wetsuitName"]
 - !private ["PSo20UIPickerViewDelegate", "wetsuitThickness"]
+- ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "AppDelegate"]
 - ["CSo11UIResponder", "Int"]
+- !private ["CSo11UIResponder", "NSArray"]
 - !private ["CSo11UIResponder", "NSEntityDescription"]
 - ["CSo11UIResponder", "NSFetchRequest"]
 - ["CSo11UIResponder", "NSFetchedResultsController"]
@@ -654,7 +774,6 @@ depends-member:
 - ["CSo11UIResponder", "NSManagedObjectContext"]
 - !private ["CSo11UIResponder", "NSSortDescriptor"]
 - ["CSo11UIResponder", "UIApplication"]
-- ["CSo11UIResponder", "UIBarButtonItem"]
 - ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
@@ -666,15 +785,18 @@ depends-member:
 - ["CSo11UIResponder", "delegate"]
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
-- !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - ["CSo11UIResponder", "fetchedResultsController"]
-- ["CSo11UIResponder", "goBack"]
+- !private ["CSo11UIResponder", "indexPathForCell"]
+- !private ["CSo11UIResponder", "indexPathForSelectedRow"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "managedObjectContext"]
 - !private ["CSo11UIResponder", "manufacturer"]
 - ["CSo11UIResponder", "numberOfSectionsInTableView"]
+- !private ["CSo11UIResponder", "objectId"]
+- ["CSo11UIResponder", "prepareForSegue"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "reloadData"]
+- !private ["CSo11UIResponder", "reloadRowsAtIndexPaths"]
 - ["CSo11UIResponder", "sharedApplication"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
@@ -685,7 +807,10 @@ depends-member:
 - !private ["CSo11UIResponder", "wetsuitName"]
 - !private ["CSo11UIResponder", "wetsuitThickness"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo12UIScrollView", "indexPathForCell"]
+- !private ["CSo12UIScrollView", "indexPathForSelectedRow"]
 - !private ["CSo12UIScrollView", "reloadData"]
+- !private ["CSo12UIScrollView", "reloadRowsAtIndexPaths"]
 - !private ["PSo20UIScrollViewDelegate", "NSEntityDescription"]
 - !private ["PSo20UIScrollViewDelegate", "NSFetchRequest"]
 - !private ["PSo20UIScrollViewDelegate", "NSFetchedResultsController"]
@@ -696,12 +821,11 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "controllerDidChangeContent"]
 - ["PSo20UIScrollViewDelegate", "controllerWillChangeContent"]
 - ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
-- !private ["PSo20UIScrollViewDelegate", "dismissViewControllerAnimated"]
 - ["PSo20UIScrollViewDelegate", "fetchedResultsController"]
-- ["PSo20UIScrollViewDelegate", "goBack"]
 - ["PSo20UIScrollViewDelegate", "init"]
 - ["PSo20UIScrollViewDelegate", "managedObjectContext"]
 - ["PSo20UIScrollViewDelegate", "numberOfSectionsInTableView"]
+- ["PSo20UIScrollViewDelegate", "prepareForSegue"]
 - !private ["PSo20UIScrollViewDelegate", "print"]
 - ["PSo20UIScrollViewDelegate", "tableView"]
 - ["PSo20UIScrollViewDelegate", "unwindToWetsuitList"]
@@ -717,13 +841,13 @@ depends-member:
 - ["PSo16UIStateRestoring", "controllerDidChangeContent"]
 - ["PSo16UIStateRestoring", "controllerWillChangeContent"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
-- !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - ["PSo16UIStateRestoring", "fetchedResultsController"]
-- ["PSo16UIStateRestoring", "goBack"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "managedObjectContext"]
 - !private ["PSo16UIStateRestoring", "manufacturer"]
 - ["PSo16UIStateRestoring", "numberOfSectionsInTableView"]
+- !private ["PSo16UIStateRestoring", "objectId"]
+- ["PSo16UIStateRestoring", "prepareForSegue"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "tableView"]
 - ["PSo16UIStateRestoring", "unwindToWetsuitList"]
@@ -731,12 +855,19 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "wetsuitName"]
 - !private ["PSo16UIStateRestoring", "wetsuitThickness"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["CSo17UIStoryboardSegue", "destinationViewController"]
+- !private ["CSo17UIStoryboardSegue", "identifier"]
 - !private ["CSo17UIStoryboardSegue", "sourceViewController"]
 - !private ["CSo11UITableView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo11UITableView", "indexPathForCell"]
+- !private ["CSo11UITableView", "indexPathForSelectedRow"]
 - !private ["CSo11UITableView", "reloadData"]
+- !private ["CSo11UITableView", "reloadRowsAtIndexPaths"]
 - !private ["CSo15UITableViewCell", "textLabel"]
+- ["CSo21UITableViewController", "AnyObject"]
 - ["CSo21UITableViewController", "AppDelegate"]
 - ["CSo21UITableViewController", "Int"]
+- !private ["CSo21UITableViewController", "NSArray"]
 - !private ["CSo21UITableViewController", "NSEntityDescription"]
 - ["CSo21UITableViewController", "NSFetchRequest"]
 - ["CSo21UITableViewController", "NSFetchedResultsController"]
@@ -744,7 +875,6 @@ depends-member:
 - ["CSo21UITableViewController", "NSManagedObjectContext"]
 - !private ["CSo21UITableViewController", "NSSortDescriptor"]
 - ["CSo21UITableViewController", "UIApplication"]
-- ["CSo21UITableViewController", "UIBarButtonItem"]
 - ["CSo21UITableViewController", "UIStoryboardSegue"]
 - ["CSo21UITableViewController", "UITableView"]
 - ["CSo21UITableViewController", "UITableViewCell"]
@@ -754,12 +884,11 @@ depends-member:
 - ["CSo21UITableViewController", "controllerDidChangeContent"]
 - ["CSo21UITableViewController", "controllerWillChangeContent"]
 - ["CSo21UITableViewController", "didReceiveMemoryWarning"]
-- !private ["CSo21UITableViewController", "dismissViewControllerAnimated"]
 - ["CSo21UITableViewController", "fetchedResultsController"]
-- ["CSo21UITableViewController", "goBack"]
 - ["CSo21UITableViewController", "init"]
 - ["CSo21UITableViewController", "managedObjectContext"]
 - ["CSo21UITableViewController", "numberOfSectionsInTableView"]
+- ["CSo21UITableViewController", "prepareForSegue"]
 - !private ["CSo21UITableViewController", "print"]
 - ["CSo21UITableViewController", "tableView"]
 - ["CSo21UITableViewController", "unwindToWetsuitList"]
@@ -776,12 +905,11 @@ depends-member:
 - ["PSo21UITableViewDataSource", "controllerDidChangeContent"]
 - ["PSo21UITableViewDataSource", "controllerWillChangeContent"]
 - ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
-- !private ["PSo21UITableViewDataSource", "dismissViewControllerAnimated"]
 - ["PSo21UITableViewDataSource", "fetchedResultsController"]
-- ["PSo21UITableViewDataSource", "goBack"]
 - ["PSo21UITableViewDataSource", "init"]
 - ["PSo21UITableViewDataSource", "managedObjectContext"]
 - ["PSo21UITableViewDataSource", "numberOfSectionsInTableView"]
+- ["PSo21UITableViewDataSource", "prepareForSegue"]
 - !private ["PSo21UITableViewDataSource", "print"]
 - ["PSo21UITableViewDataSource", "tableView"]
 - ["PSo21UITableViewDataSource", "unwindToWetsuitList"]
@@ -797,17 +925,17 @@ depends-member:
 - ["PSo19UITableViewDelegate", "controllerDidChangeContent"]
 - ["PSo19UITableViewDelegate", "controllerWillChangeContent"]
 - ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
-- !private ["PSo19UITableViewDelegate", "dismissViewControllerAnimated"]
 - ["PSo19UITableViewDelegate", "fetchedResultsController"]
-- ["PSo19UITableViewDelegate", "goBack"]
 - ["PSo19UITableViewDelegate", "init"]
 - ["PSo19UITableViewDelegate", "managedObjectContext"]
 - ["PSo19UITableViewDelegate", "numberOfSectionsInTableView"]
+- ["PSo19UITableViewDelegate", "prepareForSegue"]
 - !private ["PSo19UITableViewDelegate", "print"]
 - ["PSo19UITableViewDelegate", "tableView"]
 - ["PSo19UITableViewDelegate", "unwindToWetsuitList"]
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
+- !private ["OSC23UITableViewRowAnimation", "None"]
 - !private ["PSo18UITraitEnvironment", "NSEntityDescription"]
 - !private ["PSo18UITraitEnvironment", "NSFetchRequest"]
 - !private ["PSo18UITraitEnvironment", "NSFetchedResultsController"]
@@ -819,15 +947,18 @@ depends-member:
 - ["PSo18UITraitEnvironment", "controllerWillChangeContent"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
-- !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - ["PSo18UITraitEnvironment", "fetchedResultsController"]
-- ["PSo18UITraitEnvironment", "goBack"]
+- !private ["PSo18UITraitEnvironment", "indexPathForCell"]
+- !private ["PSo18UITraitEnvironment", "indexPathForSelectedRow"]
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "managedObjectContext"]
 - !private ["PSo18UITraitEnvironment", "manufacturer"]
 - ["PSo18UITraitEnvironment", "numberOfSectionsInTableView"]
+- !private ["PSo18UITraitEnvironment", "objectId"]
+- ["PSo18UITraitEnvironment", "prepareForSegue"]
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
+- !private ["PSo18UITraitEnvironment", "reloadRowsAtIndexPaths"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textLabel"]
@@ -837,11 +968,16 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "wetsuitThickness"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo6UIView", "indexPathForCell"]
+- !private ["CSo6UIView", "indexPathForSelectedRow"]
 - !private ["CSo6UIView", "reloadData"]
+- !private ["CSo6UIView", "reloadRowsAtIndexPaths"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "textLabel"]
+- ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "AppDelegate"]
 - ["CSo16UIViewController", "Int"]
+- !private ["CSo16UIViewController", "NSArray"]
 - !private ["CSo16UIViewController", "NSEntityDescription"]
 - ["CSo16UIViewController", "NSFetchRequest"]
 - ["CSo16UIViewController", "NSFetchedResultsController"]
@@ -849,7 +985,6 @@ depends-member:
 - ["CSo16UIViewController", "NSManagedObjectContext"]
 - !private ["CSo16UIViewController", "NSSortDescriptor"]
 - ["CSo16UIViewController", "UIApplication"]
-- ["CSo16UIViewController", "UIBarButtonItem"]
 - ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
@@ -860,13 +995,13 @@ depends-member:
 - ["CSo16UIViewController", "controllerWillChangeContent"]
 - !private ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
-- !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "fetchedResultsController"]
-- ["CSo16UIViewController", "goBack"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "managedObjectContext"]
 - !private ["CSo16UIViewController", "manufacturer"]
 - ["CSo16UIViewController", "numberOfSectionsInTableView"]
+- !private ["CSo16UIViewController", "objectId"]
+- ["CSo16UIViewController", "prepareForSegue"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "unwindToWetsuitList"]
@@ -881,8 +1016,10 @@ depends-member:
 - !private ["VSs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- ["C11SurfLogbook26WetsuitTableViewController", "AnyObject"]
 - ["C11SurfLogbook26WetsuitTableViewController", "AppDelegate"]
 - ["C11SurfLogbook26WetsuitTableViewController", "Int"]
+- !private ["C11SurfLogbook26WetsuitTableViewController", "NSArray"]
 - !private ["C11SurfLogbook26WetsuitTableViewController", "NSEntityDescription"]
 - ["C11SurfLogbook26WetsuitTableViewController", "NSFetchRequest"]
 - ["C11SurfLogbook26WetsuitTableViewController", "NSFetchedResultsController"]
@@ -890,7 +1027,6 @@ depends-member:
 - ["C11SurfLogbook26WetsuitTableViewController", "NSManagedObjectContext"]
 - !private ["C11SurfLogbook26WetsuitTableViewController", "NSSortDescriptor"]
 - ["C11SurfLogbook26WetsuitTableViewController", "UIApplication"]
-- ["C11SurfLogbook26WetsuitTableViewController", "UIBarButtonItem"]
 - ["C11SurfLogbook26WetsuitTableViewController", "UIStoryboardSegue"]
 - ["C11SurfLogbook26WetsuitTableViewController", "UITableView"]
 - ["C11SurfLogbook26WetsuitTableViewController", "UITableViewCell"]
@@ -901,12 +1037,11 @@ depends-member:
 - ["C11SurfLogbook26WetsuitTableViewController", "controllerWillChangeContent"]
 - ["C11SurfLogbook26WetsuitTableViewController", "deinit"]
 - ["C11SurfLogbook26WetsuitTableViewController", "didReceiveMemoryWarning"]
-- !private ["C11SurfLogbook26WetsuitTableViewController", "dismissViewControllerAnimated"]
 - ["C11SurfLogbook26WetsuitTableViewController", "fetchedResultsController"]
-- ["C11SurfLogbook26WetsuitTableViewController", "goBack"]
 - ["C11SurfLogbook26WetsuitTableViewController", "init"]
 - ["C11SurfLogbook26WetsuitTableViewController", "managedObjectContext"]
 - ["C11SurfLogbook26WetsuitTableViewController", "numberOfSectionsInTableView"]
+- ["C11SurfLogbook26WetsuitTableViewController", "prepareForSegue"]
 - !private ["C11SurfLogbook26WetsuitTableViewController", "print"]
 - ["C11SurfLogbook26WetsuitTableViewController", "tableView"]
 - ["C11SurfLogbook26WetsuitTableViewController", "unwindToWetsuitList"]
@@ -914,6 +1049,7 @@ depends-member:
 - ["C11SurfLogbook26WetsuitTableViewController", "viewDidLoad"]
 - !private ["C11SurfLogbook8Wetsuits", "manufacturer"]
 - !private ["C11SurfLogbook8Wetsuits", "name"]
+- !private ["C11SurfLogbook8Wetsuits", "objectID"]
 - !private ["C11SurfLogbook8Wetsuits", "wetsuitThickness"]
 - !private ["PSs10_ArrayType", "Element"]
 - !private ["PSs10_ArrayType", "Generator"]
@@ -921,6 +1057,7 @@ depends-member:
 - !private ["PSs10_ArrayType", "SubSequence"]
 - !private ["PSs10_ArrayType", "count"]
 - !private ["PSs10_ArrayType", "subscript"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
@@ -946,9 +1083,13 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "Index"]
 - !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "count"]
 - !private ["PSs21_ObjectiveCBridgeable", "init"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
+- !private ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
+- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["PSs12_Reflectable", "Distance"]
 - !private ["PSs12_Reflectable", "Element"]
 - !private ["PSs12_Reflectable", "Generator"]
@@ -956,10 +1097,14 @@ depends-member:
 - !private ["PSs12_Reflectable", "IntegerLiteralType"]
 - ["PSs12_Reflectable", "Some"]
 - !private ["PSs12_Reflectable", "SubSequence"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["PSs12_Reflectable", "count"]
 - !private ["PSs12_Reflectable", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs12_Reflectable", "indexPathForCell"]
+- !private ["PSs12_Reflectable", "indexPathForSelectedRow"]
 - !private ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "reloadData"]
+- !private ["PSs12_Reflectable", "reloadRowsAtIndexPaths"]
 - !private ["PSs12_Reflectable", "subscript"]
 - !private ["PSs12_Reflectable", "text"]
 - !private ["PSs12_Reflectable", "textLabel"]
@@ -968,6 +1113,7 @@ depends-member:
 - !private ["PSs11_Strideable", "Distance"]
 - !private ["PSs11_Strideable", "IntegerLiteralType"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "manufacturer"]
+- !private ["C11SurfLogbook12vcNewWetsuit", "objectId"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "wetsuitName"]
 - !private ["C11SurfLogbook12vcNewWetsuit", "wetsuitThickness"]
 depends-nominal:
@@ -979,6 +1125,8 @@ depends-nominal:
 - !private "PSs22BidirectionalIndexType"
 - !private "PSs21BitwiseOperationsType"
 - !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
 - "PSs11CVarArgType"
 - !private "VSs9Character"
 - !private "PSs14CollectionType"
@@ -1004,12 +1152,15 @@ depends-nominal:
 - !private "PSs11IntegerType"
 - !private "PSs14MirrorPathType"
 - !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
 - !private "PSs16MutableSliceable"
+- !private "CSo7NSArray"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "CSo19NSEntityDescription"
 - "PSo26NSExtensionRequestHandling"
 - !private "PSo17NSFastEnumeration"
+- !private "C10Foundation15NSFastGenerator"
 - !private "CSo14NSFetchRequest"
 - !private "CSo26NSFetchedResultsController"
 - "PSo34NSFetchedResultsControllerDelegate"
@@ -1029,6 +1180,7 @@ depends-nominal:
 - !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
 - !private "PSs30RangeReplaceableCollectionType"
+- !private "PSs16RawRepresentable"
 - !private "PSs12SequenceType"
 - !private "PSs17SignedIntegerType"
 - !private "PSs16SignedNumberType"
@@ -1061,6 +1213,7 @@ depends-nominal:
 - "CSo21UITableViewController"
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
+- !private "OSC23UITableViewRowAnimation"
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
@@ -1074,6 +1227,7 @@ depends-nominal:
 - "C11SurfLogbook26WetsuitTableViewController"
 - !private "C11SurfLogbook8Wetsuits"
 - !private "PSs10_ArrayType"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
 - !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "PSs33_BuiltinIntegerLiteralConvertible"
 - !private "PSs32_BuiltinStringLiteralConvertible"
@@ -1085,31 +1239,21 @@ depends-nominal:
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
 - !private "PSs21_ObjectiveCBridgeable"
+- !private "VSs26_OptionalNilComparisonType"
+- !private "PSs22_RandomAccessAmbiguity"
 - "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
 - !private "C11SurfLogbook12vcNewWetsuit"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/DarwinShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/module.map"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "dc1b512f72e279915684e938bd97d05d"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "0cfbd1dfda6121fde4ca5d837af92e97"

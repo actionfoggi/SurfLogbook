@@ -6,77 +6,82 @@ provides-nominal:
 provides-member:
 - ["C11SurfLogbook14vcSessionEntry", ""]
 provides-dynamic-lookup:
-- "durationPickerView"
-- "avgPeopleLabel"
-- "didReceiveMemoryWarning"
-- "avgPeopleSliderValueChanged"
-- "startTimeTextField"
-- "startTimeTextField"
-- "airTempSlider"
-- "handleDayPicker"
-- "editingDone"
-- "handleTimePicker"
 - "avgPeopleSlider"
+- "handleDayPicker"
+- "dayTextField"
+- "dayTextField"
 - "editWetsuitsButton"
-- "durationTextField"
-- "contentView"
-- "waterTempSlider"
-- "viewDidLayoutSubviews"
-- "scrollView"
+- "handleStartTimePicker"
 - "datePickerView"
-- "usedWetsuitTextField"
 - "airTempLabel"
-- "slinderValueChanged"
+- "contentView"
+- "endTimePickerView"
+- "avgPeopleLabel"
 - "waterTempSliderValueChanged"
-- "pickerView"
-- "pickerView"
-- "pickerView"
-- "timePickerView"
-- "commentTextView"
-- "skyConditionTextField"
-- "numberOfComponentsInPickerView"
-- "waterTempLabel"
 - "wetsuitPickOption"
+- "pickerView"
+- "pickerView"
+- "pickerView"
+- "slinderValueChanged"
+- "avgPeopleSliderValueChanged"
+- "numberOfComponentsInPickerView"
+- "didReceiveMemoryWarning"
+- "usedWetsuitTextField"
+- "startTimePickerView"
+- "waterTempSlider"
 - "viewDidLoad"
-- "dayTextField"
-- "dayTextField"
+- "endTimeTextField"
+- "endTimeTextField"
+- "waterTempLabel"
+- "unwindToSessionEntry"
+- "scrollView"
+- "editingDone"
+- "viewDidLayoutSubviews"
+- "commentTextView"
+- "loadCoreDataContentToView"
+- "handleEndTimePicker"
+- "airTempSlider"
+- "skyConditionTextField"
+- "startTimeTextField"
+- "startTimeTextField"
 depends-top-level:
-- "Array"
-- "UIPickerViewDataSource"
-- !private "NSFetchRequest"
-- !private "NSLocale"
-- !private "StringLiteralType"
-- "UIPickerViewDelegate"
-- !private "UIDatePickerMode"
-- !private "NSDateFormatter"
 - !private "NSDateFormatterStyle"
-- "Wetsuits"
-- "vcSessionEntry"
-- "UIPickerView"
-- "Int"
-- "UIButton"
-- !private "~="
-- !private "AppDelegate"
-- "UITextView"
-- "String"
-- "SkyConditions"
-- !private "NSArray"
-- !private "UIApplication"
-- "UIDatePicker"
+- !private "NSManagedObjectContext"
+- !private "StringLiteralType"
+- !private "NSDateFormatter"
+- "UIScrollViewDelegate"
 - "UITextField"
-- !private "UIControlEvents"
-- !private "BooleanLiteralType"
+- "UILabel"
 - !private ">"
 - "UIView"
-- "UIScrollView"
-- "UILabel"
-- "UISlider"
+- !private "NSArray"
+- !private "UIControlEvents"
+- !private "NSFetchRequest"
+- "Int"
+- "String"
+- "UIDatePicker"
+- "SkyConditions"
+- !private "UIApplication"
+- !private "~="
 - !private "Float"
-- "UIViewController"
-- "UIScrollViewDelegate"
 - !private "Selector"
+- "Array"
+- "UIButton"
+- "UITextView"
+- "UIPickerViewDataSource"
+- !private "NSLocale"
+- "UIPickerViewDelegate"
+- "UIScrollView"
+- "vcSessionEntry"
+- !private "BooleanLiteralType"
+- "UIViewController"
 - !private "print"
-- !private "NSManagedObjectContext"
+- !private "UIDatePickerMode"
+- "UISlider"
+- "UIPickerView"
+- "UIStoryboardSegue"
+- "Wetsuits"
+- !private "AppDelegate"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["PSs9AnyObject", "Element"]
@@ -113,16 +118,18 @@ depends-member:
 - ["PSs9AnyObject", "dayTextField"]
 - !private ["PSs9AnyObject", "delegate"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
-- ["PSs9AnyObject", "durationPickerView"]
-- ["PSs9AnyObject", "durationTextField"]
 - ["PSs9AnyObject", "editWetsuitsButton"]
 - ["PSs9AnyObject", "editingDone"]
+- ["PSs9AnyObject", "endTimePickerView"]
+- ["PSs9AnyObject", "endTimeTextField"]
 - !private ["PSs9AnyObject", "executeFetchRequest"]
 - ["PSs9AnyObject", "handleDayPicker"]
-- ["PSs9AnyObject", "handleTimePicker"]
+- ["PSs9AnyObject", "handleEndTimePicker"]
+- ["PSs9AnyObject", "handleStartTimePicker"]
 - ["PSs9AnyObject", "init"]
 - !private ["PSs9AnyObject", "inputView"]
 - !private ["PSs9AnyObject", "layoutIfNeeded"]
+- ["PSs9AnyObject", "loadCoreDataContentToView"]
 - !private ["PSs9AnyObject", "locale"]
 - !private ["PSs9AnyObject", "localizedStringWithFormat"]
 - !private ["PSs9AnyObject", "managedObjectContext"]
@@ -149,12 +156,13 @@ depends-member:
 - ["PSs9AnyObject", "skyConditionTextField"]
 - ["PSs9AnyObject", "skyconditionsPickOption"]
 - ["PSs9AnyObject", "slinderValueChanged"]
+- ["PSs9AnyObject", "startTimePickerView"]
 - ["PSs9AnyObject", "startTimeTextField"]
 - !private ["PSs9AnyObject", "stringFromDate"]
 - !private ["PSs9AnyObject", "tag"]
 - !private ["PSs9AnyObject", "text"]
-- ["PSs9AnyObject", "timePickerView"]
 - !private ["PSs9AnyObject", "timeStyle"]
+- ["PSs9AnyObject", "unwindToSessionEntry"]
 - ["PSs9AnyObject", "usedWetsuitTextField"]
 - !private ["PSs9AnyObject", "value"]
 - ["PSs9AnyObject", "viewDidLayoutSubviews"]
@@ -173,6 +181,7 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
+- !private ["Sa", "removeAll"]
 - !private ["Sa", "subscript"]
 - !private ["PSs23ArrayLiteralConvertible", "Generator"]
 - !private ["PSs23ArrayLiteralConvertible", "Index"]
@@ -181,6 +190,7 @@ depends-member:
 - !private ["PSs23ArrayLiteralConvertible", "_Element"]
 - !private ["PSs23ArrayLiteralConvertible", "append"]
 - !private ["PSs23ArrayLiteralConvertible", "count"]
+- !private ["PSs23ArrayLiteralConvertible", "removeAll"]
 - !private ["PSs23ArrayLiteralConvertible", "subscript"]
 - !private ["VSs10ArraySlice", "Generator"]
 - !private ["VSs10ArraySlice", "Index"]
@@ -229,16 +239,18 @@ depends-member:
 - ["PSs11CVarArgType", "dayTextField"]
 - !private ["PSs11CVarArgType", "delegate"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
-- ["PSs11CVarArgType", "durationPickerView"]
-- ["PSs11CVarArgType", "durationTextField"]
 - ["PSs11CVarArgType", "editWetsuitsButton"]
 - ["PSs11CVarArgType", "editingDone"]
+- ["PSs11CVarArgType", "endTimePickerView"]
+- ["PSs11CVarArgType", "endTimeTextField"]
 - !private ["PSs11CVarArgType", "executeFetchRequest"]
 - ["PSs11CVarArgType", "handleDayPicker"]
-- ["PSs11CVarArgType", "handleTimePicker"]
+- ["PSs11CVarArgType", "handleEndTimePicker"]
+- ["PSs11CVarArgType", "handleStartTimePicker"]
 - ["PSs11CVarArgType", "init"]
 - !private ["PSs11CVarArgType", "inputView"]
 - !private ["PSs11CVarArgType", "layoutIfNeeded"]
+- ["PSs11CVarArgType", "loadCoreDataContentToView"]
 - !private ["PSs11CVarArgType", "locale"]
 - !private ["PSs11CVarArgType", "localizedStringWithFormat"]
 - !private ["PSs11CVarArgType", "managedObjectContext"]
@@ -265,12 +277,13 @@ depends-member:
 - ["PSs11CVarArgType", "skyConditionTextField"]
 - ["PSs11CVarArgType", "skyconditionsPickOption"]
 - ["PSs11CVarArgType", "slinderValueChanged"]
+- ["PSs11CVarArgType", "startTimePickerView"]
 - ["PSs11CVarArgType", "startTimeTextField"]
 - !private ["PSs11CVarArgType", "stringFromDate"]
 - !private ["PSs11CVarArgType", "tag"]
 - !private ["PSs11CVarArgType", "text"]
-- ["PSs11CVarArgType", "timePickerView"]
 - !private ["PSs11CVarArgType", "timeStyle"]
+- ["PSs11CVarArgType", "unwindToSessionEntry"]
 - ["PSs11CVarArgType", "usedWetsuitTextField"]
 - !private ["PSs11CVarArgType", "value"]
 - ["PSs11CVarArgType", "viewDidLayoutSubviews"]
@@ -287,6 +300,7 @@ depends-member:
 - !private ["PSs14CollectionType", "_Element"]
 - !private ["PSs14CollectionType", "append"]
 - !private ["PSs14CollectionType", "count"]
+- !private ["PSs14CollectionType", "removeAll"]
 - !private ["PSs14CollectionType", "subscript"]
 - !private ["PSs10Comparable", "Distance"]
 - !private ["PSs10Comparable", "IntegerLiteralType"]
@@ -299,6 +313,7 @@ depends-member:
 - !private ["PSs28CustomDebugStringConvertible", "append"]
 - !private ["PSs28CustomDebugStringConvertible", "count"]
 - !private ["PSs28CustomDebugStringConvertible", "localizedStringWithFormat"]
+- !private ["PSs28CustomDebugStringConvertible", "removeAll"]
 - !private ["PSs28CustomDebugStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "Distance"]
 - !private ["PSs23CustomStringConvertible", "Float"]
@@ -340,22 +355,25 @@ depends-member:
 - ["PSs23CustomStringConvertible", "dayTextField"]
 - !private ["PSs23CustomStringConvertible", "delegate"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
-- ["PSs23CustomStringConvertible", "durationPickerView"]
-- ["PSs23CustomStringConvertible", "durationTextField"]
 - ["PSs23CustomStringConvertible", "editWetsuitsButton"]
 - ["PSs23CustomStringConvertible", "editingDone"]
+- ["PSs23CustomStringConvertible", "endTimePickerView"]
+- ["PSs23CustomStringConvertible", "endTimeTextField"]
 - !private ["PSs23CustomStringConvertible", "executeFetchRequest"]
 - ["PSs23CustomStringConvertible", "handleDayPicker"]
-- ["PSs23CustomStringConvertible", "handleTimePicker"]
+- ["PSs23CustomStringConvertible", "handleEndTimePicker"]
+- ["PSs23CustomStringConvertible", "handleStartTimePicker"]
 - ["PSs23CustomStringConvertible", "init"]
 - !private ["PSs23CustomStringConvertible", "inputView"]
 - !private ["PSs23CustomStringConvertible", "layoutIfNeeded"]
+- ["PSs23CustomStringConvertible", "loadCoreDataContentToView"]
 - !private ["PSs23CustomStringConvertible", "locale"]
 - !private ["PSs23CustomStringConvertible", "localizedStringWithFormat"]
 - !private ["PSs23CustomStringConvertible", "managedObjectContext"]
 - ["PSs23CustomStringConvertible", "numberOfComponentsInPickerView"]
 - ["PSs23CustomStringConvertible", "pickerView"]
 - !private ["PSs23CustomStringConvertible", "print"]
+- !private ["PSs23CustomStringConvertible", "removeAll"]
 - !private ["PSs23CustomStringConvertible", "resignFirstResponder"]
 - !private ["PSs23CustomStringConvertible", "returnsObjectsAsFaults"]
 - ["PSs23CustomStringConvertible", "scrollView"]
@@ -376,13 +394,14 @@ depends-member:
 - ["PSs23CustomStringConvertible", "skyConditionTextField"]
 - ["PSs23CustomStringConvertible", "skyconditionsPickOption"]
 - ["PSs23CustomStringConvertible", "slinderValueChanged"]
+- ["PSs23CustomStringConvertible", "startTimePickerView"]
 - ["PSs23CustomStringConvertible", "startTimeTextField"]
 - !private ["PSs23CustomStringConvertible", "stringFromDate"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "tag"]
 - !private ["PSs23CustomStringConvertible", "text"]
-- ["PSs23CustomStringConvertible", "timePickerView"]
 - !private ["PSs23CustomStringConvertible", "timeStyle"]
+- ["PSs23CustomStringConvertible", "unwindToSessionEntry"]
 - ["PSs23CustomStringConvertible", "usedWetsuitTextField"]
 - !private ["PSs23CustomStringConvertible", "value"]
 - ["PSs23CustomStringConvertible", "viewDidLayoutSubviews"]
@@ -437,16 +456,18 @@ depends-member:
 - ["PSs9Equatable", "dayTextField"]
 - !private ["PSs9Equatable", "delegate"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
-- ["PSs9Equatable", "durationPickerView"]
-- ["PSs9Equatable", "durationTextField"]
 - ["PSs9Equatable", "editWetsuitsButton"]
 - ["PSs9Equatable", "editingDone"]
+- ["PSs9Equatable", "endTimePickerView"]
+- ["PSs9Equatable", "endTimeTextField"]
 - !private ["PSs9Equatable", "executeFetchRequest"]
 - ["PSs9Equatable", "handleDayPicker"]
-- ["PSs9Equatable", "handleTimePicker"]
+- ["PSs9Equatable", "handleEndTimePicker"]
+- ["PSs9Equatable", "handleStartTimePicker"]
 - ["PSs9Equatable", "init"]
 - !private ["PSs9Equatable", "inputView"]
 - !private ["PSs9Equatable", "layoutIfNeeded"]
+- ["PSs9Equatable", "loadCoreDataContentToView"]
 - !private ["PSs9Equatable", "locale"]
 - !private ["PSs9Equatable", "localizedStringWithFormat"]
 - !private ["PSs9Equatable", "managedObjectContext"]
@@ -474,12 +495,13 @@ depends-member:
 - ["PSs9Equatable", "skyConditionTextField"]
 - ["PSs9Equatable", "skyconditionsPickOption"]
 - ["PSs9Equatable", "slinderValueChanged"]
+- ["PSs9Equatable", "startTimePickerView"]
 - ["PSs9Equatable", "startTimeTextField"]
 - !private ["PSs9Equatable", "stringFromDate"]
 - !private ["PSs9Equatable", "tag"]
 - !private ["PSs9Equatable", "text"]
-- ["PSs9Equatable", "timePickerView"]
 - !private ["PSs9Equatable", "timeStyle"]
+- ["PSs9Equatable", "unwindToSessionEntry"]
 - ["PSs9Equatable", "usedWetsuitTextField"]
 - !private ["PSs9Equatable", "value"]
 - ["PSs9Equatable", "viewDidLayoutSubviews"]
@@ -541,16 +563,18 @@ depends-member:
 - ["PSs8Hashable", "dayTextField"]
 - !private ["PSs8Hashable", "delegate"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
-- ["PSs8Hashable", "durationPickerView"]
-- ["PSs8Hashable", "durationTextField"]
 - ["PSs8Hashable", "editWetsuitsButton"]
 - ["PSs8Hashable", "editingDone"]
+- ["PSs8Hashable", "endTimePickerView"]
+- ["PSs8Hashable", "endTimeTextField"]
 - !private ["PSs8Hashable", "executeFetchRequest"]
 - ["PSs8Hashable", "handleDayPicker"]
-- ["PSs8Hashable", "handleTimePicker"]
+- ["PSs8Hashable", "handleEndTimePicker"]
+- ["PSs8Hashable", "handleStartTimePicker"]
 - ["PSs8Hashable", "init"]
 - !private ["PSs8Hashable", "inputView"]
 - !private ["PSs8Hashable", "layoutIfNeeded"]
+- ["PSs8Hashable", "loadCoreDataContentToView"]
 - !private ["PSs8Hashable", "locale"]
 - !private ["PSs8Hashable", "localizedStringWithFormat"]
 - !private ["PSs8Hashable", "managedObjectContext"]
@@ -577,12 +601,13 @@ depends-member:
 - ["PSs8Hashable", "skyConditionTextField"]
 - ["PSs8Hashable", "skyconditionsPickOption"]
 - ["PSs8Hashable", "slinderValueChanged"]
+- ["PSs8Hashable", "startTimePickerView"]
 - ["PSs8Hashable", "startTimeTextField"]
 - !private ["PSs8Hashable", "stringFromDate"]
 - !private ["PSs8Hashable", "tag"]
 - !private ["PSs8Hashable", "text"]
-- ["PSs8Hashable", "timePickerView"]
 - !private ["PSs8Hashable", "timeStyle"]
+- ["PSs8Hashable", "unwindToSessionEntry"]
 - ["PSs8Hashable", "usedWetsuitTextField"]
 - !private ["PSs8Hashable", "value"]
 - ["PSs8Hashable", "viewDidLayoutSubviews"]
@@ -599,6 +624,7 @@ depends-member:
 - !private ["PSs9Indexable", "_Element"]
 - !private ["PSs9Indexable", "append"]
 - !private ["PSs9Indexable", "count"]
+- !private ["PSs9Indexable", "removeAll"]
 - !private ["PSs9Indexable", "subscript"]
 - !private ["VSs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
@@ -624,13 +650,23 @@ depends-member:
 - !private ["PSs21MutableCollectionType", "_Element"]
 - !private ["PSs21MutableCollectionType", "append"]
 - !private ["PSs21MutableCollectionType", "count"]
+- !private ["PSs21MutableCollectionType", "removeAll"]
 - !private ["PSs21MutableCollectionType", "subscript"]
+- !private ["PSs16MutableIndexable", "Generator"]
+- !private ["PSs16MutableIndexable", "Index"]
+- !private ["PSs16MutableIndexable", "SubSequence"]
+- !private ["PSs16MutableIndexable", "_Element"]
+- !private ["PSs16MutableIndexable", "append"]
+- !private ["PSs16MutableIndexable", "count"]
+- !private ["PSs16MutableIndexable", "removeAll"]
+- !private ["PSs16MutableIndexable", "subscript"]
 - !private ["PSs16MutableSliceable", "Generator"]
 - !private ["PSs16MutableSliceable", "Index"]
 - !private ["PSs16MutableSliceable", "SubSequence"]
 - !private ["PSs16MutableSliceable", "_Element"]
 - !private ["PSs16MutableSliceable", "append"]
 - !private ["PSs16MutableSliceable", "count"]
+- !private ["PSs16MutableSliceable", "removeAll"]
 - !private ["PSs16MutableSliceable", "subscript"]
 - !private ["CSo7NSArray", "Generator"]
 - !private ["CSo7NSArray", "count"]
@@ -667,16 +703,18 @@ depends-member:
 - ["PSo8NSCoding", "dayTextField"]
 - !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
-- ["PSo8NSCoding", "durationPickerView"]
-- ["PSo8NSCoding", "durationTextField"]
 - ["PSo8NSCoding", "editWetsuitsButton"]
 - ["PSo8NSCoding", "editingDone"]
+- ["PSo8NSCoding", "endTimePickerView"]
+- ["PSo8NSCoding", "endTimeTextField"]
 - !private ["PSo8NSCoding", "executeFetchRequest"]
 - ["PSo8NSCoding", "handleDayPicker"]
-- ["PSo8NSCoding", "handleTimePicker"]
+- ["PSo8NSCoding", "handleEndTimePicker"]
+- ["PSo8NSCoding", "handleStartTimePicker"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "inputView"]
 - !private ["PSo8NSCoding", "layoutIfNeeded"]
+- ["PSo8NSCoding", "loadCoreDataContentToView"]
 - !private ["PSo8NSCoding", "locale"]
 - !private ["PSo8NSCoding", "localizedStringWithFormat"]
 - ["PSo8NSCoding", "numberOfComponentsInPickerView"]
@@ -700,12 +738,13 @@ depends-member:
 - ["PSo8NSCoding", "skyConditionTextField"]
 - ["PSo8NSCoding", "skyconditionsPickOption"]
 - ["PSo8NSCoding", "slinderValueChanged"]
+- ["PSo8NSCoding", "startTimePickerView"]
 - ["PSo8NSCoding", "startTimeTextField"]
 - !private ["PSo8NSCoding", "stringFromDate"]
 - !private ["PSo8NSCoding", "tag"]
 - !private ["PSo8NSCoding", "text"]
-- ["PSo8NSCoding", "timePickerView"]
 - !private ["PSo8NSCoding", "timeStyle"]
+- ["PSo8NSCoding", "unwindToSessionEntry"]
 - ["PSo8NSCoding", "usedWetsuitTextField"]
 - !private ["PSo8NSCoding", "value"]
 - ["PSo8NSCoding", "viewDidLayoutSubviews"]
@@ -757,13 +796,15 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "datePickerView"]
 - ["PSo26NSExtensionRequestHandling", "dayTextField"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
-- ["PSo26NSExtensionRequestHandling", "durationPickerView"]
-- ["PSo26NSExtensionRequestHandling", "durationTextField"]
 - ["PSo26NSExtensionRequestHandling", "editWetsuitsButton"]
 - ["PSo26NSExtensionRequestHandling", "editingDone"]
+- ["PSo26NSExtensionRequestHandling", "endTimePickerView"]
+- ["PSo26NSExtensionRequestHandling", "endTimeTextField"]
 - ["PSo26NSExtensionRequestHandling", "handleDayPicker"]
-- ["PSo26NSExtensionRequestHandling", "handleTimePicker"]
+- ["PSo26NSExtensionRequestHandling", "handleEndTimePicker"]
+- ["PSo26NSExtensionRequestHandling", "handleStartTimePicker"]
 - ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "loadCoreDataContentToView"]
 - ["PSo26NSExtensionRequestHandling", "numberOfComponentsInPickerView"]
 - ["PSo26NSExtensionRequestHandling", "pickerView"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
@@ -783,8 +824,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "skyConditionTextField"]
 - ["PSo26NSExtensionRequestHandling", "skyconditionsPickOption"]
 - ["PSo26NSExtensionRequestHandling", "slinderValueChanged"]
+- ["PSo26NSExtensionRequestHandling", "startTimePickerView"]
 - ["PSo26NSExtensionRequestHandling", "startTimeTextField"]
-- ["PSo26NSExtensionRequestHandling", "timePickerView"]
+- ["PSo26NSExtensionRequestHandling", "unwindToSessionEntry"]
 - ["PSo26NSExtensionRequestHandling", "usedWetsuitTextField"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLayoutSubviews"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
@@ -835,6 +877,7 @@ depends-member:
 - ["CSo8NSObject", "UIPickerView"]
 - ["CSo8NSObject", "UIScrollView"]
 - ["CSo8NSObject", "UISlider"]
+- ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UITextView"]
 - ["CSo8NSObject", "UIView"]
@@ -858,16 +901,18 @@ depends-member:
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
-- ["CSo8NSObject", "durationPickerView"]
-- ["CSo8NSObject", "durationTextField"]
 - ["CSo8NSObject", "editWetsuitsButton"]
 - ["CSo8NSObject", "editingDone"]
+- ["CSo8NSObject", "endTimePickerView"]
+- ["CSo8NSObject", "endTimeTextField"]
 - !private ["CSo8NSObject", "executeFetchRequest"]
 - ["CSo8NSObject", "handleDayPicker"]
-- ["CSo8NSObject", "handleTimePicker"]
+- ["CSo8NSObject", "handleEndTimePicker"]
+- ["CSo8NSObject", "handleStartTimePicker"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "inputView"]
 - !private ["CSo8NSObject", "layoutIfNeeded"]
+- ["CSo8NSObject", "loadCoreDataContentToView"]
 - !private ["CSo8NSObject", "locale"]
 - !private ["CSo8NSObject", "localizedStringWithFormat"]
 - !private ["CSo8NSObject", "managedObjectContext"]
@@ -894,12 +939,13 @@ depends-member:
 - ["CSo8NSObject", "skyConditionTextField"]
 - ["CSo8NSObject", "skyconditionsPickOption"]
 - ["CSo8NSObject", "slinderValueChanged"]
+- ["CSo8NSObject", "startTimePickerView"]
 - ["CSo8NSObject", "startTimeTextField"]
 - !private ["CSo8NSObject", "stringFromDate"]
 - !private ["CSo8NSObject", "tag"]
 - !private ["CSo8NSObject", "text"]
-- ["CSo8NSObject", "timePickerView"]
 - !private ["CSo8NSObject", "timeStyle"]
+- ["CSo8NSObject", "unwindToSessionEntry"]
 - ["CSo8NSObject", "usedWetsuitTextField"]
 - !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "viewDidLayoutSubviews"]
@@ -942,16 +988,18 @@ depends-member:
 - ["PSo16NSObjectProtocol", "dayTextField"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
-- ["PSo16NSObjectProtocol", "durationPickerView"]
-- ["PSo16NSObjectProtocol", "durationTextField"]
 - ["PSo16NSObjectProtocol", "editWetsuitsButton"]
 - ["PSo16NSObjectProtocol", "editingDone"]
+- ["PSo16NSObjectProtocol", "endTimePickerView"]
+- ["PSo16NSObjectProtocol", "endTimeTextField"]
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
 - ["PSo16NSObjectProtocol", "handleDayPicker"]
-- ["PSo16NSObjectProtocol", "handleTimePicker"]
+- ["PSo16NSObjectProtocol", "handleEndTimePicker"]
+- ["PSo16NSObjectProtocol", "handleStartTimePicker"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "inputView"]
 - !private ["PSo16NSObjectProtocol", "layoutIfNeeded"]
+- ["PSo16NSObjectProtocol", "loadCoreDataContentToView"]
 - !private ["PSo16NSObjectProtocol", "locale"]
 - !private ["PSo16NSObjectProtocol", "localizedStringWithFormat"]
 - !private ["PSo16NSObjectProtocol", "managedObjectContext"]
@@ -978,12 +1026,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "skyConditionTextField"]
 - ["PSo16NSObjectProtocol", "skyconditionsPickOption"]
 - ["PSo16NSObjectProtocol", "slinderValueChanged"]
+- ["PSo16NSObjectProtocol", "startTimePickerView"]
 - ["PSo16NSObjectProtocol", "startTimeTextField"]
 - !private ["PSo16NSObjectProtocol", "stringFromDate"]
 - !private ["PSo16NSObjectProtocol", "tag"]
 - !private ["PSo16NSObjectProtocol", "text"]
-- ["PSo16NSObjectProtocol", "timePickerView"]
 - !private ["PSo16NSObjectProtocol", "timeStyle"]
+- ["PSo16NSObjectProtocol", "unwindToSessionEntry"]
 - ["PSo16NSObjectProtocol", "usedWetsuitTextField"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", "viewDidLayoutSubviews"]
@@ -1016,6 +1065,7 @@ depends-member:
 - !private ["PSs30RangeReplaceableCollectionType", "_Element"]
 - !private ["PSs30RangeReplaceableCollectionType", "append"]
 - !private ["PSs30RangeReplaceableCollectionType", "count"]
+- !private ["PSs30RangeReplaceableCollectionType", "removeAll"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
 - !private ["PSs16RawRepresentable", "Date"]
 - !private ["PSs16RawRepresentable", "FullStyle"]
@@ -1033,6 +1083,7 @@ depends-member:
 - !private ["PSs12SequenceType", "_Element"]
 - !private ["PSs12SequenceType", "append"]
 - !private ["PSs12SequenceType", "count"]
+- !private ["PSs12SequenceType", "removeAll"]
 - !private ["PSs12SequenceType", "subscript"]
 - !private ["PSs14SetAlgebraType", "ValueChanged"]
 - !private ["PSs17SignedIntegerType", "Distance"]
@@ -1042,6 +1093,7 @@ depends-member:
 - !private ["PSs16SignedNumberType", "IntegerLiteralType"]
 - !private ["PSs16SignedNumberType", "init"]
 - ["O11SurfLogbook13SkyConditions", "allValues"]
+- ["O11SurfLogbook13SkyConditions", "deinit"]
 - !private ["O11SurfLogbook13SkyConditions", "simpleDescription"]
 - !private ["VSs5Slice", "Generator"]
 - !private ["VSs5Slice", "Index"]
@@ -1113,15 +1165,17 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "dayTextField"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
-- ["PSo21UIAppearanceContainer", "durationPickerView"]
-- ["PSo21UIAppearanceContainer", "durationTextField"]
 - ["PSo21UIAppearanceContainer", "editWetsuitsButton"]
 - ["PSo21UIAppearanceContainer", "editingDone"]
+- ["PSo21UIAppearanceContainer", "endTimePickerView"]
+- ["PSo21UIAppearanceContainer", "endTimeTextField"]
 - ["PSo21UIAppearanceContainer", "handleDayPicker"]
-- ["PSo21UIAppearanceContainer", "handleTimePicker"]
+- ["PSo21UIAppearanceContainer", "handleEndTimePicker"]
+- ["PSo21UIAppearanceContainer", "handleStartTimePicker"]
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "inputView"]
 - !private ["PSo21UIAppearanceContainer", "layoutIfNeeded"]
+- ["PSo21UIAppearanceContainer", "loadCoreDataContentToView"]
 - !private ["PSo21UIAppearanceContainer", "locale"]
 - ["PSo21UIAppearanceContainer", "numberOfComponentsInPickerView"]
 - ["PSo21UIAppearanceContainer", "pickerView"]
@@ -1143,10 +1197,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "skyConditionTextField"]
 - ["PSo21UIAppearanceContainer", "skyconditionsPickOption"]
 - ["PSo21UIAppearanceContainer", "slinderValueChanged"]
+- ["PSo21UIAppearanceContainer", "startTimePickerView"]
 - ["PSo21UIAppearanceContainer", "startTimeTextField"]
 - !private ["PSo21UIAppearanceContainer", "tag"]
 - !private ["PSo21UIAppearanceContainer", "text"]
-- ["PSo21UIAppearanceContainer", "timePickerView"]
+- ["PSo21UIAppearanceContainer", "unwindToSessionEntry"]
 - ["PSo21UIAppearanceContainer", "usedWetsuitTextField"]
 - !private ["PSo21UIAppearanceContainer", "value"]
 - ["PSo21UIAppearanceContainer", "viewDidLayoutSubviews"]
@@ -1184,13 +1239,15 @@ depends-member:
 - ["PSo18UIContentContainer", "datePickerView"]
 - ["PSo18UIContentContainer", "dayTextField"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
-- ["PSo18UIContentContainer", "durationPickerView"]
-- ["PSo18UIContentContainer", "durationTextField"]
 - ["PSo18UIContentContainer", "editWetsuitsButton"]
 - ["PSo18UIContentContainer", "editingDone"]
+- ["PSo18UIContentContainer", "endTimePickerView"]
+- ["PSo18UIContentContainer", "endTimeTextField"]
 - ["PSo18UIContentContainer", "handleDayPicker"]
-- ["PSo18UIContentContainer", "handleTimePicker"]
+- ["PSo18UIContentContainer", "handleEndTimePicker"]
+- ["PSo18UIContentContainer", "handleStartTimePicker"]
 - ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "loadCoreDataContentToView"]
 - ["PSo18UIContentContainer", "numberOfComponentsInPickerView"]
 - ["PSo18UIContentContainer", "pickerView"]
 - !private ["PSo18UIContentContainer", "print"]
@@ -1210,8 +1267,9 @@ depends-member:
 - ["PSo18UIContentContainer", "skyConditionTextField"]
 - ["PSo18UIContentContainer", "skyconditionsPickOption"]
 - ["PSo18UIContentContainer", "slinderValueChanged"]
+- ["PSo18UIContentContainer", "startTimePickerView"]
 - ["PSo18UIContentContainer", "startTimeTextField"]
-- ["PSo18UIContentContainer", "timePickerView"]
+- ["PSo18UIContentContainer", "unwindToSessionEntry"]
 - ["PSo18UIContentContainer", "usedWetsuitTextField"]
 - ["PSo18UIContentContainer", "viewDidLayoutSubviews"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
@@ -1292,6 +1350,9 @@ depends-member:
 - !private ["PSo22UIPickerViewDataSource", "contentView"]
 - !private ["PSo22UIPickerViewDataSource", "datePickerView"]
 - !private ["PSo22UIPickerViewDataSource", "dayTextField"]
+- !private ["PSo22UIPickerViewDataSource", "endTimePickerView"]
+- !private ["PSo22UIPickerViewDataSource", "endTimeTextField"]
+- !private ["PSo22UIPickerViewDataSource", "loadCoreDataContentToView"]
 - ["PSo22UIPickerViewDataSource", "numberOfComponentsInPickerView"]
 - ["PSo22UIPickerViewDataSource", "pickerView"]
 - !private ["PSo22UIPickerViewDataSource", "print"]
@@ -1310,8 +1371,8 @@ depends-member:
 - ["PSo22UIPickerViewDataSource", "scrollViewWillEndDragging"]
 - !private ["PSo22UIPickerViewDataSource", "skyConditionTextField"]
 - !private ["PSo22UIPickerViewDataSource", "skyconditionsPickOption"]
+- !private ["PSo22UIPickerViewDataSource", "startTimePickerView"]
 - !private ["PSo22UIPickerViewDataSource", "startTimeTextField"]
-- !private ["PSo22UIPickerViewDataSource", "timePickerView"]
 - !private ["PSo22UIPickerViewDataSource", "usedWetsuitTextField"]
 - ["PSo22UIPickerViewDataSource", "viewForZoomingInScrollView"]
 - !private ["PSo22UIPickerViewDataSource", "waterTempLabel"]
@@ -1336,6 +1397,9 @@ depends-member:
 - !private ["PSo20UIPickerViewDelegate", "contentView"]
 - !private ["PSo20UIPickerViewDelegate", "datePickerView"]
 - !private ["PSo20UIPickerViewDelegate", "dayTextField"]
+- !private ["PSo20UIPickerViewDelegate", "endTimePickerView"]
+- !private ["PSo20UIPickerViewDelegate", "endTimeTextField"]
+- !private ["PSo20UIPickerViewDelegate", "loadCoreDataContentToView"]
 - ["PSo20UIPickerViewDelegate", "numberOfComponentsInPickerView"]
 - ["PSo20UIPickerViewDelegate", "pickerView"]
 - !private ["PSo20UIPickerViewDelegate", "print"]
@@ -1354,8 +1418,8 @@ depends-member:
 - ["PSo20UIPickerViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo20UIPickerViewDelegate", "skyConditionTextField"]
 - !private ["PSo20UIPickerViewDelegate", "skyconditionsPickOption"]
+- !private ["PSo20UIPickerViewDelegate", "startTimePickerView"]
 - !private ["PSo20UIPickerViewDelegate", "startTimeTextField"]
-- !private ["PSo20UIPickerViewDelegate", "timePickerView"]
 - !private ["PSo20UIPickerViewDelegate", "usedWetsuitTextField"]
 - ["PSo20UIPickerViewDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo20UIPickerViewDelegate", "waterTempLabel"]
@@ -1383,6 +1447,7 @@ depends-member:
 - ["CSo11UIResponder", "UIPickerView"]
 - ["CSo11UIResponder", "UIScrollView"]
 - ["CSo11UIResponder", "UISlider"]
+- ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UITextView"]
 - ["CSo11UIResponder", "UIView"]
@@ -1403,15 +1468,17 @@ depends-member:
 - ["CSo11UIResponder", "dayTextField"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
-- ["CSo11UIResponder", "durationPickerView"]
-- ["CSo11UIResponder", "durationTextField"]
 - ["CSo11UIResponder", "editWetsuitsButton"]
 - ["CSo11UIResponder", "editingDone"]
+- ["CSo11UIResponder", "endTimePickerView"]
+- ["CSo11UIResponder", "endTimeTextField"]
 - ["CSo11UIResponder", "handleDayPicker"]
-- ["CSo11UIResponder", "handleTimePicker"]
+- ["CSo11UIResponder", "handleEndTimePicker"]
+- ["CSo11UIResponder", "handleStartTimePicker"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "inputView"]
 - !private ["CSo11UIResponder", "layoutIfNeeded"]
+- ["CSo11UIResponder", "loadCoreDataContentToView"]
 - !private ["CSo11UIResponder", "locale"]
 - !private ["CSo11UIResponder", "managedObjectContext"]
 - ["CSo11UIResponder", "numberOfComponentsInPickerView"]
@@ -1435,10 +1502,11 @@ depends-member:
 - ["CSo11UIResponder", "skyConditionTextField"]
 - ["CSo11UIResponder", "skyconditionsPickOption"]
 - ["CSo11UIResponder", "slinderValueChanged"]
+- ["CSo11UIResponder", "startTimePickerView"]
 - ["CSo11UIResponder", "startTimeTextField"]
 - !private ["CSo11UIResponder", "tag"]
 - !private ["CSo11UIResponder", "text"]
-- ["CSo11UIResponder", "timePickerView"]
+- ["CSo11UIResponder", "unwindToSessionEntry"]
 - ["CSo11UIResponder", "usedWetsuitTextField"]
 - !private ["CSo11UIResponder", "value"]
 - ["CSo11UIResponder", "viewDidLayoutSubviews"]
@@ -1469,6 +1537,9 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "contentView"]
 - !private ["PSo20UIScrollViewDelegate", "datePickerView"]
 - !private ["PSo20UIScrollViewDelegate", "dayTextField"]
+- !private ["PSo20UIScrollViewDelegate", "endTimePickerView"]
+- !private ["PSo20UIScrollViewDelegate", "endTimeTextField"]
+- !private ["PSo20UIScrollViewDelegate", "loadCoreDataContentToView"]
 - ["PSo20UIScrollViewDelegate", "numberOfComponentsInPickerView"]
 - ["PSo20UIScrollViewDelegate", "pickerView"]
 - !private ["PSo20UIScrollViewDelegate", "print"]
@@ -1487,8 +1558,8 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "scrollViewWillEndDragging"]
 - !private ["PSo20UIScrollViewDelegate", "skyConditionTextField"]
 - !private ["PSo20UIScrollViewDelegate", "skyconditionsPickOption"]
+- !private ["PSo20UIScrollViewDelegate", "startTimePickerView"]
 - !private ["PSo20UIScrollViewDelegate", "startTimeTextField"]
-- !private ["PSo20UIScrollViewDelegate", "timePickerView"]
 - !private ["PSo20UIScrollViewDelegate", "usedWetsuitTextField"]
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - !private ["PSo20UIScrollViewDelegate", "waterTempLabel"]
@@ -1519,13 +1590,15 @@ depends-member:
 - ["PSo16UIStateRestoring", "datePickerView"]
 - ["PSo16UIStateRestoring", "dayTextField"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
-- ["PSo16UIStateRestoring", "durationPickerView"]
-- ["PSo16UIStateRestoring", "durationTextField"]
 - ["PSo16UIStateRestoring", "editWetsuitsButton"]
 - ["PSo16UIStateRestoring", "editingDone"]
+- ["PSo16UIStateRestoring", "endTimePickerView"]
+- ["PSo16UIStateRestoring", "endTimeTextField"]
 - ["PSo16UIStateRestoring", "handleDayPicker"]
-- ["PSo16UIStateRestoring", "handleTimePicker"]
+- ["PSo16UIStateRestoring", "handleEndTimePicker"]
+- ["PSo16UIStateRestoring", "handleStartTimePicker"]
 - ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "loadCoreDataContentToView"]
 - ["PSo16UIStateRestoring", "numberOfComponentsInPickerView"]
 - ["PSo16UIStateRestoring", "pickerView"]
 - !private ["PSo16UIStateRestoring", "print"]
@@ -1545,8 +1618,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "skyConditionTextField"]
 - ["PSo16UIStateRestoring", "skyconditionsPickOption"]
 - ["PSo16UIStateRestoring", "slinderValueChanged"]
+- ["PSo16UIStateRestoring", "startTimePickerView"]
 - ["PSo16UIStateRestoring", "startTimeTextField"]
-- ["PSo16UIStateRestoring", "timePickerView"]
+- ["PSo16UIStateRestoring", "unwindToSessionEntry"]
 - ["PSo16UIStateRestoring", "usedWetsuitTextField"]
 - ["PSo16UIStateRestoring", "viewDidLayoutSubviews"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
@@ -1598,15 +1672,17 @@ depends-member:
 - ["PSo18UITraitEnvironment", "dayTextField"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
-- ["PSo18UITraitEnvironment", "durationPickerView"]
-- ["PSo18UITraitEnvironment", "durationTextField"]
 - ["PSo18UITraitEnvironment", "editWetsuitsButton"]
 - ["PSo18UITraitEnvironment", "editingDone"]
+- ["PSo18UITraitEnvironment", "endTimePickerView"]
+- ["PSo18UITraitEnvironment", "endTimeTextField"]
 - ["PSo18UITraitEnvironment", "handleDayPicker"]
-- ["PSo18UITraitEnvironment", "handleTimePicker"]
+- ["PSo18UITraitEnvironment", "handleEndTimePicker"]
+- ["PSo18UITraitEnvironment", "handleStartTimePicker"]
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "inputView"]
 - !private ["PSo18UITraitEnvironment", "layoutIfNeeded"]
+- ["PSo18UITraitEnvironment", "loadCoreDataContentToView"]
 - !private ["PSo18UITraitEnvironment", "locale"]
 - ["PSo18UITraitEnvironment", "numberOfComponentsInPickerView"]
 - ["PSo18UITraitEnvironment", "pickerView"]
@@ -1628,10 +1704,11 @@ depends-member:
 - ["PSo18UITraitEnvironment", "skyConditionTextField"]
 - ["PSo18UITraitEnvironment", "skyconditionsPickOption"]
 - ["PSo18UITraitEnvironment", "slinderValueChanged"]
+- ["PSo18UITraitEnvironment", "startTimePickerView"]
 - ["PSo18UITraitEnvironment", "startTimeTextField"]
 - !private ["PSo18UITraitEnvironment", "tag"]
 - !private ["PSo18UITraitEnvironment", "text"]
-- ["PSo18UITraitEnvironment", "timePickerView"]
+- ["PSo18UITraitEnvironment", "unwindToSessionEntry"]
 - ["PSo18UITraitEnvironment", "usedWetsuitTextField"]
 - !private ["PSo18UITraitEnvironment", "value"]
 - ["PSo18UITraitEnvironment", "viewDidLayoutSubviews"]
@@ -1678,6 +1755,7 @@ depends-member:
 - ["CSo16UIViewController", "UIPickerView"]
 - ["CSo16UIViewController", "UIScrollView"]
 - ["CSo16UIViewController", "UISlider"]
+- ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UITextView"]
 - ["CSo16UIViewController", "UIView"]
@@ -1692,13 +1770,15 @@ depends-member:
 - ["CSo16UIViewController", "datePickerView"]
 - ["CSo16UIViewController", "dayTextField"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
-- ["CSo16UIViewController", "durationPickerView"]
-- ["CSo16UIViewController", "durationTextField"]
 - ["CSo16UIViewController", "editWetsuitsButton"]
 - ["CSo16UIViewController", "editingDone"]
+- ["CSo16UIViewController", "endTimePickerView"]
+- ["CSo16UIViewController", "endTimeTextField"]
 - ["CSo16UIViewController", "handleDayPicker"]
-- ["CSo16UIViewController", "handleTimePicker"]
+- ["CSo16UIViewController", "handleEndTimePicker"]
+- ["CSo16UIViewController", "handleStartTimePicker"]
 - ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "loadCoreDataContentToView"]
 - ["CSo16UIViewController", "numberOfComponentsInPickerView"]
 - ["CSo16UIViewController", "pickerView"]
 - !private ["CSo16UIViewController", "print"]
@@ -1718,8 +1798,9 @@ depends-member:
 - ["CSo16UIViewController", "skyConditionTextField"]
 - ["CSo16UIViewController", "skyconditionsPickOption"]
 - ["CSo16UIViewController", "slinderValueChanged"]
+- ["CSo16UIViewController", "startTimePickerView"]
 - ["CSo16UIViewController", "startTimeTextField"]
-- ["CSo16UIViewController", "timePickerView"]
+- ["CSo16UIViewController", "unwindToSessionEntry"]
 - ["CSo16UIViewController", "usedWetsuitTextField"]
 - ["CSo16UIViewController", "viewDidLayoutSubviews"]
 - ["CSo16UIViewController", "viewDidLoad"]
@@ -1738,6 +1819,7 @@ depends-member:
 - !private ["PSs10_ArrayType", "_Element"]
 - !private ["PSs10_ArrayType", "append"]
 - !private ["PSs10_ArrayType", "count"]
+- !private ["PSs10_ArrayType", "removeAll"]
 - !private ["PSs10_ArrayType", "subscript"]
 - !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "localizedStringWithFormat"]
@@ -1757,6 +1839,7 @@ depends-member:
 - !private ["PSs24_DestructorSafeContainer", "_Element"]
 - !private ["PSs24_DestructorSafeContainer", "append"]
 - !private ["PSs24_DestructorSafeContainer", "count"]
+- !private ["PSs24_DestructorSafeContainer", "removeAll"]
 - !private ["PSs24_DestructorSafeContainer", "subscript"]
 - !private ["PSs14_Incrementable", "Distance"]
 - !private ["PSs14_Incrementable", "IntegerLiteralType"]
@@ -1778,8 +1861,12 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "count"]
 - !private ["PSs21_ObjectiveCBridgeable", "init"]
 - !private ["PSs21_ObjectiveCBridgeable", "localizedStringWithFormat"]
+- !private ["PSs21_ObjectiveCBridgeable", "removeAll"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
 - !private ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
+- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["PSs22_RandomAccessAmbiguity", "init"]
 - !private ["PSs12_Reflectable", "Distance"]
 - !private ["PSs12_Reflectable", "Generator"]
 - !private ["PSs12_Reflectable", "Index"]
@@ -1800,6 +1887,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "layoutIfNeeded"]
 - !private ["PSs12_Reflectable", "locale"]
 - !private ["PSs12_Reflectable", "localizedStringWithFormat"]
+- !private ["PSs12_Reflectable", "removeAll"]
 - !private ["PSs12_Reflectable", "resignFirstResponder"]
 - !private ["PSs12_Reflectable", "size"]
 - !private ["PSs12_Reflectable", "subscript"]
@@ -1834,6 +1922,7 @@ depends-member:
 - ["C11SurfLogbook14vcSessionEntry", "UIPickerView"]
 - ["C11SurfLogbook14vcSessionEntry", "UIScrollView"]
 - ["C11SurfLogbook14vcSessionEntry", "UISlider"]
+- ["C11SurfLogbook14vcSessionEntry", "UIStoryboardSegue"]
 - ["C11SurfLogbook14vcSessionEntry", "UITextField"]
 - ["C11SurfLogbook14vcSessionEntry", "UITextView"]
 - ["C11SurfLogbook14vcSessionEntry", "UIView"]
@@ -1849,13 +1938,15 @@ depends-member:
 - ["C11SurfLogbook14vcSessionEntry", "dayTextField"]
 - ["C11SurfLogbook14vcSessionEntry", "deinit"]
 - ["C11SurfLogbook14vcSessionEntry", "didReceiveMemoryWarning"]
-- ["C11SurfLogbook14vcSessionEntry", "durationPickerView"]
-- ["C11SurfLogbook14vcSessionEntry", "durationTextField"]
 - ["C11SurfLogbook14vcSessionEntry", "editWetsuitsButton"]
 - ["C11SurfLogbook14vcSessionEntry", "editingDone"]
+- ["C11SurfLogbook14vcSessionEntry", "endTimePickerView"]
+- ["C11SurfLogbook14vcSessionEntry", "endTimeTextField"]
 - ["C11SurfLogbook14vcSessionEntry", "handleDayPicker"]
-- ["C11SurfLogbook14vcSessionEntry", "handleTimePicker"]
+- ["C11SurfLogbook14vcSessionEntry", "handleEndTimePicker"]
+- ["C11SurfLogbook14vcSessionEntry", "handleStartTimePicker"]
 - ["C11SurfLogbook14vcSessionEntry", "init"]
+- ["C11SurfLogbook14vcSessionEntry", "loadCoreDataContentToView"]
 - ["C11SurfLogbook14vcSessionEntry", "numberOfComponentsInPickerView"]
 - ["C11SurfLogbook14vcSessionEntry", "pickerView"]
 - !private ["C11SurfLogbook14vcSessionEntry", "print"]
@@ -1875,8 +1966,9 @@ depends-member:
 - ["C11SurfLogbook14vcSessionEntry", "skyConditionTextField"]
 - ["C11SurfLogbook14vcSessionEntry", "skyconditionsPickOption"]
 - ["C11SurfLogbook14vcSessionEntry", "slinderValueChanged"]
+- ["C11SurfLogbook14vcSessionEntry", "startTimePickerView"]
 - ["C11SurfLogbook14vcSessionEntry", "startTimeTextField"]
-- ["C11SurfLogbook14vcSessionEntry", "timePickerView"]
+- ["C11SurfLogbook14vcSessionEntry", "unwindToSessionEntry"]
 - ["C11SurfLogbook14vcSessionEntry", "usedWetsuitTextField"]
 - ["C11SurfLogbook14vcSessionEntry", "viewDidLayoutSubviews"]
 - ["C11SurfLogbook14vcSessionEntry", "viewDidLoad"]
@@ -1920,6 +2012,7 @@ depends-nominal:
 - !private "PSs11IntegerType"
 - !private "PSs14MirrorPathType"
 - !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
 - !private "PSs16MutableSliceable"
 - !private "CSo7NSArray"
 - "PSo8NSCoding"
@@ -2011,31 +2104,20 @@ depends-nominal:
 - !private "PSs12_IntegerType"
 - !private "PSs21_ObjectiveCBridgeable"
 - !private "VSs26_OptionalNilComparisonType"
+- !private "PSs22_RandomAccessAmbiguity"
 - !private "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
 - "C11SurfLogbook14vcSessionEntry"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/DarwinShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/module.map"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "13f3b3d119b3da3496acf5d8896e4793"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "a891f81f53c943f38d91f7b207176d25"

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
@@ -15,6 +16,8 @@ class vcNewWetsuit: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     var wetsuitName : String!
     var manufacturer : String!
     var wetsuitThickness : String!
+    var objectId : NSManagedObjectID!
+
 
     @IBOutlet weak var manufacturerTextField: UITextField!
     @IBOutlet weak var wetsuitNameTextField: UITextField!
