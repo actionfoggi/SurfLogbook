@@ -6,46 +6,46 @@ provides-nominal:
 provides-member:
 - ["C11SurfLogbook11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDocumentsDirectory"
-- "applicationWillTerminate"
-- "managedObjectModel"
 - "applicationWillResignActive"
-- "applicationDidEnterBackground"
 - "managedObjectContext"
-- "application"
-- "applicationWillEnterForeground"
+- "applicationWillTerminate"
+- "applicationDidEnterBackground"
 - "saveContext"
+- "window"
+- "applicationWillEnterForeground"
+- "application"
+- "managedObjectModel"
+- "applicationDocumentsDirectory"
 - "persistentStoreCoordinator"
 - "applicationDidBecomeActive"
-- "window"
 depends-top-level:
-- !private "String"
-- !private "NSLocalizedDescriptionKey"
-- "NSObject"
-- "AnyObject"
-- !private "fatalError"
-- "NSManagedObjectContext"
-- "StringLiteralType"
 - !private "NSUnderlyingErrorKey"
-- !private "=="
-- "NSPersistentStoreCoordinator"
-- !private "-"
-- "UIApplication"
-- "NSURL"
+- "NSError"
+- "NSManagedObjectModel"
 - !private "NSLog"
 - !private "NSSQLiteStoreType"
-- "Bool"
+- "NSURL"
 - !private "BooleanLiteralType"
-- !private "abort"
-- !private "NSBundle"
-- "UIWindow"
-- "UIApplicationDelegate"
-- "NSManagedObjectModel"
-- "UIResponder"
+- !private "NSLocalizedDescriptionKey"
+- !private "fatalError"
 - "AppDelegate"
-- "NSError"
-- !private "NSLocalizedFailureReasonErrorKey"
+- "UIResponder"
+- !private "String"
+- !private "NSBundle"
+- "NSPersistentStoreCoordinator"
+- !private "=="
+- !private "-"
 - !private "NSFileManager"
+- !private "NSLocalizedFailureReasonErrorKey"
+- "AnyObject"
+- "UIApplicationDelegate"
+- "UIWindow"
+- "Bool"
+- "StringLiteralType"
+- "NSObject"
+- "NSManagedObjectContext"
+- !private "abort"
+- "UIApplication"
 depends-member:
 - !private ["PSs9AnyObject", "AnyObject"]
 - !private ["PSs9AnyObject", "NSBundle"]
@@ -295,6 +295,7 @@ depends-member:
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "DocumentDirectory"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
+- !private ["PSs9Equatable", "MainQueueConcurrencyType"]
 - !private ["PSs9Equatable", "NSBundle"]
 - !private ["PSs9Equatable", "NSError"]
 - !private ["PSs9Equatable", "NSFileManager"]
@@ -355,6 +356,7 @@ depends-member:
 - !private ["PSs8Hashable", "Distance"]
 - !private ["PSs8Hashable", "DocumentDirectory"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
+- !private ["PSs8Hashable", "MainQueueConcurrencyType"]
 - !private ["PSs8Hashable", "NSBundle"]
 - !private ["PSs8Hashable", "NSError"]
 - !private ["PSs8Hashable", "NSFileManager"]
@@ -467,6 +469,7 @@ depends-member:
 - !private ["CSo22NSManagedObjectContext", "init"]
 - !private ["CSo22NSManagedObjectContext", "persistentStoreCoordinator"]
 - !private ["CSo22NSManagedObjectContext", "save"]
+- !private ["OSC37NSManagedObjectContextConcurrencyType", "MainQueueConcurrencyType"]
 - !private ["CSo20NSManagedObjectModel", "init"]
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AnyObject"]
@@ -591,6 +594,7 @@ depends-member:
 - !private ["PSs30RangeReplaceableCollectionType", "count"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
 - !private ["PSs16RawRepresentable", "DocumentDirectory"]
+- !private ["PSs16RawRepresentable", "MainQueueConcurrencyType"]
 - !private ["PSs16RawRepresentable", "UserDomainMask"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
@@ -802,6 +806,7 @@ depends-nominal:
 - !private "CSo13NSFileManager"
 - !private "PSo9NSLocking"
 - !private "CSo22NSManagedObjectContext"
+- !private "OSC37NSManagedObjectContextConcurrencyType"
 - !private "CSo20NSManagedObjectModel"
 - !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
@@ -868,4 +873,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "130b6f0e296b6ffb24c658f639d037ab"
+interface-hash: "845ccf2f173c8bf30137abd10667ad07"

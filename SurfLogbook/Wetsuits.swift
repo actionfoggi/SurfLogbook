@@ -20,10 +20,6 @@ public class Wetsuits: NSManagedObject {
 
         return  "\(manufacturer), \(name), \(wetsuitThickness) "
     }
-    
-
-
-
 }
 
 

@@ -36,7 +36,6 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
     func allWetsuitsFetchRequest() -> NSFetchRequest {
         let fetchRequest = NSFetchRequest(entityName: "Wetsuits")
         let sortDescriptor = NSSortDescriptor(key: "manufacturer", ascending: true)
-        
         fetchRequest.predicate = nil
         fetchRequest.sortDescriptors = [sortDescriptor]
         fetchRequest.fetchBatchSize = 20
@@ -45,8 +44,6 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
     }
 
     
-
-
 
     // MARK: - Table view data source
 
@@ -80,7 +77,7 @@ class WetsuitTableViewController: UITableViewController, NSFetchedResultsControl
             //Check whether ther is a new wetsuit or update one
             if let selectedIndexPath = tableView.indexPathForSelectedRow{
                 /** update an existing wetsuit **/
-                let fetchRequest = allWetsuitsFetchRequest()  // NSFetchRequest(entityName: "Wetsuits")
+                let fetchRequest = allWetsuitsFetchRequest()
                 do{
                     let result : NSArray =  try  managedObjectContext!.executeFetchRequest(fetchRequest)
                     if result.count > 0{
